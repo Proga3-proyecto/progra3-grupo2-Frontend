@@ -1,0 +1,57 @@
+.usuario-container[b-00fhxcjhx7] {
+    display:flex;
+    gap: 30px;
+    padding: 40px 60px;
+}
+
+.sidebar[b-00fhxcjhx7] {
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    height: fit-content;
+    position:fixed;
+}
+
+[b-00fhxcjhx7] .sidebar-item {
+    display: flex; /* Cambiado a flex para alinear icono y texto horizontalmente */
+    align-items: center; /* Centra verticalmente la imagen con el texto */
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+[b-00fhxcjhx7] .sidebar-item:hover {
+    background-color: #f3f3f3;
+}
+
+/* Estilo específico para las 4 imágenes de los botones */
+.sidebar-icon-img[b-00fhxcjhx7] {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.75rem; /* Espaciado entre la imagen y el texto */
+    object-fit: contain;
+}
+
+.sidebar-icon-bi[b-00fhxcjhx7] {
+    font-size: 18px; /* Tamaño del icono */
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+[b-00fhxcjhx7] .cerrar {
+    color: red;
+}
+
+.contenido-usuario[b-00fhxcjhx7] {
+    max-width: calc(100vw - 220px);
+    margin-left: 220px;
+    flex: 1;
+    background-color: white;
+    padding: 0 200px;
+    border-radius: 10px;
+}

@@ -1,0 +1,116 @@
+/* --- Estilos del Encabezado Principal (Mantienen su tamaño original) --- */
+.titulo[b-4179xz3f4x] {
+    text-align: center;
+    color: #0b1f5c;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.subtitulo[b-4179xz3f4x] {
+    text-align: center;
+    color: gray;
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+/* --- Pestañas (Tabs) --- */
+.tabs[b-4179xz3f4x] {
+    margin-bottom: 20px;
+}
+
+.tab-activo[b-4179xz3f4x] {
+    color: #0b1f5c;
+    font-weight: bold;
+    border-bottom: 3px solid #0b1f5c;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+/* --- Contenedor de Pedidos --- */
+.pedido-card[b-4179xz3f4x] {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* --- Tarjeta Individual del Pedido --- */
+.pedido-item[b-4179xz3f4x] {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 18px 22px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    align-items: center;
+}
+
+/* --- Fuentes dentro de las Columnas (Subidas ~10% en general) --- */
+.pedido-col label[b-4179xz3f4x] {
+    display: block;
+    color: gray;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.pedido-col h3[b-4179xz3f4x] {
+    color: #0b1f5c;
+    margin-bottom: 4px;
+    font-size: 16.5px;
+    font-weight: bold;
+}
+
+.pedido-col p[b-4179xz3f4x] {
+    color: gray;
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.pedido-col a[b-4179xz3f4x] {
+    color: #0b5ed7;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* --- Etiquetas de Estado --- */
+.estado[b-4179xz3f4x] {
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.proceso[b-4179xz3f4x] {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.enviado[b-4179xz3f4x] {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.entregado[b-4179xz3f4x] {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+/* --- Footer Informativo Seguro --- */
+.security-footer-text[b-4179xz3f4x] {
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-shield-icon-img[b-4179xz3f4x] {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.3rem;
+}

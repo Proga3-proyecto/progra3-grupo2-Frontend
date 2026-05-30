@@ -1,0 +1,76 @@
+﻿.volver {
+    margin-bottom: 20px;
+}
+
+    .volver a {
+        text-decoration: none;
+        color: #0b5ed7;
+        font-weight: 500;
+    }
+
+.pedido-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.pedido-header h2 {
+    margin-bottom: 5px;
+    color: #0b1f5c;
+}
+
+.fecha {
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.estado {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pedido-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+    .pedido-info label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+        color: gray;
+    }
+
+.categoria {
+    color: gray;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.total-box {
+    width: 350px;
+    margin-left: auto;
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.fila-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.final {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0b1f5c;
+    margin-top: 20px;
+}

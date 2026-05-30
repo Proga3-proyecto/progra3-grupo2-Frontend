@@ -69,3 +69,21 @@ h1:focus {
 :root {
     --primary: #021947;
 }
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th {
+    text-align: left;
+    padding: 15px 10px;
+    border-bottom: 1px solid #ddd;
+    color: gray;
+}
+
+.table td {
+    padding: 20px 10px;
+    border-bottom: 1px solid #eee;
+}

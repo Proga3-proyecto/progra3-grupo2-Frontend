@@ -1,0 +1,39 @@
+﻿<article class="product-card">
+
+    <button class="heart-button" @onclick="ToggleFavorito">
+        <i class="bi @(producto.Favorito ? "bi-heart-fill" : "bi-heart")"></i>
+    </button>
+
+    <div class="product-img-box">
+        <img src="@producto.ImagenUrl" class="product-img" />
+    </div>
+
+    <h3>@producto.Nombre</h3>
+    <p>@producto.Categoria</p>
+
+    <div class="product-bottom">
+        <span>S/ @producto.Precio.ToString("0.00")</span>
+
+        <button class="cart-button" @onclick="AgregarCarrito">
+            <i class="bi bi-cart"></i>
+        </button>
+    </div>
+
+</article>
+
+@code {
+
+    [Parameter]
+    public Producto producto { get; set; } = default!;
+
+    private void ToggleFavorito()
+    {
+        producto.Favorito = !producto.Favorito;
+    }
+
+    private void AgregarCarrito()
+    {
+        Console.WriteLine($"Agregado: {producto.Nombre}");
+    }
+
+}

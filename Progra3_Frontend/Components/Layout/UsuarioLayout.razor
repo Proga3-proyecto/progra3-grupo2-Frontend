@@ -1,0 +1,92 @@
+﻿@layout MainLayout
+@inherits LayoutComponentBase
+
+<div class="usuario-container">
+
+    <div class="sidebar">
+
+        <NavLink class="sidebar-item" href="/perfil">
+            <i class="bi bi-person sidebar-icon-bi"></i>
+            <span> Mi perfil</span>
+        </NavLink>
+
+        <NavLink class="sidebar-item" href="/MisPedidos">
+            <i class="bi bi-briefcase sidebar-icon-bi"></i>
+            <span> Mis pedidos</span>
+        </NavLink>
+
+        <NavLink class="sidebar-item" href="/CambiarContraseña">
+            <i class="bi bi-lock sidebar-icon-bi"></i>
+            <span> Cambiar contraseña</span>
+        </NavLink>
+
+        <NavLink class="sidebar-item cerrar" href="/">
+            <i class="bi bi-box-arrow-left sidebar-icon-bi"></i>
+            <span> Cerrar sesión</span>
+        </NavLink>
+
+    </div>
+
+    <div class="contenido-usuario">
+        @Body
+    </div>
+
+</div>
+
+@* <style>
+
+    .usuario-container {
+        display: flex;
+        gap: 30px;
+        padding: 40px 60px;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        height: fit-content;
+    }
+
+    .sidebar-item {
+        display: flex; /* Cambiado a flex para alinear icono y texto horizontalmente */
+        align-items: center; /* Centra verticalmente la imagen con el texto */
+        padding: 20px;
+        border-bottom: 1px solid #e5e5e5;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+
+        .sidebar-item:hover {
+            background-color: #f3f3f3;
+        }
+
+    /* Estilo específico para las 4 imágenes de los botones */
+    .sidebar-icon-img {
+        width: 18px;
+        height: 18px;
+        margin-right: 0.75rem; /* Espaciado entre la imagen y el texto */
+        object-fit: contain;
+    }
+
+    .sidebar-icon-bi {
+        font-size: 18px; /* Tamaño del icono */
+        margin-right: 16px; 
+        display: flex;
+        align-items: center;
+    }
+
+    .cerrar {
+        color: red;
+    }
+
+    .contenido-usuario {
+        flex: 1;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+    }
+</style> *@

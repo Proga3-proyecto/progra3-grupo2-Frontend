@@ -1,0 +1,170 @@
+﻿/* --- Contenedor de la Página --- */
+.password-page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* --- Encabezado --- */
+.password-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo {
+    text-align: center;
+    color: #0b1f5c;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: gray;
+    margin-bottom: 40px;
+}
+
+/* --- Tarjetas (Cards) Generales --- */
+.password-form-card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 2rem;
+}
+
+/* --- Grupos de Formulario e Inputs --- */
+.form-group-container {
+    margin-bottom: 1.5rem;
+}
+
+.form-group-container-compact {
+    margin-bottom: 0.5rem;
+}
+
+.form-input-label {
+    font-weight: 600;
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+.custom-input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+    .custom-input-group:focus-within {
+        border-color: #1a2b4c;
+    }
+
+.custom-form-control {
+    flex: 1;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    outline: none;
+    color: #495057;
+}
+
+.input-icon-prefix {
+    padding-left: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon-suffix {
+    background: none;
+    border: none;
+    padding-right: 0.75rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.field-icon-img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+
+/* --- Panel de Requisitos (Checklist) --- */
+.requirements-box {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.requirements-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.info-icon-img {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+}
+
+.requirement-item {
+    font-size: 0.8rem;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+}
+
+.check-icon-img {
+    width: 14px;
+    height: 14px;
+    margin-right: 0.4rem;
+}
+
+/* --- Botón de Acción Principal --- */
+.submit-container {
+    text-align: center;
+}
+
+.btn-submit-password {
+    width: 100%;
+    padding: 0.65rem;
+    background-color: #1a2b4c;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .btn-submit-password:hover {
+        background-color: #111c33;
+    }
+
+/* --- Footer Informativo Seguro --- */
+.security-footer-text {
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-shield-icon-img {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.3rem;
+}
