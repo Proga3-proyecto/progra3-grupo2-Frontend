@@ -1,0 +1,190 @@
+﻿@page "/ListaStockProductos"
+
+<style>
+    .text-navy { color: #021947; }
+    .navy-bg { background-color: #021947; color: white; transition: background-color 0.2s; }
+    .navy-bg:hover { background-color: #010d26; color: white; }
+    
+    .table-container { background: white; border-radius: 8px; border: 1px solid #f1f5f9; padding: 24px; }
+    
+    .search-input { border-radius: 8px; background-color: #ffffff; border: 1px solid #e2e8f0; font-size: 0.95rem; max-width: 450px;}
+    .search-input:focus { box-shadow: none; border-color: #021947; }
+    
+    .product-img-container { 
+        width: 40px; 
+        height: 60px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        margin-right: 16px;
+    }
+    .product-img { max-height: 100%; max-width: 100%; object-fit: contain; }
+    
+    .custom-pagination .page-item.active .page-link { background-color: #021947; border-color: #021947; color: white; }
+    .custom-pagination .page-link { color: #475569; border: 1px solid #e2e8f0; margin: 0 2px; border-radius: 6px; background: white; }
+    .custom-pagination .page-link:disabled { background-color: #f8f9fa; color: #94a3b8; }
+    
+    .custom-table th { color: #64748b; font-weight: 600; font-size: 0.85rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 12px; text-transform: uppercase;}
+    .custom-table td { vertical-align: middle; padding: 16px 8px; border-bottom: 1px solid #f8f9fa; font-weight: 500; color: #1e293b; }
+</style>
+
+<div class="container-fluid mt-4" style="max-width: 1400px;">
+    
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-navy mb-0">Control de Stock de Productos</h2>
+        <button class="btn navy-bg px-4 py-2 d-flex align-items-center gap-2" style="border-radius: 6px; font-weight: 500;">
+            <i class="bi bi-plus-lg"></i> Añadir Nuevo Producto
+        </button>
+    </div>
+
+    <div class="mb-4">
+        <div class="position-relative">
+            <i class="bi bi-search position-absolute" style="top: 10px; left: 16px; color: #94a3b8;"></i>
+            <input type="text" class="form-control search-input ps-5 py-2" placeholder="Buscar...">
+        </div>
+    </div>
+
+    <div class="table-container shadow-sm">
+        
+        <div class="table-responsive">
+            <table class="table custom-table table-borderless align-middle text-center">
+                <thead class="text-start">
+                    <tr>
+                        <th scope="col" style="width: 35%;">PRODUCTO</th>
+                        <th scope="col" class="text-center">SKU</th>
+                        <th scope="col" class="text-center">STOCK ACTUAL</th>
+                        <th scope="col" class="text-center">STOCK MÍNIMO</th>
+                        <th scope="col" class="text-center">ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody class="text-start">
+                    @foreach (var product in GetPagedProducts())
+                    {
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="product-img-container">
+                                        <img src="@product.ImageUrl" alt="@product.Name" class="product-img" onerror="this.src='https://via.placeholder.com/40x60?text=Botella'" />
+                                    </div>
+                                    <span class="fw-bold text-navy" style="font-size: 0.95rem;">@product.Name</span>
+                                </div>
+                            </td>
+                            
+                            <td class="text-center text-muted" style="font-size: 0.9rem;">
+                                @product.Sku
+                            </td>
+                            
+                            <td class="text-center">
+                                <span class="fw-bold fs-5 text-dark">@product.CurrentStock</span>
+                            </td>
+                            
+                            <td class="text-center">
+                                <span class="fw-bold fs-6 text-navy">@product.MinStock</span>
+                            </td>
+                            
+                            <td class="text-center">
+                                <button class="btn navy-bg btn-sm px-3 py-1.5" style="border-radius: 6px; font-size: 0.85rem;">
+                                    Actualizar Producto
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @if (TotalPages > 1)
+        {
+            <div class="d-flex justify-content-center mt-4 mb-2">
+                <nav>
+                    <ul class="pagination custom-pagination pagination-sm">
+                        <li class="page-item @(CurrentPage == 1 ? "disabled" : "")">
+                            <button class="page-link" @onclick="GoToPreviousPage" disabled="@(CurrentPage == 1)">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                        </li>
+
+                        @for (int i = 1; i <= TotalPages; i++)
+                        {
+                            var pageNumber = i;
+                            <li class="page-item @(CurrentPage == pageNumber ? "active" : "")">
+                                <button class="page-link" @onclick="() => ChangePage(pageNumber)">@pageNumber</button>
+                            </li>
+                        }
+
+                        <li class="page-item @(CurrentPage == TotalPages ? "disabled" : "")">
+                            <button class="page-link" @onclick="GoToNextPage" disabled="@(CurrentPage == TotalPages)">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        }
+
+    </div>
+</div>
+
+@code {
+    /* Clase DTO temporal, luego se cambiará por la clase del backend */
+    public class ProductDto
+    {
+        public string Sku { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public string ImageUrl { get; set; } = string.Empty;
+        public int CurrentStock { get; set; }
+        public int MinStock { get; set; }
+    }
+    private List<ProductDto> Products { get; set; } = new();
+
+    // Variables de paginación
+    private int CurrentPage { get; set; } = 1;
+    private int PageSize { get; set; } = 4; 
+    private int TotalPages => (int)Math.Ceiling((double)Products.Count / PageSize);
+
+    private IEnumerable<ProductDto> GetPagedProducts()
+    {
+        return Products.Skip((CurrentPage - 1) * PageSize).Take(PageSize);
+    }
+
+    private void ChangePage(int page) => CurrentPage = page;
+    private void GoToPreviousPage() { if (CurrentPage > 1) CurrentPage--; }
+    private void GoToNextPage() { if (CurrentPage < TotalPages) CurrentPage++; }
+
+    /* Inicializacion de pagina */
+    protected override void OnInitialized()
+    {
+        // Data de prueba
+        Products.Add(new ProductDto { 
+            Name = "CHIVAS REGAL 12 AÑOS", 
+            Sku = "CHIV-12A", 
+            CurrentStock = 15, 
+            MinStock = 5,
+            ImageUrl = "" 
+        });
+        
+        Products.Add(new ProductDto { 
+            Name = "CATENA ZAPATA MALBEC", 
+            Sku = "CAT-MAL", 
+            CurrentStock = 8, 
+            MinStock = 3,
+            ImageUrl = "" 
+        });
+        
+        Products.Add(new ProductDto { 
+            Name = "CUATRO GALLOS PISCO QUEBRANTA", 
+            Sku = "PIS-QUE", 
+            CurrentStock = 20, 
+            MinStock = 6,
+            ImageUrl = "" 
+        });
+        
+        Products.Add(new ProductDto { 
+            Name = "FLOR DE CAÑA 7 AÑOS", 
+            Sku = "RON-7A", 
+            CurrentStock = 12, 
+            MinStock = 4,
+            ImageUrl = "" 
+        });
+    }
+}

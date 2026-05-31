@@ -1,0 +1,200 @@
+﻿@page "/AgregarProducto"
+@using System.ComponentModel.DataAnnotations
+
+<style>
+    .text-navy { color: #021947; }
+    .navy-bg { background-color: #021947; color: white; transition: background-color 0.2s; }
+    .navy-bg:hover { background-color: #010d26; color: white; }
+    
+    .btn-outline-custom { background-color: white; border: 1px solid #cbd5e1; color: #334155; font-weight: 500; transition: all 0.2s; }
+    .btn-outline-custom:hover { background-color: #f8f9fa; border-color: #94a3b8; }
+
+    .form-container { background: white; border-radius: 12px; border: 1px solid #f1f5f9; padding: 40px; max-width: 1100px; margin: 0 auto; }
+
+    .form-label-custom { font-weight: 600; color: #1e293b; font-size: 0.9rem; margin-bottom: 8px; }
+    .asterisk { color: #dc3545; margin-left: 2px; }
+    
+    .custom-input { border-radius: 8px; background-color: #ffffff; border: 1px solid #cbd5e1; font-size: 0.95rem; padding: 10px 14px; color: #334155; }
+    .custom-input:focus { box-shadow: 0 0 0 3px rgba(2, 25, 71, 0.1); border-color: #021947; outline: none; }
+    .custom-input::placeholder { color: #94a3b8; }
+    
+    .upload-box {
+        border: 2px dashed #cbd5e1;
+        border-radius: 12px;
+        background-color: #fafafa;
+        text-align: center;
+        padding: 40px 20px;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.2s;
+        height: 100%;
+        min-height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .upload-box:hover { border-color: #021947; background-color: #f1f5f9; }
+    
+    .file-input-hidden { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+    
+    .upload-icon-container {
+        width: 60px; height: 60px; background-color: #f1f5f9; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+    }
+    
+    .validation-text { color: #dc3545; font-size: 0.85rem; margin-top: 4px; display: block; font-weight: 500; }
+</style>
+
+<div class="container-fluid mt-5 mb-5">
+    
+    <div class="text-center mb-4">
+        <h2 class="fw-bold text-navy" style="letter-spacing: 0.5px;">Añadir Nuevo Producto</h2>
+    </div>
+
+    <div class="form-container shadow-sm">
+        
+        <EditForm Model="NewProduct" OnValidSubmit="GuardarProducto">
+            <DataAnnotationsValidator />
+
+            <div class="row gx-5">
+                
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <label class="form-label-custom d-block mb-3">Imagen del producto</label>
+                    
+                    <div class="upload-box">
+                        <InputFile OnChange="HandleFileSelected" class="file-input-hidden" accept="image/png, image/jpeg, image/webp" />
+                        
+                        <div class="upload-icon-container">
+                            <i class="bi bi-upload text-navy fs-4"></i>
+                        </div>
+                        <p class="mb-1 text-navy fw-bold">Arrastra la imagen aquí</p>
+                        <p class="text-muted small mb-4">o haz clic para seleccionar</p>
+                        
+                        <p class="text-muted mb-0" style="font-size: 0.8rem;">Formatos: JPG, PNG, WEBP</p>
+                        <p class="text-muted mb-0" style="font-size: 0.8rem;">Máx. 5MB</p>
+                        
+                        @if (!string.IsNullOrEmpty(SelectedFileName))
+                        {
+                            <div class="mt-3 text-success fw-medium" style="font-size: 0.85rem;">
+                                <i class="bi bi-check-circle me-1"></i> @SelectedFileName
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label-custom">
+                                SKU <span class="asterisk">*</span>
+                                <i class="bi bi-question-circle-fill text-muted ms-1" style="font-size: 0.85rem;" title="Código único del producto"></i>
+                            </label>
+                            <input type="text" class="form-control custom-input" placeholder="Ej: SKU-00123" @bind="NewProduct.Sku">
+                            <ValidationMessage For="@(() => NewProduct.Sku)" class="validation-text" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label-custom">Nombre del producto <span class="asterisk">*</span></label>
+                            <input type="text" class="form-control custom-input" placeholder="Ej: Ron Zacapa 23 Años 750ml" @bind="NewProduct.Nombre">
+                            <ValidationMessage For="@(() => NewProduct.Nombre)" class="validation-text" />
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label-custom">Marca <span class="asterisk">*</span></label>
+                            <input type="text" class="form-control custom-input" placeholder="Ej: Chivas Regal, Cartavio" @bind="NewProduct.Marca">
+                            <ValidationMessage For="@(() => NewProduct.Marca)" class="validation-text" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label-custom">Tipo <span class="asterisk">*</span></label>
+                            <input type="text" class="form-control custom-input" placeholder="Ej: Ron, Whisky, Vino Tinto" @bind="NewProduct.Tipo">
+                            <ValidationMessage For="@(() => NewProduct.Tipo)" class="validation-text" />
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label-custom">Formato</label>
+                            <input type="text" class="form-control custom-input" placeholder="Ej: 750ml, 1L, 700ml" @bind="NewProduct.Formato">
+                            <ValidationMessage For="@(() => NewProduct.Formato)" class="validation-text" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label-custom">Stock inicial <span class="asterisk">*</span></label>
+                            <input type="number" class="form-control custom-input" placeholder="Ej: 50" @bind="NewProduct.StockInicial" min="0">
+                            <ValidationMessage For="@(() => NewProduct.StockInicial)" class="validation-text" />
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label-custom">Descripción</label>
+                        <textarea class="form-control custom-input" 
+                                  rows="4" 
+                                  placeholder="Describe el producto..."
+                                  @bind="NewProduct.Descripcion"
+                                  @bind:event="oninput"
+                                  maxlength="500"></textarea>
+                        <div class="text-end text-muted mt-1" style="font-size: 0.8rem;">
+                            @(NewProduct.Descripcion?.Length ?? 0)/500
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-3 mt-4 pt-4" style="border-top: 1px solid #e2e8f0;">
+                <button type="button" class="btn btn-outline-custom px-4 py-2" style="border-radius: 8px;">
+                    Cancelar
+                </button>
+                <button type="submit" class="btn navy-bg px-4 py-2" style="border-radius: 8px; font-weight: 500;">
+                    Guardar producto
+                </button>
+            </div>
+
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    public class ProductoFormDto
+    {
+        [Required(ErrorMessage = "El SKU es obligatorio")]
+        public string Sku { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "El nombre es obligatorio")]
+        public string Nombre { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "La marca es obligatoria")]
+        public string Marca { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "El tipo es obligatorio")]
+        public string Tipo { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "El formato es obligatorio")]
+        public string Formato { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "El stock inicial es obligatorio")]
+        [Range(0, 10000, ErrorMessage = "El stock debe ser un número válido")]
+        public int? StockInicial { get; set; }
+
+        public string Descripcion { get; set; } = string.Empty;
+    }
+    private ProductoFormDto NewProduct { get; set; } = new();
+    private string SelectedFileName { get; set; } = string.Empty;
+
+    private void HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        if (file != null)
+        {
+            SelectedFileName = file.Name;
+        }
+    }
+
+    private void GuardarProducto()
+    {
+        /* Luego, se añadirá lógica para guardar el producto en la BD (transformar ProductoFormDto -> ProductoDTO y llamar al método guardarProducto) */
+        Console.WriteLine($"Guardando producto: {NewProduct.Nombre} - Marca: {NewProduct.Marca}");
+    }
+}

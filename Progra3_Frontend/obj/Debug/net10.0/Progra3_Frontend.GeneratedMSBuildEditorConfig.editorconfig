@@ -26,6 +26,26 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MSI/Desktop/progra3/Progra3_Frontend/Progra3_Frontend/Components/Pages/Admin/ActualizarProducto.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblxBY3R1YWxpemFyUHJvZHVjdG8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/progra3/Progra3_Frontend/Progra3_Frontend/Components/Pages/Admin/AgregarProducto.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblxBZ3JlZ2FyUHJvZHVjdG8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/progra3/Progra3_Frontend/Progra3_Frontend/Components/Pages/Admin/AgregarUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblxBZ3JlZ2FyVXN1YXJpby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/progra3/Progra3_Frontend/Progra3_Frontend/Components/Pages/Admin/ListaStockProductos.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblxMaXN0YVN0b2NrUHJvZHVjdG9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/progra3/Progra3_Frontend/Progra3_Frontend/Components/Pages/Admin/ListaUsuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblxMaXN0YVVzdWFyaW9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MSI/Desktop/progra3/Progra3_Frontend/Progra3_Frontend/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

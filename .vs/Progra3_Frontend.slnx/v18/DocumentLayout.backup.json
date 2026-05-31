@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3_frontend\\progra3_frontend\\components\\pages\\admin\\actualizarproducto.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\pages\\admin\\actualizarproducto.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3_frontend\\progra3_frontend\\components\\pages\\products\\products.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\pages\\products\\products.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3_frontend\\progra3_frontend\\components\\pages\\products\\productomodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\pages\\products\\productomodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3_frontend\\progra3_frontend\\components\\pages\\products\\productcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\pages\\products\\productcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3_frontend\\progra3_frontend\\components\\pages\\products\\products.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\pages\\products\\products.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3_frontend\\progra3_frontend\\components\\pages\\products\\productcard.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\pages\\products\\productcard.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductoModels.cs",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Pages\\products\\ProductoModels.cs",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Pages\\products\\ProductoModels.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Pages\\products\\ProductoModels.cs",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Pages\\products\\ProductoModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T22:43:44.597Z",
+              "DocumentIndex": 0,
+              "Title": "ActualizarProducto.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Pages\\Admin\\ActualizarProducto.razor",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Pages\\Admin\\ActualizarProducto.razor",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Pages\\Admin\\ActualizarProducto.razor",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Pages\\Admin\\ActualizarProducto.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-30T23:56:58.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Products.razor",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Pages\\products\\Products.razor",
               "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Pages\\products\\Products.razor",
               "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Pages\\products\\Products.razor",
               "RelativeToolTip": "Progra3_Frontend\\Components\\Pages\\products\\Products.razor",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAQwIYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAQwIEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-30T22:38:12.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductCard.razor",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Pages\\products\\ProductCard.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Pages\\products\\ProductCard.razor",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Pages\\products\\ProductCard.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Pages\\products\\ProductCard.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-30T22:40:51.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Products.razor.css",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Pages\\products\\Products.razor.css",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Pages\\products\\Products.razor.css",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Pages\\products\\Products.razor.css",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Pages\\products\\Products.razor.css",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAIQAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-05-30T22:48:21.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductCard.razor.css",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Pages\\products\\ProductCard.razor.css",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Pages\\products\\ProductCard.razor.css",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Pages\\products\\ProductCard.razor.css",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Pages\\products\\ProductCard.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-05-30T22:44:30.517Z",
+              "WhenOpened": "2026-05-30T23:41:52.142Z",
               "EditorCaption": ""
             }
           ]

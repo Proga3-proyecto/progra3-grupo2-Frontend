@@ -1,0 +1,224 @@
+﻿@page "/ListaUsuarios"
+
+<style>
+    .text-navy { color: #021947; }
+    .navy-bg { background-color: #021947; color: white; transition: background-color 0.2s; }
+    .navy-bg:hover { background-color: #010d26; color: white; }
+    
+    /* Botones de filtro inactivos */
+    .btn-filter-inactive { background-color: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; transition: all 0.2s; }
+    .btn-filter-inactive:hover { background-color: #e2e8f0; color: #1e293b; }
+
+    .table-container { background: white; border-radius: 8px; border: 1px solid #f1f5f9; padding: 24px; }
+    .search-input { border-radius: 8px; background-color: #ffffff; border: 1px solid #e2e8f0; font-size: 0.95rem; }
+    .search-input:focus { box-shadow: none; border-color: #021947; }
+    
+    .avatar-circle { width: 42px; height: 42px; background-color: #021947; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .badge-id { background-color: #f8f9fa; color: #64748b; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; border: 1px solid #e2e8f0; margin-top: 4px; display: inline-block;}
+    
+    /* Paginación Dinámica */
+    .custom-pagination .page-item.active .page-link { background-color: #021947; border-color: #021947; color: white; }
+    .custom-pagination .page-link { color: #475569; border: 1px solid #e2e8f0; margin: 0 2px; border-radius: 6px; background: white; }
+    .custom-pagination .page-link:disabled { background-color: #f8f9fa; color: #94a3b8; }
+    
+    .custom-table th { color: #64748b; font-weight: 500; font-size: 0.9rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 12px;}
+    .custom-table td { vertical-align: middle; padding: 16px 8px; border-bottom: 1px solid #f8f9fa; }
+</style>
+
+<div class="container-fluid mt-4" style="max-width: 1400px;">
+    
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-navy mb-0">Lista de usuarios</h2>
+        <button class="btn navy-bg px-4 py-2 d-flex align-items-center gap-2" style="border-radius: 6px; font-weight: 500;">
+            <i class="bi bi-plus-lg"></i> Nuevo usuario
+        </button>
+    </div>
+
+    <div class="table-container shadow-sm">
+        
+        <div class="mb-4">
+            <div class="position-relative">
+                <i class="bi bi-search position-absolute" style="top: 10px; left: 16px; color: #94a3b8;"></i>
+                <input type="text" class="form-control search-input ps-5 py-2" placeholder="Buscar...">
+            </div>
+        </div>
+
+        <div class="mb-4 d-flex gap-2">
+            <button class="btn btn-sm px-4 py-1.5 fw-medium @(SelectedFilter == "Todos" ? "navy-bg" : "btn-filter-inactive")" 
+                    style="border-radius: 6px;" 
+                    @onclick='() => FilterByRole("Todos")'>
+                Todos
+            </button>
+            <button class="btn btn-sm px-4 py-1.5 fw-medium @(SelectedFilter == "Administrador" ? "navy-bg" : "btn-filter-inactive")" 
+                    style="border-radius: 6px;" 
+                    @onclick='() => FilterByRole("Administrador")'>
+                Administradores
+            </button>
+            <button class="btn btn-sm px-4 py-1.5 fw-medium @(SelectedFilter == "Cliente" ? "navy-bg" : "btn-filter-inactive")" 
+                    style="border-radius: 6px;" 
+                    @onclick='() => FilterByRole("Cliente")'>
+                Clientes
+            </button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table custom-table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 35%;">Usuario</th>
+                        <th scope="col">Rol</th>
+                        <th scope="col">Fecha de registro</th>
+                        <th scope="col">Última actividad</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!GetPagedUsers().Any())
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center text-muted py-4">No se encontraron usuarios con este filtro.</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @foreach (var user in GetPagedUsers())
+                        {
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar-circle me-3">
+                                            <i class="bi bi-person"></i>
+                                        </div>
+                                        <div>
+                                            <div class="fw-bold text-dark" style="font-size: 0.95rem;">@user.Name</div>
+                                            <div class="text-muted" style="font-size: 0.85rem;">@user.Email</div>
+                                            <span class="badge-id">ID: @user.Id</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-dark font-medium">@user.Role</td>
+                                <td>
+                                    <div class="text-dark fw-medium" style="font-size: 0.9rem;">@user.RegistrationDate.ToString("dd/MM/yyyy")</div>
+                                    <div class="text-muted" style="font-size: 0.85rem;">@user.RegistrationDate.ToString("hh:mm tt")</div>
+                                </td>
+                                <td>
+                                    <div class="text-dark fw-medium" style="font-size: 0.9rem;">@user.LastActivityDateText</div>
+                                    <div class="text-muted" style="font-size: 0.85rem;">@user.LastActivityTimeText</div>
+                                </td>
+                                <td>
+                                    <span class="fw-bold @(user.IsActive ? "text-success" : "text-danger")" style="font-size: 0.9rem;">
+                                        @(user.IsActive ? "Activo" : "Inactivo")
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @if (TotalPages > 1)
+        {
+            <div class="d-flex justify-content-center mt-4 mb-2">
+                <nav>
+                    <ul class="pagination custom-pagination pagination-sm">
+                        <li class="page-item @(CurrentPage == 1 ? "disabled" : "")">
+                            <button class="page-link" @onclick="GoToPreviousPage" disabled="@(CurrentPage == 1)">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                        </li>
+
+                        @for (int i = 1; i <= TotalPages; i++)
+                        {
+                            var pageNumber = i;
+                            <li class="page-item @(CurrentPage == pageNumber ? "active" : "")">
+                                <button class="page-link" @onclick="() => ChangePage(pageNumber)">@pageNumber</button>
+                            </li>
+                        }
+
+                        <li class="page-item @(CurrentPage == TotalPages ? "disabled" : "")">
+                            <button class="page-link" @onclick="GoToNextPage" disabled="@(CurrentPage == TotalPages)">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        }
+
+    </div>
+</div>
+
+@code {
+    /* Clase DTO temporal, luego se cambiará por la clase del backend */
+    public class UserDto
+    {
+        public string Id { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Role { get; set; } = string.Empty;
+        public DateTime RegistrationDate { get; set; }
+        public string LastActivityDateText { get; set; } = string.Empty;
+        public string LastActivityTimeText { get; set; } = string.Empty;
+        public bool IsActive { get; set; }
+    }
+    private List<UserDto> Users { get; set; } = new();
+
+    // Estado del filtro seleccionado
+    private string SelectedFilter { get; set; } = "Todos";
+
+    // Variables de paginación
+    private int CurrentPage { get; set; } = 1;
+    private int PageSize { get; set; } = 8;
+
+    // Obtiene la lista filtrada por rol (sin paginar todavía)
+    private IEnumerable<UserDto> FilteredUsers => 
+        SelectedFilter == "Todos" ? Users : Users.Where(u => u.Role == SelectedFilter);
+
+    // Calcula el total de páginas basado estrictamente en la lista filtrada
+    private int TotalPages => (int)Math.Ceiling((double)FilteredUsers.Count() / PageSize);
+
+    // Corta el segmento de datos exacto para la página actual
+    private IEnumerable<UserDto> GetPagedUsers()
+    {
+        return FilteredUsers.Skip((CurrentPage - 1) * PageSize).Take(PageSize);
+    }
+
+    private void FilterByRole(string role)
+    {
+        SelectedFilter = role;
+        CurrentPage = 1; // Reiniciamos siempre a la primera página tras cambiar de filtro
+    }
+    private void ChangePage(int page) => CurrentPage = page;
+    private void GoToPreviousPage() { if (CurrentPage > 1) CurrentPage--; }
+    private void GoToNextPage() { if (CurrentPage < TotalPages) CurrentPage++; }
+
+    /* Inicializacion de pagina */
+    protected override void OnInitialized()
+    {
+        // Data de prueba
+        Users.Add(new UserDto { 
+            Id = "USR-000123", Name = "Carlos Mendoza S.", Email = "carlos@email.com", 
+            Role = "Administrador", RegistrationDate = new DateTime(2025, 5, 12, 10, 30, 0), 
+            LastActivityDateText = "12/05/2025", LastActivityTimeText = "02:45 PM", IsActive = true 
+        });
+        
+        Users.Add(new UserDto { 
+            Id = "USR-000124", Name = "Ana Maria Torres", Email = "ana.torres@email.com", 
+            Role = "Administrador", RegistrationDate = new DateTime(2025, 5, 12, 9, 15, 0), 
+            LastActivityDateText = "12/05/2025", LastActivityTimeText = "01:20 PM", IsActive = true 
+        });
+        
+        Users.Add(new UserDto { 
+            Id = "USR-000125", Name = "Juan Pérez Quispe", Email = "juan.perez@email.com", 
+            Role = "Cliente", RegistrationDate = new DateTime(2025, 5, 12, 8, 0, 0), 
+            LastActivityDateText = "12/05/2025", LastActivityTimeText = "11:10 AM", IsActive = true 
+        });
+        
+        Users.Add(new UserDto { 
+            Id = "USR-000126", Name = "Milagros Rivas C.", Email = "mrivas@email.com", 
+            Role = "Cliente", RegistrationDate = new DateTime(2025, 5, 12, 7, 45, 0), 
+            LastActivityDateText = "Ayer,", LastActivityTimeText = "06:30 PM", IsActive = false 
+        });
+    }
+}

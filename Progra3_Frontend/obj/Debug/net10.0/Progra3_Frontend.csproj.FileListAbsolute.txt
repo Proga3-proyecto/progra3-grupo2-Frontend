@@ -118,5 +118,5 @@ C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\s8sequh6s5-{0}-48jtqtpbsp-48jtqtpbsp.gz
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Pages\products\ProductCard.razor.rz.scp.css
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Pages\products\Products.razor.rz.scp.css
-C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\138ud5l1f6-{0}-pqzcj48abk-pqzcj48abk.gz
-C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\8c3gofyjw5-{0}-pqzcj48abk-pqzcj48abk.gz
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\138ud5l1f6-{0}-mdgz8h5fkt-mdgz8h5fkt.gz
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\8c3gofyjw5-{0}-mdgz8h5fkt-mdgz8h5fkt.gz
