@@ -157,6 +157,8 @@ C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\wwwroot\css\fonts
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\wwwroot\css\fonts\css\v5-font-face.css
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\wwwroot\css\fonts\css\v5-font-face.min.css
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\wwwroot\css\typography.css
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\wwwroot\css\utilities.css
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\wwwroot\css\variables.css
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -204,5 +206,3 @@ C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\wwwroot\lib\boots
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\Components\Layout\ReconnectModal.razor.js
 C:\Users\MSI\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\_framework\blazor.web.js
 C:\Users\MSI\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\_framework\blazor.server.js
-C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\wwwroot\css\utilities.css
-C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\wwwroot\css\variables.css

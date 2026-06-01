@@ -21,18 +21,18 @@ section {
 .title {
     font-size: 48px;
     font-weight: 800;
-    color: var(--primary);
+    color: var(--color-primary);
 }
 
 .sub-title {
-    color: var(--primary);
+    color: var(--color-primary);
     margin-top: 10px;
 }
 
 .hr {
     width: 50px;
     height: 4px;
-    background: var(--primary);
+    background: var(--color-primary);
     border-radius: 4px;
     margin: auto;
     margin-top: 10px;
@@ -73,10 +73,10 @@ section {
     gap: 5px;
 }
 
-.form-input label {
-    color: var(--primary);
-    font-weight: 600;
-}
+    .form-input label {
+        color: var(--color-primary);
+        font-weight: 600;
+    }
 
 .input-container {
     display: flex;
@@ -94,16 +94,16 @@ section {
         background: transparent;
     }
 
-.input-container i {
-    color: var(--primary);
-}
+    .input-container i {
+        color: var(--color-primary);
+    }
 
 .register-button {
     width: 250px;
     height: 50px;
     border: none;
     border-radius: 6px;
-    background: var(--primary);
+    background: var(--color-primary);
     color: white;
     font-size: 16px;
     font-weight: 600;

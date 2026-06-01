@@ -1,4 +1,6 @@
 ﻿@page "/login"
+@inject NavigationManager Navigation
+
 <div class="container">
     <section>
         <div class="form-header">
@@ -11,7 +13,7 @@
             </h3>
             <div class="hr" />
         </div>
-        <form>
+        <form @onsubmit="OnSumit">
 
             <div class="form-input">
                 <label for="email">Correo electrónico</label>
@@ -38,13 +40,14 @@
                     </div>
                 </div>
             </div>
-            <a class="link">¿Olvidaste tu contraseña?</a>
-
+            <a href="/forgot-password" class="link">
+                <u>¿Olvidaste tu contraseña?</u>
+            </a>
             <button type="submit">Ingresar</button>
         </form>
         <div>
             <span class="label">¿Eres nuevo?</span>
-            <a class="link">Crear un cuenta</a>
+            <a href="/register" class="link"><u>Crear un cuenta</u></a>
         </div>
     </section>
 </div>
@@ -55,5 +58,9 @@
     void changeVisibility()
     {
         hidePassword = !hidePassword;
+    }
+    void OnSumit()
+    {
+        Navigation.NavigateTo("/user");
     }
 }

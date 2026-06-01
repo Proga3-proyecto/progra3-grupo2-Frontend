@@ -3,24 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3_frontend\\progra3_frontend\\components\\features\\auth\\resetpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\auth\\resetpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3_frontend\\progra3_frontend\\components\\features\\auth\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\auth\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3_frontend\\progra3_frontend\\components\\features\\auth\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\auth\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3_frontend\\progra3_frontend\\components\\features\\auth\\confirmationemail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\auth\\confirmationemail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3_frontend\\progra3_frontend\\components\\features\\auth\\forgotpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\auth\\forgotpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI\\Downloads\\progra3-grupo2-Frontend-main CambiosAuth y Cabecera\\progra3-grupo2-Frontend-main CambiosAuth y Cabecera\\Progra3_Frontend\\Components\\Pages\\auth\\Login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +17,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 226,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ResetPassword.razor",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Features\\auth\\ResetPassword.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\auth\\ResetPassword.razor",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Features\\auth\\ResetPassword.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\auth\\ResetPassword.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-01T20:43:55.604Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Register.razor",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Features\\auth\\Register.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\auth\\Register.razor",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Features\\auth\\Register.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\auth\\Register.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-01T20:43:54.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Login.razor",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Features\\auth\\Login.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\auth\\Login.razor",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Features\\auth\\Login.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\auth\\Login.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\MSI\\Downloads\\progra3-grupo2-Frontend-main CambiosAuth y Cabecera\\progra3-grupo2-Frontend-main CambiosAuth y Cabecera\\Progra3_Frontend\\Components\\Pages\\auth\\Login.razor",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\progra3-grupo2-Frontend-main CambiosAuth y Cabecera\\progra3-grupo2-Frontend-main CambiosAuth y Cabecera\\Progra3_Frontend\\Components\\Pages\\auth\\Login.razor",
+              "ToolTip": "C:\\Users\\MSI\\Downloads\\progra3-grupo2-Frontend-main CambiosAuth y Cabecera\\progra3-grupo2-Frontend-main CambiosAuth y Cabecera\\Progra3_Frontend\\Components\\Pages\\auth\\Login.razor",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\progra3-grupo2-Frontend-main CambiosAuth y Cabecera\\progra3-grupo2-Frontend-main CambiosAuth y Cabecera\\Progra3_Frontend\\Components\\Pages\\auth\\Login.razor",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-01T20:43:53.367Z",
+              "WhenOpened": "2026-06-01T20:55:13.722Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ForgotPassword.razor",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Features\\auth\\ForgotPassword.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\auth\\ForgotPassword.razor",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Features\\auth\\ForgotPassword.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\auth\\ForgotPassword.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Features\\Auth\\Login.razor",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\Auth\\Login.razor",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Features\\Auth\\Login.razor",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\Auth\\Login.razor",
+              "ViewState": "AgIAAC0AAAAAAAAAAAArwD0AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-01T20:43:51.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ConfirmationEmail.razor",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Features\\auth\\ConfirmationEmail.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\auth\\ConfirmationEmail.razor",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Components\\Features\\auth\\ConfirmationEmail.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\auth\\ConfirmationEmail.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-01T20:43:44.521Z",
+              "WhenOpened": "2026-06-01T20:54:23.212Z",
               "EditorCaption": ""
             }
           ]

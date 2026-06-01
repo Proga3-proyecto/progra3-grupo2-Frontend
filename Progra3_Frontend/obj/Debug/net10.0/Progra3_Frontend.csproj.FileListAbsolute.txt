@@ -106,10 +106,6 @@ C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\Progra3_Frontend.pdb
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\Progra3_Frontend.genruntimeconfig.cache
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\ref\Progra3_Frontend.dll
-C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\shared\MainLaout\Contact.razor.rz.scp.css
-C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\shared\MainLaout\Search.razor.rz.scp.css
-C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Shared\MainLaout\Nav.razor.rz.scp.css
-C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Shared\MainLaout\UserControls.razor.rz.scp.css
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Shared\ui\Button.razor.rz.scp.css
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Shared\ui\IndicatorBar.razor.rz.scp.css
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Shared\ui\Input.razor.rz.scp.css
@@ -133,5 +129,13 @@ C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Layout\AdminLayout.razor.rz.scp.css
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\nm44rhn40k-{0}-w95eiai980-w95eiai980.gz
 C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\taikbzedph-{0}-a0xp0wfqth-a0xp0wfqth.gz
-C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\138ud5l1f6-{0}-hw6ghihp9d-hw6ghihp9d.gz
-C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\8c3gofyjw5-{0}-hw6ghihp9d-hw6ghihp9d.gz
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\Auth\ConfirmationEmail.razor.rz.scp.css
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\Auth\ForgotPassword.razor.rz.scp.css
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\Auth\Register.razor.rz.scp.css
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\Auth\ResetPassword.razor.rz.scp.css
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Shared\MainLayout\Contact.razor.rz.scp.css
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Shared\MainLayout\Nav.razor.rz.scp.css
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Shared\MainLayout\Search.razor.rz.scp.css
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Shared\MainLayout\UserControls.razor.rz.scp.css
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\138ud5l1f6-{0}-4zsbvrfmgr-4zsbvrfmgr.gz
+C:\Users\MSI\Desktop\progra3\Progra3_Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\8c3gofyjw5-{0}-4zsbvrfmgr-4zsbvrfmgr.gz

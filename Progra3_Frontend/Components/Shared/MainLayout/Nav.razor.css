@@ -4,7 +4,7 @@
     color: white;
     text-transform: uppercase;
     padding: 10px 10px;
-    background: var(--primary);
+    background: var(--color-primary);
     display: flex;
     flex-wrap: wrap;
     align-content: start;
