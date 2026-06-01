@@ -1,0 +1,25 @@
+.contact[b-5upjkb2wec] {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100vw;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 14px;
+    stroke-width: 2;
+    background: white;
+}
+
+.item[b-5upjkb2wec] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.icon[b-5upjkb2wec] {
+    margin-top: 2px;
+    font-size: 16px;
+}

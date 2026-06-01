@@ -1,0 +1,35 @@
+.controls[b-8kuf1mwamb] {
+    display: flex;
+    gap: 32px;
+}
+
+.shopping-chart-container[b-8kuf1mwamb] {
+    position: relative;
+}
+
+.shopping-chart[b-8kuf1mwamb] {
+    color: white;
+    font-size: 36px;
+    position: relative;
+}
+
+.user-icon[b-8kuf1mwamb] {
+    color: white;
+    font-size: 36px;
+}
+
+
+.shopping-chart-value[b-8kuf1mwamb] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    top: 0px;
+    right: -10px;
+    font-size: 20px;
+    font-weight: 600;
+}

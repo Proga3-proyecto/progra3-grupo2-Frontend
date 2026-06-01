@@ -1,0 +1,33 @@
+.generic-btn[b-t4qe4vwk9h] {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .generic-btn:hover[b-t4qe4vwk9h] {
+        opacity: 0.9;
+    }
+
+    .generic-btn:disabled[b-t4qe4vwk9h] {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+/* Variantes */
+.primary[b-t4qe4vwk9h] {
+    background-color: #0b1f5c;
+    color: white;
+}
+
+.secondary[b-t4qe4vwk9h] {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.danger[b-t4qe4vwk9h] {
+    background-color: #dc3545;
+    color: white;
+}

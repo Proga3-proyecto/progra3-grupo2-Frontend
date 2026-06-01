@@ -1,0 +1,33 @@
+﻿.title {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.title-2 {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.sub-title {
+    color: var(--color-primary);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.label {
+    color: var(--color-primary);
+    font-weight:600;
+    font-size:14px;
+}
+
+.form-input{
+    color: var(--color-text-muted);
+    font-weight:400;
+    font-size: 15px;
+}

@@ -1,0 +1,26 @@
+.container[b-c3vf3z5z4k] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 60%;
+    height: 48px;
+    border-radius: 30px;
+    position: relative;
+    padding: 0 30px 0 30px;
+    background: white;
+    overflow: hidden;
+
+    i {
+        font-size: 21px;
+    }
+}
+
+
+input[b-c3vf3z5z4k] {
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}

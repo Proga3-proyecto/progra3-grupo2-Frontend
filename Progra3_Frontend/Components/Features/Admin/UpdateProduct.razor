@@ -1,0 +1,131 @@
+﻿@page "/admin/update-product"
+@layout AdminLayout
+@using System.ComponentModel.DataAnnotations
+
+<div class="container-fluid mt-5 mb-5">
+    
+    <div class="text-center mb-4">
+        <h2 class="fw-bold text-navy" style="letter-spacing: 0.5px;">Actualizar Stock de Producto</h2>
+        <p class="text-muted">Modifica la cantidad disponible en el inventario actual.</p>
+    </div>
+
+    <div class="form-container shadow-sm">
+        
+        <EditForm Model="ProductToUpdate" OnValidSubmit="ActualizarStock">
+            <DataAnnotationsValidator />
+
+            <div class="row gx-5">
+                
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <label class="form-label-custom d-block mb-3">Imagen del producto</label>
+                    
+                    <div class="image-display-box shadow-sm">
+                        <img src="https://via.placeholder.com/150x200?text=Botella" alt="@ProductToUpdate.Nombre" class="product-img-preview" />
+                        <span class="badge bg-secondary">Imagen Actual</span>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label-custom text-muted">SKU</label>
+                            <input type="text" class="form-control custom-input input-readonly" @bind="ProductToUpdate.Sku" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label-custom text-muted">Nombre del producto</label>
+                            <input type="text" class="form-control custom-input input-readonly" @bind="ProductToUpdate.Nombre" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label-custom text-muted">Marca</label>
+                            <input type="text" class="form-control custom-input input-readonly" @bind="ProductToUpdate.Marca" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label-custom text-muted">Tipo</label>
+                            <input type="text" class="form-control custom-input input-readonly" @bind="ProductToUpdate.Tipo" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 align-items-end">
+                        <div class="col-md-6">
+                            <label class="form-label-custom text-muted">Formato</label>
+                            <input type="text" class="form-control custom-input input-readonly" @bind="ProductToUpdate.Formato" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label-custom" style="color: #021947; font-size: 1rem;">
+                                Stock actual <i class="bi bi-pencil-square ms-1"></i>
+                            </label>
+                            <input type="number" class="form-control custom-input input-editable" @bind="ProductToUpdate.StockActual" min="0">
+                            <ValidationMessage For="@(() => ProductToUpdate.StockActual)" class="validation-text" />
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label-custom text-muted">Descripción</label>
+                        <textarea class="form-control custom-input input-readonly" 
+                                  rows="3" 
+                                  @bind="ProductToUpdate.Descripcion"
+                                  readonly></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-3 mt-4 pt-4" style="border-top: 1px solid #e2e8f0;">
+                <button type="button" class="btn btn-outline-custom px-4 py-2" style="border-radius: 8px;">
+                    Cancelar
+                </button>
+                <button type="submit" class="btn navy-bg px-4 py-2" style="border-radius: 8px; font-weight: 500;">
+                    Guardar cambios
+                </button>
+            </div>
+
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    public class ProductoUpdateDto
+    {
+        public string Sku { get; set; } = string.Empty;
+        public string Nombre { get; set; } = string.Empty;
+        public string Marca { get; set; } = string.Empty;
+        public string Tipo { get; set; } = string.Empty;
+        public string Formato { get; set; } = string.Empty;
+        public string Descripcion { get; set; } = string.Empty;
+        public string ImageUrl { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "El stock no puede estar vacío")]
+        [Range(0, 10000, ErrorMessage = "Ingresa una cantidad válida")]
+        public int? StockActual { get; set; }
+    }
+    private ProductoUpdateDto ProductToUpdate { get; set; } = new();
+
+    protected override void OnInitialized()
+    {
+        // Simulamos que recibimos los datos de la tabla de Control de Stock
+        // Cuando se conecten las páginas, esto se recibirá de la página de Control de Stock
+        ProductToUpdate = new ProductoUpdateDto
+        {
+            Sku = "CHIV-12A",
+            Nombre = "Chivas Regal 12 Años",
+            Marca = "Chivas Regal",
+            Tipo = "Whisky",
+            Formato = "750ml",
+            StockActual = 15,
+            Descripcion = "Whisky escocés de mezcla, añejado por un mínimo de 12 años en barricas de roble.",
+            ImageUrl = ""
+        };
+    }
+
+    private void ActualizarStock()
+    {
+        /* Luego, se añadirá lógica para actualizar el producto en la BD (transformar ProductoUpdateDto -> ProductoDTO y llamar al método actualizarProducto) */
+        Console.WriteLine($"Stock actualizado a: {ProductToUpdate.StockActual} para el SKU: {ProductToUpdate.Sku}");
+    }
+
+
+}

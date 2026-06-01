@@ -1,0 +1,47 @@
+﻿.nav {
+    width: 100vw;
+    
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    background: var(--primary);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: center;
+    gap: 10px 50px;
+    font-size: 15px;
+}
+
+
+::deep a:hover,
+    ::deep a.active {
+        border-bottom: 2px solid white;
+    }
+
+    ::deep a:link,
+    ::deep a:visited,
+    ::deep a:hover,
+    ::deep a:active {
+        color: white;
+        text-decoration: none;
+    }
+
+
+
+.layout {
+    min-height: 100vh;
+    max-width: 100vw;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow-x: hidden;
+}
+
+.header-container {
+    z-index: 1000;
+    position: fixed;
+}
+
+.body-container {
+    margin-top: 190px;
+}

@@ -1,0 +1,170 @@
+/* --- Contenedor de la Página --- */
+.password-page-container[b-wjoq3luf0z] {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* --- Encabezado --- */
+.password-header[b-wjoq3luf0z] {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo[b-wjoq3luf0z] {
+    text-align: center;
+    color: #0b1f5c;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.subtitulo[b-wjoq3luf0z] {
+    text-align: center;
+    color: gray;
+    margin-bottom: 40px;
+}
+
+/* --- Tarjetas (Cards) Generales --- */
+.password-form-card[b-wjoq3luf0z] {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 2rem;
+}
+
+/* --- Grupos de Formulario e Inputs --- */
+.form-group-container[b-wjoq3luf0z] {
+    margin-bottom: 1.5rem;
+}
+
+.form-group-container-compact[b-wjoq3luf0z] {
+    margin-bottom: 0.5rem;
+}
+
+.form-input-label[b-wjoq3luf0z] {
+    font-weight: 600;
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+.custom-input-group[b-wjoq3luf0z] {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+    .custom-input-group:focus-within[b-wjoq3luf0z] {
+        border-color: #1a2b4c;
+    }
+
+.custom-form-control[b-wjoq3luf0z] {
+    flex: 1;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    outline: none;
+    color: #495057;
+}
+
+.input-icon-prefix[b-wjoq3luf0z] {
+    padding-left: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon-suffix[b-wjoq3luf0z] {
+    background: none;
+    border: none;
+    padding-right: 0.75rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.field-icon-img[b-wjoq3luf0z] {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+
+/* --- Panel de Requisitos (Checklist) --- */
+.requirements-box[b-wjoq3luf0z] {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.requirements-title[b-wjoq3luf0z] {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.info-icon-img[b-wjoq3luf0z] {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+}
+
+.requirement-item[b-wjoq3luf0z] {
+    font-size: 0.8rem;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+}
+
+.check-icon-img[b-wjoq3luf0z] {
+    width: 14px;
+    height: 14px;
+    margin-right: 0.4rem;
+}
+
+/* --- Botón de Acción Principal --- */
+.submit-container[b-wjoq3luf0z] {
+    text-align: center;
+}
+
+.btn-submit-password[b-wjoq3luf0z] {
+    width: 100%;
+    padding: 0.65rem;
+    background-color: #1a2b4c;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .btn-submit-password:hover[b-wjoq3luf0z] {
+        background-color: #111c33;
+    }
+
+/* --- Footer Informativo Seguro --- */
+.security-footer-text[b-wjoq3luf0z] {
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-shield-icon-img[b-wjoq3luf0z] {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.3rem;
+}

@@ -1,55 +1,23 @@
-﻿@inherits LayoutComponentBase
+﻿@using Progra3_Frontend.Components.Shared.MainLaout
+@inherits LayoutComponentBase
 
-<div class="layout">
-    <div class="header-container">
-        <div class="header-contact">
-            <div class="contact-item">
-                <i class="bi bi-envelope contact-icon"></i>
-                <span>CONSULTASCLIENTES@LICORERIA.ALLASI.COM</span>
-            </div>
-            <span>|</span>
-            <div class="contact-item">
-                <i class="bi bi-telephone contact-icon "></i>
-                <span>(01) 123-4567</span>
-            </div>
-            <span>|</span>
-            <div class="contact-item">
-                <i class="bi bi-geo-alt contact-icon"></i>
-                <span>AV.UNIVERSITARIA 1801, SAN MIGUEL, LIMA</span>
-            </div>
-        </div>
+<Contact />
 
-        <div class="header">
+<header class="header">
+    <div class="container">
+        <a href="/">
             <img src="./assets/logo.png" class="logo" />
-            <div class="search-container">
-                <i class="bi bi-search"></i>
-                <input class="search" placeholder="Buscar productos, recetas, marcas..." />
-            </div>
-            <div class="controls">
-                <i class="bi bi-person-circle user-icon"></i>
-                <div class="shopping-chart-container">
-                    <i class="bi bi-cart shopping-chart"></i>
-                    <di class="shopping-chart-value">0</di>
-                </div>
-            </div>
-        </div>
-
-        <nav class="nav">
-            <NavLink href="/" Match="NavLinkMatch.All">Inicio</NavLink>
-            <NavLink href="/categoria/ron">RON</NavLink>
-            <NavLink href="/categoria/vodka">VODKA</NavLink>
-            <NavLink href="/categoria/whisky">WHISKY</NavLink>
-            <NavLink href="/categoria/gin">GIN</NavLink>
-            <NavLink href="/categoria/pisco">PISCO</NavLink>
-            <NavLink href="/categoria/vino">VINO</NavLink>
-            <NavLink href="/categoria/licor">LICORES</NavLink>
-    
-            <a href="javascript:void(0)">RECETAS</a>
-            <a href="javascript:void(0)">PACKS</a>
-            <a href="javascript:void(0)">OFERTAS</a>
-        </nav>
+        </a>
+        <Search />
+        <UserControls />
     </div>
-    <section class="body-container">
-        @Body;
-    </section>
+
+</header>
+
+<div class="nav-container">
+    <Nav />
 </div>
+
+<section class="body-container">
+    @Body
+</section>

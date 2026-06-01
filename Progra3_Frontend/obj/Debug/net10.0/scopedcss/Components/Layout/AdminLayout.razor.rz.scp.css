@@ -1,0 +1,24 @@
+.admin-container[b-6ysi9zm4tx] {
+    width:100vw;
+    display: flex;
+    padding: 40px;
+    height:100%;
+    overflow:hidden;
+   
+}
+.sidebar[b-6ysi9zm4tx] {
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    height: fit-content;
+}
+.admin-content[b-6ysi9zm4tx] {
+    margin-left: 220px;
+    flex: 1;
+    background-color: white;
+    padding: 0 200px;
+    border-radius: 10px;
+    padding-top:20px;
+    overflow-y:auto;
+}

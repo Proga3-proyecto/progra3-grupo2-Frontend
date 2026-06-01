@@ -1,0 +1,76 @@
+.volver[b-81wvcmdvgm] {
+    margin-bottom: 20px;
+}
+
+    .volver a[b-81wvcmdvgm] {
+        text-decoration: none;
+        color: #0b5ed7;
+        font-weight: 500;
+    }
+
+.pedido-card[b-81wvcmdvgm] {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.pedido-header h2[b-81wvcmdvgm] {
+    margin-bottom: 5px;
+    color: #0b1f5c;
+}
+
+.fecha[b-81wvcmdvgm] {
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.estado[b-81wvcmdvgm] {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pedido-info[b-81wvcmdvgm] {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+    .pedido-info label[b-81wvcmdvgm] {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+        color: gray;
+    }
+
+.categoria[b-81wvcmdvgm] {
+    color: gray;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.total-box[b-81wvcmdvgm] {
+    width: 350px;
+    margin-left: auto;
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.fila-total[b-81wvcmdvgm] {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.final[b-81wvcmdvgm] {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0b1f5c;
+    margin-top: 20px;
+}

@@ -1,0 +1,25 @@
+.user-container[b-e6sw02f2gg] {
+    width:100vw;
+    display: flex;
+    padding: 40px;
+    height:100%;
+    overflow:hidden;
+   
+}
+.sidebar[b-e6sw02f2gg] {
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    height: fit-content;
+}
+.contenido-usuario[b-e6sw02f2gg] {
+    max-width: calc(100vw - 220px);
+    margin-left: 220px;
+    flex: 1;
+    background-color: white;
+    padding: 0 200px;
+    border-radius: 10px;
+    padding-top:20px;
+    overflow-y:auto;
+}

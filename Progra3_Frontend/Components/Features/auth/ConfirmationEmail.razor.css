@@ -1,0 +1,125 @@
+﻿.container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    max-width: 550px;
+}
+
+.form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.success-icon-container {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--primary), white 85%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-icon {
+    font-size: 60px;
+    color: var(--primary);
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--primary);
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 20px;
+    color: var(--primary);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.hr {
+    width: 50px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--primary);
+}
+
+.message-container {
+    text-align: center;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    line-height: 1.6;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.button-link {
+    width: 100%;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+    .button-link:hover {
+        opacity: 0.9;
+    }
+
+.link {
+    text-align: center;
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: color-mix(in srgb, var(--primary), white 20%);
+}
+
+@media (max-width: 600px) {
+
+    section {
+        width: 90%;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .sub-title {
+        font-size: 18px;
+    }
+
+    .success-icon {
+        font-size: 50px;
+    }
+
+    .success-icon-container {
+        width: 90px;
+        height: 90px;
+    }
+}

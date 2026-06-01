@@ -1,0 +1,35 @@
+﻿.controls {
+    display: flex;
+    gap: 32px;
+}
+
+.shopping-chart-container {
+    position: relative;
+}
+
+.shopping-chart {
+    color: white;
+    font-size: 36px;
+    position: relative;
+}
+
+.user-icon {
+    color: white;
+    font-size: 36px;
+}
+
+
+.shopping-chart-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    top: 0px;
+    right: -10px;
+    font-size: 20px;
+    font-weight: 600;
+}

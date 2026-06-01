@@ -1,0 +1,24 @@
+.contact[b-mhanhin8xg] {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 14px;
+    stroke-width: 2;
+    background: white;
+}
+
+.item[b-mhanhin8xg] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.icon[b-mhanhin8xg] {
+    margin-top: 2px;
+    font-size: 16px;
+}

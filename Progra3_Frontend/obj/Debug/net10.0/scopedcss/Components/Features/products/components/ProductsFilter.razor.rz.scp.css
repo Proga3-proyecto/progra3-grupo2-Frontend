@@ -1,0 +1,75 @@
+.filters-card[b-ewupr7nfa0] {
+    width: 260px;
+    min-width: 260px;
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    color: var(--color-primary);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    /* NUEVO: Tomar todo el alto de la sección y permitir scroll interno solo si hay muchos filtros */
+    height: 95%;
+    overflow-y: auto;
+}
+
+    /* Scrollbar estilizado para los filtros */
+    .filters-card[b-ewupr7nfa0]::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .filters-card[b-ewupr7nfa0]::-webkit-scrollbar-thumb {
+        background: #d8dbe8;
+        border-radius: 4px;
+    }
+
+.filter-title[b-ewupr7nfa0] {
+    display: flex;
+    justify-content: space-between; /* Empuja el texto a la izquierda y el ícono a la derecha */
+    align-items: center;
+    cursor: pointer; /* Cambia el cursor a una 'mano' indicando que es clickeable */
+    user-select: none; /* Evita que el texto se sombree de azul al hacer clics rápidos */
+    padding: 8px 0; /* Un poco de espacio para facilitar el clic en móviles */
+    font-weight: 600; /* Opcional: para destacar el título */
+}
+
+    /* Transición suave para el ícono al rotar (opcional) */
+    .filter-title i[b-ewupr7nfa0] {
+        transition: transform 0.2s ease-in-out;
+    }
+
+.filters-header[b-ewupr7nfa0]{
+    display:flex;
+    justify-content:space-between;
+}
+.price-range-inputs[b-ewupr7nfa0] {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+    .price-range-inputs input[b-ewupr7nfa0] {
+        width: 100%;
+        height: 38px;
+        border: 1px solid #d8dbe8;
+        border-radius: 8px;
+        padding: 0 10px;
+        color: var(--color-primary);
+        outline: none;
+        box-sizing: border-box;
+    }
+
+.clear-button[b-ewupr7nfa0] {
+    width: 100%;
+    height: 46px;
+    margin-top: 24px;
+    border: none;
+    border-radius: 8px;
+    background: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}

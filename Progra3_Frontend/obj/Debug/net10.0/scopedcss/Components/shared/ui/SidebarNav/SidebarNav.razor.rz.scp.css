@@ -1,0 +1,35 @@
+
+
+[b-mvpiea8qwc] .sidebar-item {
+    display: flex; /* Cambiado a flex para alinear icono y texto horizontalmente */
+    align-items: center; /* Centra verticalmente la imagen con el texto */
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+    [b-mvpiea8qwc] .sidebar-item:hover {
+        background-color: #f3f3f3;
+    }
+
+/* Estilo específico para las 4 imágenes de los botones */
+.sidebar-icon-img[b-mvpiea8qwc] {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.75rem; /* Espaciado entre la imagen y el texto */
+    object-fit: contain;
+}
+
+.sidebar-icon-bi[b-mvpiea8qwc] {
+    font-size: 18px; /* Tamaño del icono */
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+[b-mvpiea8qwc] .cerrar {
+    color: red;
+}

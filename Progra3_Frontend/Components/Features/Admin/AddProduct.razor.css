@@ -1,0 +1,118 @@
+﻿.text-navy {
+    color: #021947;
+}
+
+.navy-bg {
+    background-color: #021947;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+    .navy-bg:hover {
+        background-color: #010d26;
+        color: white;
+    }
+
+.btn-outline-custom {
+    background-color: white;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+    .btn-outline-custom:hover {
+        background-color: #f8f9fa;
+        border-color: #94a3b8;
+    }
+
+.form-container {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.form-label-custom {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.asterisk {
+    color: #dc3545;
+    margin-left: 2px;
+}
+
+.custom-input {
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    font-size: 0.95rem;
+    padding: 10px 14px;
+    color: #334155;
+}
+
+    .custom-input:focus {
+        box-shadow: 0 0 0 3px rgba(2, 25, 71, 0.1);
+        border-color: #021947;
+        outline: none;
+    }
+
+    .custom-input::placeholder {
+        color: #94a3b8;
+    }
+
+.upload-box {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    background-color: #fafafa;
+    text-align: center;
+    padding: 40px 20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+    height: 100%;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .upload-box:hover {
+        border-color: #021947;
+        background-color: #f1f5f9;
+    }
+
+.file-input-hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-icon-container {
+    width: 60px;
+    height: 60px;
+    background-color: #f1f5f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.validation-text {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+    font-weight: 500;
+}

@@ -1,0 +1,26 @@
+.security-indicator-container[b-knus6o9i5u] {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.security-text[b-knus6o9i5u] {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 0.75rem;
+    min-width: 110px;
+}
+
+.security-progress-bg[b-knus6o9i5u] {
+    flex-grow: 1;
+    height: 4px;
+    background-color: #e9ecef;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.security-progress-bar[b-knus6o9i5u] {
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s ease, background-color 0.4s ease;
+}

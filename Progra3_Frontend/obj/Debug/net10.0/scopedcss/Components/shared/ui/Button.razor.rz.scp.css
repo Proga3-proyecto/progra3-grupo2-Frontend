@@ -1,0 +1,33 @@
+.generic-btn[b-rfy46jqmb1] {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .generic-btn:hover[b-rfy46jqmb1] {
+        opacity: 0.9;
+    }
+
+    .generic-btn:disabled[b-rfy46jqmb1] {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+/* Variantes */
+.primary[b-rfy46jqmb1] {
+    background-color: #0b1f5c;
+    color: white;
+}
+
+.secondary[b-rfy46jqmb1] {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.danger[b-rfy46jqmb1] {
+    background-color: #dc3545;
+    color: white;
+}

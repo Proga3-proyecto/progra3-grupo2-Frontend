@@ -1,0 +1,102 @@
+.text-navy[b-jpb16fouw5] {
+    color: #021947;
+}
+
+.navy-bg[b-jpb16fouw5] {
+    background-color: #021947;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+    .navy-bg:hover[b-jpb16fouw5] {
+        background-color: #010d26;
+        color: white;
+    }
+
+/* Botones de filtro inactivos */
+.btn-filter-inactive[b-jpb16fouw5] {
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s;
+}
+
+    .btn-filter-inactive:hover[b-jpb16fouw5] {
+        background-color: #e2e8f0;
+        color: #1e293b;
+    }
+
+.table-container[b-jpb16fouw5] {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
+    padding: 24px;
+}
+
+.search-input[b-jpb16fouw5] {
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+}
+
+    .search-input:focus[b-jpb16fouw5] {
+        box-shadow: none;
+        border-color: #021947;
+    }
+
+.avatar-circle[b-jpb16fouw5] {
+    width: 42px;
+    height: 42px;
+    background-color: #021947;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-id[b-jpb16fouw5] {
+    background-color: #f8f9fa;
+    color: #64748b;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    border: 1px solid #e2e8f0;
+    margin-top: 4px;
+    display: inline-block;
+}
+
+/* Paginación Dinámica */
+.custom-pagination .page-item.active .page-link[b-jpb16fouw5] {
+    background-color: #021947;
+    border-color: #021947;
+    color: white;
+}
+
+.custom-pagination .page-link[b-jpb16fouw5] {
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    margin: 0 2px;
+    border-radius: 6px;
+    background: white;
+}
+
+    .custom-pagination .page-link:disabled[b-jpb16fouw5] {
+        background-color: #f8f9fa;
+        color: #94a3b8;
+    }
+
+.custom-table th[b-jpb16fouw5] {
+    color: #64748b;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 12px;
+}
+
+.custom-table td[b-jpb16fouw5] {
+    vertical-align: middle;
+    padding: 16px 8px;
+    border-bottom: 1px solid #f8f9fa;
+}
