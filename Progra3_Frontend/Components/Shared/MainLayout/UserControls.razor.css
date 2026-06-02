@@ -9,13 +9,13 @@
 
 .shopping-chart {
     color: white;
-    font-size: 36px;
+    font-size: 28px;
     position: relative;
 }
 
 .user-icon {
     color: white;
-    font-size: 36px;
+    font-size: 28px;
 }
 
 
@@ -25,11 +25,11 @@
     align-items: center;
     position: absolute;
     background: white;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     border-radius: 100%;
     top: 0px;
     right: -10px;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 600;
 }

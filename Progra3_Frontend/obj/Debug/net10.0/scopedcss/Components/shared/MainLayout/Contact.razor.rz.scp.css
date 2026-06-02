@@ -3,10 +3,10 @@
     gap: 20px;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 32px;
     color: var(--color-primary);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     stroke-width: 2;
     background: white;
 }
@@ -20,5 +20,5 @@
 
 .icon[b-3ojy9ny2kv] {
     margin-top: 2px;
-    font-size: 16px;
+    font-size: 14px;
 }

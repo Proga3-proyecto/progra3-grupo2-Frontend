@@ -1,30 +1,19 @@
-﻿@page "/"
+﻿
+@page "/"
 @page "/category/{CategoriaRoute}"
 @using Progra3_Frontend.Components.Features.Products.components
 
-
 <div class="products-banner">
-
     <img src="@BannerImage" class="products-banner-img" />
-
     <div class="products-banner-content">
-
-        <h1 class="products-title">
-            @Titulo
-        </h1>
-
+        <h1 class="products-title">@Titulo</h1>
         <div class="products-divider">
             <span></span>
             <i class="fa-light fa-martini-glass"></i>
             <span></span>
         </div>
-
-        <p class="products-description">
-            @Descripcion
-        </p>
-
+        <p class="products-description">@Descripcion</p>
     </div>
-
 </div>
 
 <section class="products-section">
@@ -34,24 +23,39 @@
     <main class="products-area">
 
         <div class="products-top">
-            <p>@ProductosFiltrados.Count producto(s)</p>
+            <p>Mostrando @ProductosPaginados.Count de @ProductosFiltrados.Count producto(s)</p>
         </div>
 
         <div class="products-grid">
-
-            @foreach (var producto in ProductosFiltrados)
+            @* Iteramos sobre ProductosPaginados en lugar de ProductosFiltrados *@
+            @foreach (var producto in ProductosPaginados)
             {
                 <ProductCard Producto="producto" />
             }
-
         </div>
 
-    </main>
+        @* Controles de paginación *@
+        @if (TotalPages > 1)
+        {
+            <div class="pagination-container">
+                <button class="btn-page" disabled="@(currentPage == 1)" @onclick="PaginaAnterior">Anterior</button>
 
+                @for (int i = 1; i <= TotalPages; i++)
+                {
+                    var numeroPagina = i;
+                    <button class="btn-page @(currentPage == numeroPagina ? "active" : "")" @onclick="() => IrAPagina(numeroPagina)">
+                        @numeroPagina
+                    </button>
+                }
+
+                <button class="btn-page" disabled="@(currentPage == TotalPages)" @onclick="PaginaSiguiente">Siguiente</button>
+            </div>
+        }
+
+    </main>
 </section>
 
 @code {
-    // 1. Declarar el parámetro que recibe la URL
     [Parameter]
     public string? CategoriaRoute { get; set; }
 
@@ -62,7 +66,10 @@
     private string Descripcion = "Descubre nuestra selección premium";
     private string BannerImage = "/assets/banner/banner.png";
 
-    // 2. Interceptar cuando la URL cambia para actualizar la interfaz
+    // --- VARIABLES DE PAGINACIÓN ---
+    private int currentPage = 1;
+    private int pageSize = 15; // Mostrar 30 productos por página
+
     protected override void OnParametersSet()
     {
         if (string.IsNullOrWhiteSpace(CategoriaRoute))
@@ -71,10 +78,12 @@
         }
         else
         {
-            Titulo = CategoriaRoute.ToUpper(); // Ej: "gin" -> "GIN"
+            Titulo = CategoriaRoute.ToUpper();
         }
-        
-        LimpiarFiltros(); // Opcional: Reinicia precios si se cambia de categoría
+
+        // Reiniciar a la primera página al cambiar de categoría
+        currentPage = 1;
+        LimpiarFiltros();
     }
 
     private List<Producto> Productos = new()
@@ -86,7 +95,6 @@
         new() { Nombre = "Hendrick's Gin", Categoria = "Gin", Precio = 149, Imagen = "gin-hendricks.png" },
 
         // --- LICORES ---
-        // Nota: Uso "Licor" en singular para que coincida con tu ruta <NavLink href="/categoria/licor">
         new() { Nombre = "Jägermeister", Categoria = "Licor", Precio = 79, Imagen = "licor-jagermeister.png" },
         new() { Nombre = "Baileys Original", Categoria = "Licor", Precio = 69, Imagen = "licor-baileys.png" },
         new() { Nombre = "Kahlúa", Categoria = "Licor", Precio = 65, Imagen = "licor-kahlua.png" },
@@ -115,26 +123,50 @@
         new() { Nombre = "Smirnoff Red", Categoria = "Vodka", Precio = 55, Imagen = "vodka-smirnoff.png" },
         new() { Nombre = "Grey Goose", Categoria = "Vodka", Precio = 119, Imagen = "vodka-grey-goose.png" },
         new() { Nombre = "Stolichnaya", Categoria = "Vodka", Precio = 59, Imagen = "vodka-stolichnaya.png" },
-    // --- WHISKY ---
+
+        // --- WHISKY ---
         new() { Nombre = "Johnnie Walker Red Label", Categoria = "Whisky", Precio = 69, Imagen = "whisky-johnnie-walker.png" },
         new() { Nombre = "Jack Daniel's", Categoria = "Whisky", Precio = 89, Imagen = "whisky-jack-daniels.png" },
         new() { Nombre = "Chivas Regal 12 años", Categoria = "Whisky", Precio = 129, Imagen = "whisky-chivas-regal.png" },
         new() { Nombre = "Johnnie Walker Black Label", Categoria = "Whisky", Precio = 149, Imagen = "whisky-black-label.png" }
     };
 
-    // 3. Añadir la evaluación de la categoría en el LINQ
     private List<Producto> ProductosFiltrados =>
         Productos.Where(p =>
-            // Filtra por categoría exacta (ignorando mayúsculas/minúsculas) si la URL tiene una
             (string.IsNullOrWhiteSpace(CategoriaRoute) || p.Categoria.Equals(CategoriaRoute, StringComparison.OrdinalIgnoreCase)) &&
-            // Mantiene el filtro de precios
             (!precioMin.HasValue || p.Precio >= precioMin) &&
             (!precioMax.HasValue || p.Precio <= precioMax))
         .ToList();
+
+    // --- PROPIEDADES CALCULADAS PARA PAGINACIÓN ---
+    private int TotalPages => (int)Math.Ceiling(ProductosFiltrados.Count / (double)pageSize);
+
+    private List<Producto> ProductosPaginados =>
+        ProductosFiltrados
+            .Skip((currentPage - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
+
+    // --- MÉTODOS DE PAGINACIÓN ---
+    private void IrAPagina(int page)
+    {
+        currentPage = page;
+    }
+
+    private void PaginaAnterior()
+    {
+        if (currentPage > 1) currentPage--;
+    }
+
+    private void PaginaSiguiente()
+    {
+        if (currentPage < TotalPages) currentPage++;
+    }
 
     private void LimpiarFiltros()
     {
         precioMin = null;
         precioMax = null;
+        currentPage = 1; // Volver a la primera página al limpiar filtros
     }
 }

@@ -11,10 +11,10 @@
             <h3 class="sub-title">
                 Introduzca su correo electrónico y contraseña:
             </h3>
-            <div class="hr" />
+            <div class="hr"></div>
         </div>
-        <form @onsubmit="OnSumit">
 
+        <form @onsubmit="OnSumit">
             <div class="form-input">
                 <label for="email">Correo electrónico</label>
                 <div class="input-container">
@@ -27,8 +27,8 @@
                 <label for="password">Contraseña</label>
                 <div class="input-container">
                     <i class="bi bi-lock-fill"></i>
-                    <input id="password" type="@(hidePassword ? "password":"text" )" placeholder="*************" />
-                    <div @onclick="changeVisibility">
+                    <input id="password" type="@(hidePassword ? "password" : "text")" placeholder="*************" />
+                    <div @onclick="changeVisibility" style="cursor:pointer;">
                         @if (hidePassword)
                         {
                             <i class="bi bi-eye-slash"></i>
@@ -40,25 +40,29 @@
                     </div>
                 </div>
             </div>
+
             <a href="/forgot-password" class="link">
                 <u>¿Olvidaste tu contraseña?</u>
             </a>
+
             <button type="submit">Ingresar</button>
         </form>
-        <div>
+
+        <div class="footer-register">
             <span class="label">¿Eres nuevo?</span>
-            <a href="/register" class="link"><u>Crear un cuenta</u></a>
+            <a href="/register" class="link"><u>Crear una cuenta</u></a>
         </div>
     </section>
 </div>
 
-
 @code {
-    bool hidePassword = false;
+    bool hidePassword = true; /* Es mejor que inicie en 'true' para ocultar la contraseña por defecto */
+
     void changeVisibility()
     {
         hidePassword = !hidePassword;
     }
+
     void OnSumit()
     {
         Navigation.NavigateTo("/user");

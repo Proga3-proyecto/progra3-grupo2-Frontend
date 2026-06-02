@@ -25,11 +25,10 @@
 
 .logo[b-chcq31etud] {
     aspect-ratio: 1.4251781473;
-    height: 110px;
+    height: 70px;
     margin-top: 4px;
 }
 
 .body-container[b-chcq31etud] {
     max-width: 100vw;
-    height: calc(100vh - 100px);
 }

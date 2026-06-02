@@ -1,4 +1,5 @@
 ﻿@page "/forgot-password-confirmation"
+
 <div class="container">
     <section>
         <div class="form-header">
@@ -13,22 +14,26 @@
             </h3>
             <div class="hr"></div>
         </div>
-        <div class="message-container">
-            <p>
-                Si existe una cuenta asociada a la dirección ingresada,
-                recibirás un enlace para restablecer tu contraseña en los próximos minutos.
-            </p>
-            <p>
-                Revisa también tu carpeta de spam o correo no deseado.
-            </p>
-        </div>
-        <div class="actions">
-            <a href="/login" class="button-link">
-                Volver al inicio de sesión
-            </a>
-            <a href="/forgot-password" class="button-link">
-                Reenviar correo
-            </a>
+
+        <div class="form-body">
+            <div class="message-container">
+                <p>
+                    Si existe una cuenta asociada a la dirección ingresada,
+                    recibirás un enlace para restablecer tu contraseña en los próximos minutos.
+                </p>
+                <p>
+                    Revisa también tu carpeta de spam o correo no deseado.
+                </p>
+            </div>
+
+            <div class="actions">
+                <a href="/login" class="button-link">
+                    Volver al inicio de sesión
+                </a>
+                <a href="/forgot-password" class="button-link button-secondary">
+                    Reenviar correo
+                </a>
+            </div>
         </div>
     </section>
 </div>

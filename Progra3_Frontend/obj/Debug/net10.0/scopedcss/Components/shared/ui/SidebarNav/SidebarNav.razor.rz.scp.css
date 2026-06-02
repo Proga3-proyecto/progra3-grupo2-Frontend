@@ -3,12 +3,13 @@
 [b-mvpiea8qwc] .sidebar-item {
     display: flex; /* Cambiado a flex para alinear icono y texto horizontalmente */
     align-items: center; /* Centra verticalmente la imagen con el texto */
-    padding: 20px;
+    padding: 12px;
     border-bottom: 1px solid #e5e5e5;
     text-decoration: none;
     color: black;
     font-weight: 500;
     transition: all 0.2s ease;
+    font-size:14px;
 }
 
     [b-mvpiea8qwc] .sidebar-item:hover {
@@ -24,7 +25,7 @@
 }
 
 .sidebar-icon-bi[b-mvpiea8qwc] {
-    font-size: 18px; /* Tamaño del icono */
+    font-size: 14px; /* Tamaño del icono */
     margin-right: 16px;
     display: flex;
     align-items: center;

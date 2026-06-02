@@ -1,6 +1,6 @@
 .container[b-1gcafon035] {
     display: flex;
-    height: 100%;
+    height: 100vh; /* Mejorado para centrar verticalmente en toda la pantalla */
     justify-content: center;
     align-items: center;
 }
@@ -8,24 +8,27 @@
 section[b-1gcafon035] {
     display: flex;
     flex-direction: column;
-    align-items:center;
-    gap: 40px;
+    align-items: center;
+    gap: 20px; /* Reducido de 40px para un diseño más compacto */
 }
 
 .logo[b-1gcafon035] {
-    font-size: 60px;
+    font-size: 40px; /* Reducido de 60px */
     color: var(--color-primary);
 }
 
 .title[b-1gcafon035] {
-    font-size: 45px;
+    font-size: 28px; /* Reducido de 45px */
     font-weight: 800;
     color: var(--color-primary);
+    margin: 0;
 }
 
 .sub-title[b-1gcafon035] {
-    font-size: 22px;
+    font-size: 16px; /* Reducido de 22px */
     color: var(--color-primary);
+    margin: 0;
+    text-align: center;
 }
 
 .form-header[b-1gcafon035] {
@@ -36,67 +39,92 @@ section[b-1gcafon035] {
 }
 
 .hr[b-1gcafon035] {
-    width: 50px;
-    height: 4px;
+    width: 40px;
+    height: 3px; /* Ligeramente más delgado */
     border-radius: 2px;
     background: var(--color-primary);
+    margin-top: 5px;
+}
+
+/* MARGEN AÑADIDO Y TAMAÑO REDUCIDO */
+form[b-1gcafon035] {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reducido de 20px */
+    width: 22em; /* Reducido de 28em para hacerlo más estrecho */
+    margin: 25px 0; /* Agrega margen arriba y abajo del formulario */
 }
 
 .form-input[b-1gcafon035] {
     color: var(--color-primary);
     font-weight: 600;
+    font-size: 14px; /* Ajuste para letras más pequeñas */
 }
 
 .input-container[b-1gcafon035] {
     display: flex;
-    gap: 10px;
-    padding: 5px 10px;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
     border: 1px solid rgb(170,170,170);
     border-radius: 4px;
+    margin-top: 5px; /* Pequeño espacio entre el label y el input */
 }
 
-.input-container input[b-1gcafon035] {
-    outline: none;
-    border: none;
-    width:100%;
-}
+    .input-container input[b-1gcafon035] {
+        outline: none;
+        border: none;
+        width: 100%;
+        font-size: 14px;
+    }
 
-.input-container i[b-1gcafon035] {
-    font-size: 25px;
-}
+    .input-container i[b-1gcafon035] {
+        font-size: 18px; /* Reducido de 25px */
+        color: var(--color-primary);
+    }
 
 button[b-1gcafon035] {
     width: 100%;
-    height: 50px;
+    height: 40px; /* Reducido de 50px */
     outline: none;
     border: none;
     border-radius: 4px;
     background: var(--color-primary);
     color: white;
-}
-form[b-1gcafon035]{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    width:28em;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.link[b-1gcafon035]{
-    margin-top:-5px;
-}
 .link[b-1gcafon035] {
     color: var(--color-primary);
     font-weight: 600;
+    font-size: 14px;
 }
+
     .link:link[b-1gcafon035],
     .link:visited[b-1gcafon035],
     .link:hover[b-1gcafon035],
     .link:active[b-1gcafon035] {
-        color: color-mix(in srgb, var(--color-primary), #fff 20%)
+        color: color-mix(in srgb, var(--color-primary), #fff 20%);
     }
+
+.footer-register[b-1gcafon035] {
+    font-size: 14px;
+}
 
 .label[b-1gcafon035] {
     color: var(--color-primary);
     font-weight: 600;
-    margin-right: 10px;
+    margin-right: 5px;
+}
+}
+.input-container input[b-1gcafon035] {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%; /* Hace que ocupe todo el alto del contenedor */
+    flex: 1; /* Permite que el input se expanda ocupando el espacio sobrante en el flexbox */
+    background-color: transparent; /* Vuelve el fondo del input transparente */
+    font-size: 14px;
+    color: var(--color-primary); /* Asegura que el texto ingresado mantenga el color del tema */
 }

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "c4r3x4S47ho=",
+  "dgSpecHash": "VNNsP6T5lm8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\MSI\\Desktop\\progra3\\Progra3_Frontend\\Progra3_Frontend\\Progra3_Frontend.csproj",
+  "projectFilePath": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Progra3_Frontend.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\MSI\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.8\\microsoft.aspnetcore.app.internal.assets.10.0.8.nupkg.sha512"
+    "C:\\Users\\Frank\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.8\\microsoft.aspnetcore.app.internal.assets.10.0.8.nupkg.sha512"
   ],
   "logs": []
 }

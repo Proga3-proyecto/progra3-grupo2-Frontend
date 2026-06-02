@@ -4,23 +4,23 @@
     align-items: center;
     gap: 12px;
     width: 60%;
-    height: 48px;
+    height: 35px;
     border-radius: 30px;
     position: relative;
-    padding: 0 30px 0 30px;
+    padding: 0 15px 0 15px;
     background: white;
     overflow: hidden;
 
     i {
-        font-size: 21px;
+        font-size: 18px;
     }
 }
 
 
 input[b-76u1aicvoe] {
     width: 100%;
-    height: 60px;
+    height: 30px;
     border: none;
     outline: none;
-    font-size: 18px;
+    font-size: 16px;
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Progra3_Frontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e2894fa858c439b1d8d6f24de144a8ba44d48ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b343d7acaa22ff8d6d359d0ea8a7aa59d8070e8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Progra3_Frontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Progra3_Frontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
