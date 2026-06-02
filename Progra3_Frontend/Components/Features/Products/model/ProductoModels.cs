@@ -1,5 +1,10 @@
 ﻿namespace Progra3_Frontend.Components.Features.Products
 {
+    public class Marca
+    {
+        public int IdMarca { get; set; }
+        public string Nombre { get; set; } = string.Empty;
+    }
     public class Producto
     {
         public string Nombre { get; set; }
@@ -12,5 +17,6 @@
 
         // El URL se calcula dinámicamente aquí
         public string ImagenUrl => $"/assets/products/{Categoria.ToLower()}/{Imagen}";
+        public Marca Marca { get; set; } = new();
     }
 }

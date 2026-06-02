@@ -1,0 +1,98 @@
+﻿@page "/categoria/receta"
+@using Progra3_Frontend.Components.Pages.recipes
+
+<div class="recipes-banner">
+
+    <img src="@BannerImage" class="recipes-banner-img" />
+
+    <div class="recipes-banner-content">
+
+        <h1 class="recipes-title">
+            @Titulo
+        </h1>
+
+        <div class="recipes-divider">
+            <span></span>
+            <i class="fa-light fa-utensils"></i> <span></span>
+        </div>
+
+        <p class="recipes-description">
+            @Descripcion
+        </p>
+
+    </div>
+
+</div>
+
+<section class="recipes-section">
+
+    <aside class="filters-card">
+
+        <div class="filters-header">
+            <h2>FILTROS</h2>
+            <i class="bi bi-sliders"></i>
+        </div>
+
+        <div class="filter-block">
+            <div class="filter-title">
+                <span>Buscar receta</span>
+            </div>
+
+            <div class="search-input-box">
+                <input type="text" placeholder="Ej. Pisco Sour..." @bind="terminoBusqueda" @bind:event="oninput" />
+            </div>
+        </div>
+
+        <button class="clear-button" @onclick="LimpiarFiltros">
+            <i class="bi bi-arrow-counterclockwise"></i>
+            Limpiar filtros
+        </button>
+
+    </aside>
+
+    <main class="recipes-area">
+
+        <div class="recipes-top">
+            <p>@RecetasFiltradas.Count receta(s)</p>
+        </div>
+
+        <div class="recipes-grid">
+
+            @foreach (var receta in RecetasFiltradas)
+            {
+                <RecipeCard receta="receta" />
+            }
+
+        </div>
+
+    </main>
+
+</section>
+
+@code {
+    // 1. Declarar el parámetro que recibe la URL
+
+    private string Titulo = "TODOS LOS PRODUCTOS";
+    private string Descripcion = "Descubre nuestra selección premium";
+    private string BannerImage = "/assets/banner/banner.png";
+
+    private string terminoBusqueda = "";
+
+    private List<Receta> Recetas = new()
+    {
+        new() { IdReceta = 1, Nombre = "Gin Tonic Clásico", Descripcion = "Refrescante y fácil de preparar con tu ginebra favorita.", ImageSrc = "receta-pisco-sour.png" },
+        new() { IdReceta = 2, Nombre = "Pisco Sour", Descripcion = "El cóctel bandera peruano, equilibrio perfecto entre dulce y ácido.", ImageSrc = "receta-pisco-sour.png" },
+        new() { IdReceta = 3, Nombre = "Cuba Libre", Descripcion = "La mezcla perfecta de ron, bebida de cola y un toque de limón.", ImageSrc = "receta-pisco-sour.png" },
+        new() { IdReceta = 4, Nombre = "Margarita", Descripcion = "Tequila, triple sec y jugo de limón servido en copa escarchada.", ImageSrc = "receta-pisco-sour.png" }
+    };
+
+    private List<Receta> RecetasFiltradas =>
+        Recetas.Where(r => string.IsNullOrWhiteSpace(terminoBusqueda) ||
+                           r.Nombre.Contains(terminoBusqueda, StringComparison.OrdinalIgnoreCase))
+        .ToList();
+
+    private void LimpiarFiltros()
+    {
+        terminoBusqueda = "";
+    }
+}

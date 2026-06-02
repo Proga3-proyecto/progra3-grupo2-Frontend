@@ -1,116 +1,123 @@
-/* --- Estilos del Encabezado Principal (Mantienen su tamaño original) --- */
-.titulo[b-zl7ppptjw8] {
-    text-align: center;
-    color: #0b1f5c;
-    margin-bottom: 10px;
-    font-size: 36px;
+/* --- COLORES PRINCIPALES --- */
+.text-navy[b-zl7ppptjw8] {
+    color: var(--color-primary, #021947);
 }
 
-.subtitulo[b-zl7ppptjw8] {
-    text-align: center;
-    color: gray;
-    margin-bottom: 40px;
-    font-size: 14px;
+/* --- Contenedor Principal --- */
+.orders-page-container[b-zl7ppptjw8] {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
 }
 
 /* --- Pestañas (Tabs) --- */
 .tabs[b-zl7ppptjw8] {
-    margin-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .tab-activo[b-zl7ppptjw8] {
-    color: #0b1f5c;
-    font-weight: bold;
-    border-bottom: 3px solid #0b1f5c;
-    padding-bottom: 10px;
-    font-size: 15px;
+    color: var(--color-primary, #021947);
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-primary, #021947);
+    font-size: 0.85rem;
+    margin-bottom: -1px; /* Solapa el borde inferior para un corte limpio */
 }
 
 /* --- Contenedor de Pedidos --- */
 .pedido-card[b-zl7ppptjw8] {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
+    background-color: transparent;
+    padding: 10px 0;
 }
 
 /* --- Tarjeta Individual del Pedido --- */
 .pedido-item[b-zl7ppptjw8] {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 18px 22px;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    margin-bottom: 18px;
+    gap: 15px;
+    padding: 14px 18px; /* Padding reducido para que sean más delgadas */
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px; /* Radio menos pronunciado */
+    margin-bottom: 12px; /* Margen inferior reducido */
     align-items: center;
+    transition: box-shadow 0.2s ease;
 }
 
-/* --- Fuentes dentro de las Columnas (Subidas ~10% en general) --- */
+    .pedido-item:hover[b-zl7ppptjw8] {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+/* --- Tipografía Compacta de las Columnas --- */
 .pedido-col label[b-zl7ppptjw8] {
     display: block;
-    color: gray;
-    margin-bottom: 6px;
-    font-size: 13px;
-    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 2px;
+    font-size: 0.72rem; /* Etiquetas muy sutiles */
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .pedido-col h3[b-zl7ppptjw8] {
-    color: #0b1f5c;
-    margin-bottom: 4px;
-    font-size: 16.5px;
-    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 0.90rem; /* Textos clave unificados */
 }
 
 .pedido-col p[b-zl7ppptjw8] {
-    color: gray;
-    margin-bottom: 0px;
-    font-size: 13px;
+    margin-bottom: 4px;
+    font-size: 0.75rem;
 }
 
-.pedido-col a[b-zl7ppptjw8] {
+.detalle-link[b-zl7ppptjw8] {
     color: #0b5ed7;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 0.78rem; /* Link de acción más pequeño */
 }
+
+    .detalle-link:hover[b-zl7ppptjw8] {
+        text-decoration: underline;
+    }
 
 /* --- Etiquetas de Estado --- */
 .estado[b-zl7ppptjw8] {
-    padding: 5px 11px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 6px; /* Formato píldora ligera */
+    font-size: 0.72rem;
+    font-weight: 600;
     display: inline-block;
 }
 
 .proceso[b-zl7ppptjw8] {
-    background-color: #dbeafe;
-    color: #1d4ed8;
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
 }
 
 .enviado[b-zl7ppptjw8] {
-    background-color: #fef3c7;
+    background-color: #fffbeb;
     color: #d97706;
+    border: 1px solid #fde68a;
 }
 
 .entregado[b-zl7ppptjw8] {
-    background-color: #dcfce7;
-    color: #15803d;
+    background-color: #f0fdf4;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
 }
 
 /* --- Footer Informativo Seguro --- */
 .security-footer-text[b-zl7ppptjw8] {
     text-align: center;
-    color: #6c757d;
-    font-size: 0.8rem;
-    margin-top: 1rem;
+    color: #94a3b8;
+    font-size: 0.72rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .footer-shield-icon-img[b-zl7ppptjw8] {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     margin-right: 0.3rem;
 }

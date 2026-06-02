@@ -1,0 +1,187 @@
+﻿@page "/receta/{IdReceta:int}"
+@using Progra3_Frontend.Components.Features.Products
+@using Progra3_Frontend.Components.Pages.recipes
+@inject NavigationManager Navigation;
+
+<div class="recipe-detail-container">
+     
+    <section class="recipe-media">
+        <div class="main-image-box">
+            <img src="@RecetaBase.ImageUrl" alt="@RecetaBase.Nombre" class="main-recipe-img" />
+        </div>
+    </section>
+
+    <section class="recipe-info">
+        <h1 class="recipe-title">Receta para @RecetaBase.Nombre</h1>
+
+        <div class="recipe-price">
+            S/. @ComposicionPrecio.MontoTotal.ToString("0.00")
+        </div>
+
+        <div class="recipe-rating">
+            <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="rating-value">5.00</span>
+            <span class="rating-count">(12 reseñas)</span>
+        </div>
+
+        <p class="recipe-description">
+            @RecetaBase.Descripcion
+        </p>
+
+        <hr class="recipe-divider" />
+
+        <div class="ingredients-section">
+            <h3>Ingredientes:</h3>
+            <ul>
+                @foreach (var elemento in RecetaBase.Elementos)
+                {
+                    <li>
+                        @elemento.Cantidad @elemento.UnidadMedida de
+                        <strong>@elemento.Producto.Nombre</strong>
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <div class="recipe-actions">
+            <button class="btn-preparacion" @onclick="IrAPreparacion">
+                <i class="bi bi-glass-cocktail"></i> Preparación
+            </button>
+            <button class="btn-add-cart" @onclick="RedirigirConfiguracion">
+                <i class="bi bi-cart3"></i> Añadir al carrito
+            </button>
+        </div>
+    </section>
+
+</div>
+
+@code {
+    [Parameter]
+    public int IdReceta { get; set; }
+
+    private Receta RecetaBase { get; set; } = new();
+    private DetalleReceta ComposicionPrecio { get; set; } = new();
+
+    protected override void OnParametersSet()
+    {
+        // Evaluamos el ID de la receta según el catálogo activo
+        switch (IdReceta)
+        {
+            case 1: // GIN TONIC CLÁSICO
+                RecetaBase = new Receta
+                {
+                    IdReceta = 1,
+                    Nombre = "Gin Tonic Clásico",
+                    Descripcion = "Un cóctel británico icónico, refrescante y sofisticado. Ideal para disfrutar en tardes calurosas con una buena ginebra botánica.",
+                    ImageSrc = "receta-gin-tonic.png"
+                };
+                RecetaBase.Elementos = new List<ElementoReceta>
+                {
+                    new() { Cantidad = 2.0m, UnidadMedida = "oz", Producto = new Producto { Nombre = "Gin Beefeater / Tanqueray", Categoria = "Gin", Precio = 85.00m, Imagen = "gin.png" } },
+                    new() { Cantidad = 6.0m, UnidadMedida = "oz", Producto = new Producto { Nombre = "Agua Tónica Premium", Categoria = "Complementos", Precio = 8.00m, Imagen = "tonica.png" } },
+                    new() { Cantidad = 1.0m, UnidadMedida = "rodaja", Producto = new Producto { Nombre = "Limón de Pica", Categoria = "Complementos", Precio = 2.00m, Imagen = "limon.png" } }
+                };
+                ComposicionPrecio = new DetalleReceta
+                {
+                    IdDetalleReceta = 601,
+                    DescuentoTotal = 5.00m,
+                    TotalImpuestos = 14.49m,
+                    MontoTotal = 95.00m,
+                    RecetaBase = RecetaBase
+                };
+                break;
+
+            case 2: // PISCO SOUR
+                RecetaBase = new Receta
+                {
+                    IdReceta = 2,
+                    Nombre = "Pisco Sour",
+                    Descripcion = "El cóctel bandera del Perú. Una perfecta armonía entre la potencia del pisco quebranta, la acidez del limón fresco y el dulzor del jarabe.",
+                    ImageSrc = "receta-pisco-sour.png"
+                };
+                RecetaBase.Elementos = new List<ElementoReceta>
+                {
+                    new() { Cantidad = 3.0m, UnidadMedida = "oz", Producto = new Producto { Nombre = "Pisco Quebranta Cuatro Gallos", Categoria = "Pisco", Precio = 55.00m, Imagen = "pisco-q.png" } },
+                    new() { Cantidad = 1.0m, UnidadMedida = "oz", Producto = new Producto { Nombre = "Jugo de Limón Sutil", Categoria = "Complementos", Precio = 3.00m, Imagen = "jugo-limon.png" } },
+                    new() { Cantidad = 1.0m, UnidadMedida = "oz", Producto = new Producto { Nombre = "Jarabe de Goma", Categoria = "Licor", Precio = 15.00m, Imagen = "jarabe.png" } },
+                    new() { Cantidad = 1.0m, UnidadMedida = "clara", Producto = new Producto { Nombre = "Huevo fresco", Categoria = "Complementos", Precio = 1.00m, Imagen = "huevo.png" } }
+                };
+                ComposicionPrecio = new DetalleReceta
+                {
+                    IdDetalleReceta = 602,
+                    DescuentoTotal = 0.00m,
+                    TotalImpuestos = 11.29m,
+                    MontoTotal = 74.00m,
+                    RecetaBase = RecetaBase
+                };
+                break;
+
+            case 3: // CUBA LIBRE
+                RecetaBase = new Receta
+                {
+                    IdReceta = 3,
+                    Nombre = "Cuba Libre",
+                    Descripcion = "Un clásico caribeño instantáneo. Combina perfectamente la calidez del ron envejecido con la efervescencia refrescante de la cola.",
+                    ImageSrc = "receta-cuba-libre.png"
+                };
+                RecetaBase.Elementos = new List<ElementoReceta>
+                {
+                    new() { Cantidad = 2.0m, UnidadMedida = "oz", Producto = new Producto { Nombre = "Ron Flor de Caña / Havana Club", Categoria = "Ron", Precio = 48.00m, Imagen = "ron.png" } },
+                    new() { Cantidad = 5.0m, UnidadMedida = "oz", Producto = new Producto { Nombre = "Coca-Cola Original", Categoria = "Complementos", Precio = 4.50m, Imagen = "cocacola.png" } },
+                    new() { Cantidad = 0.5m, UnidadMedida = "oz", Producto = new Producto { Nombre = "Zumo de Limón", Categoria = "Complementos", Precio = 1.50m, Imagen = "limon-zumo.png" } }
+                };
+                ComposicionPrecio = new DetalleReceta
+                {
+                    IdDetalleReceta = 603,
+                    DescuentoTotal = 4.00m,
+                    TotalImpuestos = 7.63m,
+                    MontoTotal = 50.00m,
+                    RecetaBase = RecetaBase
+                };
+                break;
+
+            case 4: // MARGARITA
+                RecetaBase = new Receta
+                {
+                    IdReceta = 4,
+                    Nombre = "Margarita",
+                    Descripcion = "El tesoro de México en una copa. Una mezcla enérgica y equilibrada de tequila, licor de naranja y un toque cítrico con borde de sal marina.",
+                    ImageSrc = "receta-margarita.png"
+                };
+                RecetaBase.Elementos = new List<ElementoReceta>
+                {
+                    new() { Cantidad = 2.0m, UnidadMedida = "oz", Producto = new Producto { Nombre = "Tequila José Cuervo Reposado", Categoria = "Tequila", Precio = 79.00m, Imagen = "tequila.png" } },
+                    new() { Cantidad = 1.0m, UnidadMedida = "oz", Producto = new Producto { Nombre = "Licor Triple Sec Cointreau", Categoria = "Licor", Precio = 45.00m, Imagen = "triplesec.png" } },
+                    new() { Cantidad = 1.0m, UnidadMedida = "oz", Producto = new Producto { Nombre = "Jugo de Limón Fresco", Categoria = "Complementos", Precio = 3.00m, Imagen = "limon.png" } }
+                };
+                ComposicionPrecio = new DetalleReceta
+                {
+                    IdDetalleReceta = 604,
+                    DescuentoTotal = 7.00m,
+                    TotalImpuestos = 18.30m,
+                    MontoTotal = 120.00m,
+                    RecetaBase = RecetaBase
+                };
+                break;
+
+            default:
+                // Fallback preventivo por si se ingresa un ID inválido en la URL
+                RecetaBase = new Receta { Nombre = "No Encontrado", Descripcion = "La receta solicitada no existe." };
+                ComposicionPrecio = new DetalleReceta { MontoTotal = 0.00m };
+                break;
+        }
+    }
+
+    private void IrAPreparacion() => Console.WriteLine($"Abriendo panel de preparación para {RecetaBase.Nombre}");
+
+    private void RedirigirConfiguracion()
+    {
+        Navigation.NavigateTo($"/recetas/{IdReceta}/seleccion");
+    }
+}

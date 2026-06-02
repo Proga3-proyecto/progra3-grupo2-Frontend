@@ -217,8 +217,6 @@ C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.
 C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\lscum21h1m-{0}-0czikqsn06-0czikqsn06.gz
 C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\93al8pnv16-{0}-zsn5mezce6-zsn5mezce6.gz
 C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\wyqcytefnp-{0}-v4bedk724e-v4bedk724e.gz
-C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\l3ppok8qe1-{0}-e7octp5edg-e7octp5edg.gz
-C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\nm44rhn40k-{0}-w95eiai980-w95eiai980.gz
 C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\taikbzedph-{0}-a0xp0wfqth-a0xp0wfqth.gz
 C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\mh26q7rnb9-{0}-t1cqhe9u97-t1cqhe9u97.gz
 C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\dby8ln507x-{0}-c2jlpeoesf-c2jlpeoesf.gz
@@ -278,5 +276,13 @@ C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.
 C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\Progra3_Frontend.pdb
 C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\Progra3_Frontend.genruntimeconfig.cache
 C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\ref\Progra3_Frontend.dll
-C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\138ud5l1f6-{0}-wh4s7sh6fd-wh4s7sh6fd.gz
-C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\8c3gofyjw5-{0}-wh4s7sh6fd-wh4s7sh6fd.gz
+C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\l3ppok8qe1-{0}-jjaqi2sf3z-jjaqi2sf3z.gz
+C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\nm44rhn40k-{0}-ndf5107qk8-ndf5107qk8.gz
+C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\chart\Cart.razor.rz.scp.css
+C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\recipes\AddRecipeProduct.razor.rz.scp.css
+C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\recipes\ChangeBrand.razor.rz.scp.css
+C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\recipes\Recipe.razor.rz.scp.css
+C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\recipes\RecipeCard.razor.rz.scp.css
+C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\recipes\RecipeDetails.razor.rz.scp.css
+C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\138ud5l1f6-{0}-3tyh11trn6-3tyh11trn6.gz
+C:\Users\Frank\Desktop\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\8c3gofyjw5-{0}-3tyh11trn6-3tyh11trn6.gz

@@ -1,5 +1,6 @@
-﻿.text-navy {
-    color: #021947;
+﻿/* --- COLORES PRINCIPALES --- */
+.text-navy {
+    color: #021947; /* O var(--color-primary) si ya lo usas así globalmente */
 }
 
 .navy-bg {
@@ -13,7 +14,7 @@
         color: white;
     }
 
-/* Botones de filtro inactivos */
+/* --- FILTROS --- */
 .btn-filter-inactive {
     background-color: #f1f5f9;
     color: #475569;
@@ -26,48 +27,97 @@
         color: #1e293b;
     }
 
+/* --- CONTENEDOR DE LA TABLA --- */
 .table-container {
     background: white;
     border-radius: 8px;
     border: 1px solid #f1f5f9;
-    padding: 24px;
+    padding: 14px; /* Relleno compacto, igual que en Productos */
 }
 
-.search-input {
-    border-radius: 8px;
-    background-color: #ffffff;
+/* --- BARRA DE BÚSQUEDA UNIFICADA --- */
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    background-color: #f8fafc;
     border: 1px solid #e2e8f0;
-    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
 }
 
-    .search-input:focus {
-        box-shadow: none;
+    .input-container:focus-within {
+        background-color: #ffffff;
         border-color: #021947;
+        box-shadow: 0 0 0 3px rgba(2, 25, 71, 0.15);
     }
 
+    .input-container input {
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 13px;
+        color: #1e293b;
+        width: 100%;
+    }
+
+        .input-container input::placeholder {
+            color: #94a3b8;
+        }
+
+    .input-container i {
+        color: #64748b;
+        font-size: 14px;
+        transition: color 0.2s ease;
+    }
+
+    .input-container:focus-within i {
+        color: #021947;
+    }
+
+/* --- AVATAR E IDS --- */
 .avatar-circle {
-    width: 42px;
-    height: 42px;
+    width: 32px; /* Avatar mucho más pequeño */
+    height: 32px;
     background-color: #021947;
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 14px;
 }
 
 .badge-id {
     background-color: #f8f9fa;
     color: #64748b;
-    padding: 2px 8px;
+    padding: 2px 6px;
     border-radius: 4px;
-    font-size: 0.75rem;
+    font-size: 0.68rem; /* ID más sutil */
     border: 1px solid #e2e8f0;
     margin-top: 4px;
     display: inline-block;
 }
 
-/* Paginación Dinámica */
+/* --- TABLA MODERNA Y COMPACTA --- */
+.custom-table th {
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.72rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.custom-table td {
+    vertical-align: middle;
+    padding: 6px 8px; /* Filas muy juntas y delgadas */
+    border-bottom: 1px solid #f8f9fa;
+}
+
+/* --- PAGINACIÓN MODERNA --- */
 .custom-pagination .page-item.active .page-link {
     background-color: #021947;
     border-color: #021947;
@@ -77,26 +127,21 @@
 .custom-pagination .page-link {
     color: #475569;
     border: 1px solid #e2e8f0;
-    margin: 0 2px;
-    border-radius: 6px;
+    margin: 0 1px;
+    border-radius: 4px;
     background: white;
+    padding: 3px 8px; /* Botones mini */
+    font-size: 0.78rem;
+    transition: all 0.2s;
 }
 
-    .custom-pagination .page-link:disabled {
-        background-color: #f8f9fa;
-        color: #94a3b8;
+    .custom-pagination .page-link:hover:not(:disabled) {
+        background-color: #f1f5f9;
+        color: #021947;
     }
 
-.custom-table th {
-    color: #64748b;
-    font-weight: 500;
-    font-size: 0.9rem;
-    border-bottom: 2px solid #f1f5f9;
-    padding-bottom: 12px;
-}
-
-.custom-table td {
-    vertical-align: middle;
-    padding: 16px 8px;
-    border-bottom: 1px solid #f8f9fa;
-}
+    .custom-pagination .page-link:disabled {
+        background-color: #f8fafc;
+        color: #cbd5e1;
+        border-color: #f1f5f9;
+    }

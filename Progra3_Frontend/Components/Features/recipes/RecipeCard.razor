@@ -1,0 +1,34 @@
+﻿@using Progra3_Frontend.Components.Pages.recipes
+@inject NavigationManager Navigation;
+
+<article class="recipe-card">
+
+    <div class="recipe-img-box">
+        <img src="@receta.ImageUrl" class="recipe-img" alt="@receta.Nombre" />
+    </div>
+
+    <h3>@receta.Nombre</h3>
+    <p class="recipe-desc">@receta.Descripcion</p>
+
+    <div class="recipe-bottom">
+        <span class="spacer"></span>
+
+        <button class="view-recipe-button" @onclick="VerReceta">
+            Ver receta
+        </button>
+    </div>
+
+</article>
+
+@code {
+    [Parameter]
+    public Receta receta { get; set; } = default!;
+
+    private void VerReceta()
+    {
+        // Aquí puedes agregar la lógica para navegar al detalle de la receta
+        // ej: NavigationManager.NavigateTo($"/recetas/{receta.Id}");
+        Console.WriteLine($"Ver receta: {receta.Nombre}"); 
+        Navigation.NavigateTo($"/receta/{receta.IdReceta}");
+    }
+}

@@ -1,76 +1,106 @@
-﻿.volver {
-    margin-bottom: 20px;
+﻿/* --- COLORES PRINCIPALES --- */
+.text-navy {
+    color: var(--color-primary, #021947);
 }
 
-    .volver a {
-        text-decoration: none;
-        color: #0b5ed7;
-        font-weight: 500;
+/* --- CONTENEDOR PRINCIPAL --- */
+.order-details-container {
+    max-width: 850px; /* Límite para que la tarjeta no se estire demasiado */
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+/* --- ENLACE VOLVER --- */
+.volver-link {
+    text-decoration: none;
+    color: #0b5ed7;
+    font-weight: 600;
+    font-size: 0.82rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+    .volver-link:hover {
+        color: #0a4ebd;
+        text-decoration: underline;
     }
 
+/* --- TARJETA PRINCIPAL --- */
 .pedido-card {
     background-color: white;
-    border-radius: 10px;
-    padding: 30px;
+    border-radius: 8px; /* Menos redondeado */
+    border: 1px solid #e2e8f0;
+    padding: 24px; /* Relleno compacto */
 }
 
-.pedido-header h2 {
-    margin-bottom: 5px;
-    color: #0b1f5c;
-}
-
-.fecha {
-    color: gray;
-    margin-bottom: 15px;
-}
-
+/* --- ETIQUETAS DE ESTADO --- */
 .estado {
-    background-color: #dbeafe;
-    color: #1d4ed8;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 6px; /* Forma de píldora ligera */
+    font-size: 0.72rem;
+    font-weight: 600;
+    display: inline-block;
+    letter-spacing: 0.3px;
 }
 
+/* Misma clase de estado que en MyOrders.css */
+.proceso {
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+/* --- INFORMACIÓN DEL PEDIDO (MALLA) --- */
 .pedido-info {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-    margin: 30px 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Reducido de 30px */
 }
 
     .pedido-info label {
-        font-weight: bold;
+        font-weight: 600;
         display: block;
-        margin-bottom: 10px;
-        color: gray;
+        margin-bottom: 4px;
+        color: #64748b;
+        font-size: 0.72rem;
+        text-transform: uppercase;
     }
 
-.categoria {
-    color: gray;
-    font-size: 14px;
-    margin-top: 5px;
+/* --- TABLA DE PRODUCTOS --- */
+.custom-table th {
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.72rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
+    text-transform: uppercase;
 }
 
+.custom-table td {
+    vertical-align: middle;
+    padding: 10px 8px; /* Filas juntas */
+    border-bottom: 1px solid #f8f9fa;
+}
+
+/* --- CAJA DE TOTALES --- */
 .total-box {
-    width: 350px;
-    margin-left: auto;
-    margin-top: 30px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
+    width: 280px; /* Más angosto (antes 350px) */
+    background-color: #f8fafc; /* Fondo gris sutil */
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px 18px; /* Padding interior reducido */
 }
 
 .fila-total {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+    font-size: 0.82rem;
 }
 
-.final {
-    font-size: 24px;
-    font-weight: bold;
-    color: #0b1f5c;
-    margin-top: 20px;
+.final-price {
+    font-size: 1.15rem; /* Destacado pero sin ser enorme (antes 24px) */
+    font-weight: 700;
 }

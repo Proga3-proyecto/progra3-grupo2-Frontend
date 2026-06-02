@@ -1,0 +1,131 @@
+﻿@page "/escoger-marca/{IdElemento:int}"
+@using Progra3_Frontend.Components.Features.Products
+@inject NavigationManager NavigationManager
+
+<div class="change-brand-container">
+    <header class="change-brand-header">
+        <h1>Escoger otra marca</h1>
+        <div class="title-underline"></div>
+
+        <p class="subtitle">Estás cambiando la marca de: <strong>@NombreActual</strong></p>
+        <p class="product-type">Tipo: <strong>@Categoria</strong></p>
+
+        <p class="instruction">Selecciona la nueva marca que deseas para este producto:</p>
+    </header>
+
+    <main class="brands-grid">
+        @if (MarcasAlternativasFiltradas == null || !MarcasAlternativasFiltradas.Any())
+        {
+            <p class="no-options-alert">No hay marcas alternativas disponibles para esta categoría en este momento.</p>
+        }
+        else
+        {
+            @foreach (var opcion in MarcasAlternativasFiltradas)
+            {
+                <div class="brand-option-card @(MarcaSeleccionada == opcion.Nombre ? "active-card" : "")"
+                     @onclick="() => SeleccionarMarca(opcion.Nombre)">
+
+                    <div class="brand-img-box">
+                        <img src="@opcion.ImagenUrl" alt="@opcion.Nombre" class="brand-thumb" />
+                    </div>
+
+                    <div class="brand-info">
+                        <h3>@opcion.Nombre</h3>
+                        <p class="brand-category">@opcion.Categoria</p>
+                        <p class="brand-price">S/ @opcion.Precio.ToString("0.00")</p>
+                    </div>
+
+                    <div class="brand-radio-wrapper">
+                        <div class="custom-radio @(MarcaSeleccionada == opcion.Nombre ? "checked" : "")">
+                            @if (MarcaSeleccionada == opcion.Nombre)
+                            {
+                                <div class="radio-inner-dot"></div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </main>
+
+    <footer class="change-brand-footer">
+        <button class="btn-cancel-change" @onclick="Cancelar">Cancelar</button>
+        <button class="btn-confirm-change" @onclick="ConfirmarCambio" disabled="@string.IsNullOrEmpty(MarcaSeleccionada)">
+            Confirmar cambio
+        </button>
+    </footer>
+</div>
+
+@code {
+    // Parámetro obligatorio por Ruta para saber qué registro del carrito se está modificando
+    [Parameter] public int IdElemento { get; set; }
+
+    // Parámetros dinámicos leídos desde el QueryString (?categoria=...&nombreActual=...)
+    [Parameter][SupplyParameterFromQuery] public string Categoria { get; set; } = string.Empty;
+    [Parameter][SupplyParameterFromQuery] public string NombreActual { get; set; } = string.Empty;
+
+    private string MarcaSeleccionada { get; set; } = string.Empty;
+    private List<Producto> MarcasAlternativasFiltradas { get; set; } = new();
+
+    // El ciclo OnParametersSet se ejecuta cada vez que los parámetros de la URL cambian
+    protected override void OnParametersSet()
+    {
+        // Decodificamos por seguridad en caso de caracteres especiales o espacios
+        Categoria = Uri.UnescapeDataString(Categoria ?? "Pisco");
+        NombreActual = Uri.UnescapeDataString(NombreActual ?? "");
+
+        CargarCatalogoPorCategoria(Categoria);
+
+        // Pre-seleccionamos una por defecto si la lista tiene elementos
+        if (MarcasAlternativasFiltradas.Any())
+        {
+            MarcaSeleccionada = MarcasAlternativasFiltradas.First().Nombre;
+        }
+    }
+
+    private void CargarCatalogoPorCategoria(string categoria)
+    {
+        // Repositorio/Simulación global multi-producto de tu catálogo general
+        var inventarioMaestro = new List<Producto>
+        {
+            // --- VARIANTES DE PISCO ---
+            new() { Nombre = "Santiago Queirolo", Categoria = "Pisco", Precio = 25.00m, Imagen = "pisco-quebranta.png" },
+            new() { Nombre = "Tabernero", Categoria = "Pisco", Precio = 26.00m, Imagen = "pisco-tabernero.png" },
+            new() { Nombre = "Tres Generaciones", Categoria = "Pisco", Precio = 24.50m, Imagen = "pisco-acholado.png" },
+            new() { Nombre = "Biondi", Categoria = "Pisco", Precio = 27.00m, Imagen = "pisco-biondi.png" },
+            new() { Nombre = "Portón", Categoria = "Pisco", Precio = 89.00m, Imagen = "pisco-porton.png" },
+
+            // --- VARIANTES DE JARABES / LICORES COMPLEMENTARIOS ---
+            new() { Nombre = "Jarabe de Goma Burgos", Categoria = "Licor", Precio = 15.00m, Imagen = "licor-kahlua.png" },
+            new() { Nombre = "Jarabe de Goma Caravedo", Categoria = "Licor", Precio = 18.50m, Imagen = "licor-kahlua.png" },
+            new() { Nombre = "Jarabe Premium Monin", Categoria = "Licor", Precio = 32.00m, Imagen = "licor-kahlua.png" },
+
+            // --- VARIANTES DE COMPLEMENTOS (Ej: Jugos / Cítricos / Insumos) ---
+            new() { Nombre = "Jugo de Limón Sutil Del Huerto", Categoria = "Complementos", Precio = 8.00m, Imagen = "limon.png" },
+            new() { Nombre = "Jugo de Limón Premium Frugos", Categoria = "Complementos", Precio = 10.50m, Imagen = "limon.png" }
+        };
+
+        // Filtrado dinámico inteligente: se adapta al tipo de producto que envió la página anterior
+        MarcasAlternativasFiltradas = inventarioMaestro
+            .Where(p => p.Categoria.Equals(categoria, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+    }
+
+    private void SeleccionarMarca(string nombreMarca)
+    {
+        MarcaSeleccionada = nombreMarca;
+    }
+
+    private void ConfirmarCambio()
+    {
+        Console.WriteLine($"ElementoCarrito ID {IdElemento} actualizado con éxito a la marca: {MarcaSeleccionada}");
+
+        // Regresa limpiamente a la pantalla de la receta (reemplazar por tu ruta exacta)
+        NavigationManager.NavigateTo("/recetas/2/anadir");
+    }
+
+    private void Cancelar()
+    {
+        NavigationManager.NavigateTo("/recetas/2/anadir");
+    }
+}

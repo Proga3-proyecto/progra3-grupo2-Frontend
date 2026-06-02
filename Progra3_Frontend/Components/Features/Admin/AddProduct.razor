@@ -2,97 +2,127 @@
 @layout AdminLayout
 @using System.ComponentModel.DataAnnotations
 
+<div class="container-fluid mt-3 mb-4">
 
-<div class="container-fluid mt-5 mb-5">
-    
-    <div class="text-center mb-4">
-        <h2 class="fw-bold text-navy" style="letter-spacing: 0.5px;">Añadir Nuevo Producto</h2>
+    <div class="text-center mb-3">
+        <h2 class="fw-bold text-navy" style="letter-spacing: 0.5px; font-size: 1.35rem;">Añadir Nuevo Producto</h2>
     </div>
 
-    <div class="form-container shadow-sm">
-        
+    <div class="form-container">
+
         <EditForm Model="NewProduct" OnValidSubmit="GuardarProducto">
             <DataAnnotationsValidator />
 
-            <div class="row gx-5">
-                
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <label class="form-label-custom d-block mb-3">Imagen del producto</label>
-                    
-                    <div class="upload-box">
-                        <InputFile OnChange="HandleFileSelected" class="file-input-hidden" accept="image/png, image/jpeg, image/webp" />
-                        
-                        <div class="upload-icon-container">
-                            <i class="bi bi-upload text-navy fs-4"></i>
-                        </div>
-                        <p class="mb-1 text-navy fw-bold">Arrastra la imagen aquí</p>
-                        <p class="text-muted small mb-4">o haz clic para seleccionar</p>
-                        
-                        <p class="text-muted mb-0" style="font-size: 0.8rem;">Formatos: JPG, PNG, WEBP</p>
-                        <p class="text-muted mb-0" style="font-size: 0.8rem;">Máx. 5MB</p>
-                        
-                        @if (!string.IsNullOrEmpty(SelectedFileName))
+            <div class="row gx-4">
+
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <label class="form-label-custom d-block mb-2">Imagen del producto</label>
+
+                    <div class="upload-box @(string.IsNullOrEmpty(ImagePreviewUrl) ? "" : "has-image")">
+
+                        @if (string.IsNullOrEmpty(ImagePreviewUrl))
                         {
-                            <div class="mt-3 text-success fw-medium" style="font-size: 0.85rem;">
-                                <i class="bi bi-check-circle me-1"></i> @SelectedFileName
+                            <InputFile OnChange="HandleFileSelected" class="file-input-hidden" accept="image/png, image/jpeg, image/webp" />
+
+                            <div class="upload-icon-container">
+                                <i class="bi bi-upload text-navy" style="font-size: 1.1rem;"></i>
+                            </div>
+                            <p class="mb-1 text-navy fw-bold" style="font-size: 0.85rem;">Arrastra la imagen aquí</p>
+                            <p class="text-muted mb-2" style="font-size: 0.75rem;">o haz clic para seleccionar</p>
+
+                            <p class="text-muted mb-0" style="font-size: 0.7rem;">Formatos: JPG, PNG, WEBP</p>
+                            <p class="text-muted mb-0" style="font-size: 0.7rem;">Máx. 5MB</p>
+                        }
+                        else
+                        {
+                            <div class="image-preview-container">
+                                <img src="@ImagePreviewUrl" alt="Vista previa" class="img-preview" />
+                                <p class="text-navy fw-bold mt-2 mb-2" style="font-size: 0.8rem;">@SelectedFileName</p>
+
+                                <button type="button" class="btn btn-sm btn-remove-image" @onclick="RemoveImage">
+                                    <i class="bi bi-trash3"></i> Quitar imagen
+                                </button>
                             </div>
                         }
                     </div>
                 </div>
 
                 <div class="col-md-8">
-                    
-                    <div class="row mb-4">
+
+                    <div class="row mb-3">
                         <div class="col-md-6">
                             <label class="form-label-custom">
                                 SKU <span class="asterisk">*</span>
-                                <i class="bi bi-question-circle-fill text-muted ms-1" style="font-size: 0.85rem;" title="Código único del producto"></i>
+                                <i class="bi bi-question-circle-fill text-muted ms-1" style="font-size: 0.75rem;" title="Código único del producto"></i>
                             </label>
-                            <input type="text" class="form-control custom-input" placeholder="Ej: SKU-00123" @bind="NewProduct.Sku">
+                            <div class="input-container">
+                                <i class="bi bi-upc-scan"></i>
+                                <input type="text" placeholder="Ej: SKU-00123" @bind="NewProduct.Sku">
+                            </div>
                             <ValidationMessage For="@(() => NewProduct.Sku)" class="validation-text" />
                         </div>
+
                         <div class="col-md-6">
                             <label class="form-label-custom">Nombre del producto <span class="asterisk">*</span></label>
-                            <input type="text" class="form-control custom-input" placeholder="Ej: Ron Zacapa 23 Años 750ml" @bind="NewProduct.Nombre">
+                            <div class="input-container">
+                                <i class="bi bi-box"></i>
+                                <input type="text" placeholder="Ej: Ron Zacapa 23 Años 750ml" @bind="NewProduct.Nombre">
+                            </div>
                             <ValidationMessage For="@(() => NewProduct.Nombre)" class="validation-text" />
                         </div>
                     </div>
 
-                    <div class="row mb-4">
+                    <div class="row mb-3">
                         <div class="col-md-6">
                             <label class="form-label-custom">Marca <span class="asterisk">*</span></label>
-                            <input type="text" class="form-control custom-input" placeholder="Ej: Chivas Regal, Cartavio" @bind="NewProduct.Marca">
+                            <div class="input-container">
+                                <i class="bi bi-bookmark"></i>
+                                <input type="text" placeholder="Ej: Chivas Regal, Cartavio" @bind="NewProduct.Marca">
+                            </div>
                             <ValidationMessage For="@(() => NewProduct.Marca)" class="validation-text" />
                         </div>
+
                         <div class="col-md-6">
                             <label class="form-label-custom">Tipo <span class="asterisk">*</span></label>
-                            <input type="text" class="form-control custom-input" placeholder="Ej: Ron, Whisky, Vino Tinto" @bind="NewProduct.Tipo">
+                            <div class="input-container">
+                                <i class="bi bi-tags"></i>
+                                <input type="text" placeholder="Ej: Ron, Whisky, Vino Tinto" @bind="NewProduct.Tipo">
+                            </div>
                             <ValidationMessage For="@(() => NewProduct.Tipo)" class="validation-text" />
                         </div>
                     </div>
 
-                    <div class="row mb-4">
+                    <div class="row mb-3">
                         <div class="col-md-6">
                             <label class="form-label-custom">Formato</label>
-                            <input type="text" class="form-control custom-input" placeholder="Ej: 750ml, 1L, 700ml" @bind="NewProduct.Formato">
+                            <div class="input-container">
+                                <i class="bi bi-cup-straw"></i>
+                                <input type="text" placeholder="Ej: 750ml, 1L, 700ml" @bind="NewProduct.Formato">
+                            </div>
                             <ValidationMessage For="@(() => NewProduct.Formato)" class="validation-text" />
                         </div>
+
                         <div class="col-md-6">
                             <label class="form-label-custom">Stock inicial <span class="asterisk">*</span></label>
-                            <input type="number" class="form-control custom-input" placeholder="Ej: 50" @bind="NewProduct.StockInicial" min="0">
+                            <div class="input-container">
+                                <i class="bi bi-boxes"></i>
+                                <input type="number" placeholder="Ej: 50" @bind="NewProduct.StockInicial" min="0">
+                            </div>
                             <ValidationMessage For="@(() => NewProduct.StockInicial)" class="validation-text" />
                         </div>
                     </div>
 
-                    <div class="mb-4">
+                    <div class="mb-3">
                         <label class="form-label-custom">Descripción</label>
-                        <textarea class="form-control custom-input" 
-                                  rows="4" 
-                                  placeholder="Describe el producto..."
-                                  @bind="NewProduct.Descripcion"
-                                  @bind:event="oninput"
-                                  maxlength="500"></textarea>
-                        <div class="text-end text-muted mt-1" style="font-size: 0.8rem;">
+                        <div class="input-container" style="align-items: flex-start;">
+                            <i class="bi bi-card-text" style="margin-top: 4px;"></i>
+                            <textarea rows="3"
+                                      placeholder="Describe el producto..."
+                                      @bind="NewProduct.Descripcion"
+                                      @bind:event="oninput"
+                                      maxlength="500"></textarea>
+                        </div>
+                        <div class="text-end text-muted mt-1" style="font-size: 0.7rem;">
                             @(NewProduct.Descripcion?.Length ?? 0)/500
                         </div>
                     </div>
@@ -100,11 +130,11 @@
                 </div>
             </div>
 
-            <div class="d-flex justify-content-end gap-3 mt-4 pt-4" style="border-top: 1px solid #e2e8f0;">
-                <button type="button" class="btn btn-outline-custom px-4 py-2" style="border-radius: 8px;">
+            <div class="d-flex justify-content-end gap-2 mt-3 pt-3" style="border-top: 1px solid rgba(170,170,170,0.3);">
+                <button type="button" class="btn btn-outline-custom" style="border-radius: 6px; font-size: 0.82rem; padding: 6px 14px;">
                     Cancelar
                 </button>
-                <button type="submit" class="btn navy-bg px-4 py-2" style="border-radius: 8px; font-weight: 500;">
+                <button type="submit" class="btn navy-bg" style="border-radius: 6px; font-weight: 500; font-size: 0.82rem; padding: 6px 14px;">
                     Guardar producto
                 </button>
             </div>
@@ -137,21 +167,44 @@
 
         public string Descripcion { get; set; } = string.Empty;
     }
+
     private ProductoFormDto NewProduct { get; set; } = new();
     private string SelectedFileName { get; set; } = string.Empty;
+    private string ImagePreviewUrl { get; set; } = string.Empty;
 
-    private void HandleFileSelected(InputFileChangeEventArgs e)
+    private async Task HandleFileSelected(InputFileChangeEventArgs e)
     {
         var file = e.File;
         if (file != null)
         {
             SelectedFileName = file.Name;
+            var maxAllowedSize = 5120000;
+            var format = file.ContentType;
+
+            try
+            {
+                using var stream = file.OpenReadStream(maxAllowedSize);
+                using var ms = new MemoryStream();
+                await stream.CopyToAsync(ms);
+
+                var base64 = Convert.ToBase64String(ms.ToArray());
+                ImagePreviewUrl = $"data:{format};base64,{base64}";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al leer la imagen: {ex.Message}");
+            }
         }
+    }
+
+    private void RemoveImage()
+    {
+        SelectedFileName = string.Empty;
+        ImagePreviewUrl = string.Empty;
     }
 
     private void GuardarProducto()
     {
-        /* Luego, se añadirá lógica para guardar el producto en la BD (transformar ProductoFormDto -> ProductoDTO y llamar al método guardarProducto) */
         Console.WriteLine($"Guardando producto: {NewProduct.Nombre} - Marca: {NewProduct.Marca}");
     }
 }

@@ -1,46 +1,47 @@
 /* /Components/Features/Admin/AddProduct.razor.rz.scp.css */
+/* --- COLORES PRINCIPALES --- */
 .text-navy[b-jyvd0mrujh] {
-    color: #021947;
+    color: var(--color-primary);
 }
 
 .navy-bg[b-jyvd0mrujh] {
-    background-color: #021947;
+    background-color: var(--color-primary);
     color: white;
     transition: background-color 0.2s;
 }
 
     .navy-bg:hover[b-jyvd0mrujh] {
-        background-color: #010d26;
+        background-color: color-mix(in srgb, var(--color-primary), black 15%);
         color: white;
     }
 
 .btn-outline-custom[b-jyvd0mrujh] {
-    background-color: white;
-    border: 1px solid #cbd5e1;
-    color: #334155;
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
     font-weight: 500;
     transition: all 0.2s;
 }
 
     .btn-outline-custom:hover[b-jyvd0mrujh] {
-        background-color: #f8f9fa;
-        border-color: #94a3b8;
+        background-color: color-mix(in srgb, var(--color-primary), white 90%);
     }
 
+/* --- CONTENEDOR PRINCIPAL (TAMAÑO EXTRA COMPACTO) --- */
 .form-container[b-jyvd0mrujh] {
-    background: white;
-    border-radius: 12px;
-    border: 1px solid #f1f5f9;
-    padding: 40px;
-    max-width: 1100px;
+    background: transparent;
+    padding: 0;
+    max-width: 750px;
     margin: 0 auto;
 }
 
+/* --- ETIQUETAS Y VALIDACIÓN --- */
 .form-label-custom[b-jyvd0mrujh] {
     font-weight: 600;
-    color: #1e293b;
-    font-size: 0.9rem;
-    margin-bottom: 8px;
+    color: var(--color-primary);
+    font-size: 0.75rem; /* Letra pequeña (12px) */
+    margin-bottom: 2px;
+    display: block;
 }
 
 .asterisk[b-jyvd0mrujh] {
@@ -48,36 +49,75 @@
     margin-left: 2px;
 }
 
-.custom-input[b-jyvd0mrujh] {
-    border-radius: 8px;
-    background-color: #ffffff;
-    border: 1px solid #cbd5e1;
-    font-size: 0.95rem;
-    padding: 10px 14px;
-    color: #334155;
+.validation-text[b-jyvd0mrujh] {
+    color: #dc3545;
+    font-size: 0.70rem; /* Validación minimizada */
+    margin-top: 3px;
+    display: block;
+    font-weight: 500;
 }
 
-    .custom-input:focus[b-jyvd0mrujh] {
-        box-shadow: 0 0 0 3px rgba(2, 25, 71, 0.1);
-        border-color: #021947;
+/* --- DISEÑO DE INPUT MODERNO Y EXTRA SUAVE --- */
+.input-container[b-jyvd0mrujh] {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px; /* Tamaño unificado (alto delgado) */
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px; /* Radio ligeramente menor */
+    transition: all 0.2s ease-in-out;
+}
+
+    .input-container:focus-within[b-jyvd0mrujh] {
+        background-color: #ffffff;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary), white 85%);
+    }
+
+    .input-container input[b-jyvd0mrujh],
+    .input-container select[b-jyvd0mrujh],
+    .input-container textarea[b-jyvd0mrujh] {
+        flex: 1;
+        border: none;
         outline: none;
+        background: transparent;
+        font-size: 13px; /* Tamaño de letra compacto */
+        color: #1e293b;
+        width: 100%;
+        resize: none;
     }
 
-    .custom-input[b-jyvd0mrujh]::placeholder {
-        color: #94a3b8;
+        .input-container input[b-jyvd0mrujh]::placeholder,
+        .input-container textarea[b-jyvd0mrujh]::placeholder {
+            color: #94a3b8;
+        }
+
+    /* Estado inactivo del icono */
+    .input-container i[b-jyvd0mrujh] {
+        color: #64748b;
+        font-size: 14px; /* Iconos unificados (14px) */
+        transition: color 0.2s ease;
     }
 
+    /* El icono "se enciende" al hacer clic */
+    .input-container:focus-within i[b-jyvd0mrujh] {
+        color: var(--color-primary);
+    }
+
+
+/* --- CAJA DE SUBIDA DE IMÁGENES (ESTADO VACÍO) --- */
 .upload-box[b-jyvd0mrujh] {
     border: 2px dashed #cbd5e1;
-    border-radius: 12px;
-    background-color: #fafafa;
+    border-radius: 8px; /* Menos redondeado */
+    background-color: #f8fafc;
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px 10px; /* Menos espacio interior */
     cursor: pointer;
     position: relative;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
     height: 100%;
-    min-height: 280px;
+    min-height: 180px; /* Reducción de altura */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,154 +125,299 @@
 }
 
     .upload-box:hover[b-jyvd0mrujh] {
-        border-color: #021947;
-        background-color: #f1f5f9;
+        border-color: var(--color-primary);
+        background-color: color-mix(in srgb, var(--color-primary), white 95%);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
 
-.file-input-hidden[b-jyvd0mrujh] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
+/* Círculo decorativo detrás del icono de subida */
 .upload-icon-container[b-jyvd0mrujh] {
-    width: 60px;
-    height: 60px;
-    background-color: #f1f5f9;
+    width: 40px; /* Reducción de círculo */
+    height: 40px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
 }
 
-.validation-text[b-jyvd0mrujh] {
-    color: #dc3545;
-    font-size: 0.85rem;
-    margin-top: 4px;
-    display: block;
-    font-weight: 500;
+.upload-box:hover .upload-icon-container[b-jyvd0mrujh] {
+    transform: translateY(-4px);
+    color: var(--color-primary);
 }
+
+/* --- EL INPUT NATIVO INVISIBLE (CORRECCIÓN "SELECCIONAR ARCHIVO") --- */
+[b-jyvd0mrujh] .file-input-hidden,
+.file-input-hidden[b-jyvd0mrujh] {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0 !important;
+    cursor: pointer !important;
+    z-index: 10;
+    color: transparent !important;
+}
+
+
+/* --- ESTADO CON IMAGEN (VISTA PREVIA) --- */
+.upload-box.has-image[b-jyvd0mrujh] {
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    cursor: default;
+}
+
+    .upload-box.has-image:hover[b-jyvd0mrujh] {
+        box-shadow: none;
+        transform: none;
+    }
+
+.image-preview-container[b-jyvd0mrujh] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 15;
+}
+
+.img-preview[b-jyvd0mrujh] {
+    max-width: 100%;
+    max-height: 120px; /* Imagen más pequeña para que quepa en la caja ajustada */
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Botón de quitar imagen */
+.btn-remove-image[b-jyvd0mrujh] {
+    background-color: #fff0f2;
+    color: #e11d48;
+    border: 1px solid #ffe4e6;
+    border-radius: 4px; /* Más cuadrado */
+    font-size: 0.75rem; /* Letra pequeña */
+    font-weight: 600;
+    padding: 4px 10px; /* Botón ajustado */
+    margin-top: 8px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+    .btn-remove-image:hover[b-jyvd0mrujh] {
+        background-color: #e11d48;
+        color: white;
+        border-color: #e11d48;
+        box-shadow: 0 4px 8px rgba(225, 29, 72, 0.2);
+    }
 /* /Components/Features/Admin/AddUser.razor.rz.scp.css */
+/* --- COLORES PRINCIPALES --- */
 .text-navy[b-3qhbubc7wb] {
-    color: #021947;
+    color: var(--color-primary);
 }
 
 .navy-bg[b-3qhbubc7wb] {
-    background-color: #021947;
+    background-color: var(--color-primary);
     color: white;
     transition: background-color 0.2s;
 }
 
     .navy-bg:hover[b-3qhbubc7wb] {
-        background-color: #010d26;
+        background-color: color-mix(in srgb, var(--color-primary), black 15%);
         color: white;
     }
 
+/* --- CONTENEDOR PRINCIPAL (TAMAÑO EXTRA COMPACTO) --- */
 .form-container[b-3qhbubc7wb] {
-    background: white;
-    border-radius: 12px;
-    border: 1px solid #f1f5f9;
-    padding: 40px;
-    max-width: 900px;
+    background: transparent;
+    padding: 0;
+    max-width: 650px;
     margin: 0 auto;
 }
 
+/* --- ETIQUETAS Y VALIDACIÓN --- */
 .form-label-custom[b-3qhbubc7wb] {
     font-weight: 600;
-    color: #1e293b;
-    font-size: 0.9rem;
-    margin-bottom: 6px;
+    color: var(--color-primary);
+    font-size: 0.75rem; /* Etiquetas más pequeñas (12px) */
+    margin-bottom: 2px; /* Más pegado al input */
+    display: block;
 }
 
-.custom-input[b-3qhbubc7wb] {
-    border-radius: 8px;
-    background-color: #ffffff;
-    border: 1px solid #cbd5e1;
-    font-size: 0.95rem;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #334155;
-}
-
-    .custom-input:focus[b-3qhbubc7wb] {
-        box-shadow: 0 0 0 3px rgba(2, 25, 71, 0.1);
-        border-color: #021947;
-    }
-
-    .custom-input[b-3qhbubc7wb]::placeholder {
-        color: #94a3b8;
-    }
-
-.icon-left[b-3qhbubc7wb] {
-    top: 12px;
-    left: 14px;
-    color: #64748b;
-    font-size: 1.1rem;
-}
-
-.icon-right[b-3qhbubc7wb] {
-    top: 12px;
-    right: 14px;
-    color: #64748b;
-    cursor: pointer;
-    font-size: 1.1rem;
+.asterisk[b-3qhbubc7wb] {
+    color: #dc3545;
+    margin-left: 2px;
 }
 
 .validation-text[b-3qhbubc7wb] {
     color: #dc3545;
-    font-size: 0.85rem;
-    margin-top: 4px;
+    font-size: 0.70rem; /* Texto de error minimizado */
+    margin-top: 3px;
     display: block;
     font-weight: 500;
 }
-/* /Components/Features/Admin/ProductList.razor.rz.scp.css */
-.text-navy[b-x7m49bk3up] {
-    color: #021947;
+
+/* --- DISEÑO DE INPUT MODERNO Y EXTRA SUAVE --- */
+.input-container[b-3qhbubc7wb] {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px; /* Reducción igual al buscador de ProductList */
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
 }
 
+    .input-container:focus-within[b-3qhbubc7wb] {
+        background-color: #ffffff;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary), white 85%);
+    }
+
+    .input-container input[b-3qhbubc7wb],
+    .input-container select[b-3qhbubc7wb] {
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 13px; /* Tamaño de letra compacto en todo el sistema */
+        color: #1e293b;
+        width: 100%;
+    }
+
+        .input-container input[type="date"][b-3qhbubc7wb]::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            opacity: 0.6;
+            transition: 0.2s;
+        }
+
+            .input-container input[type="date"][b-3qhbubc7wb]::-webkit-calendar-picker-indicator:hover {
+                opacity: 1;
+            }
+
+        .input-container input[b-3qhbubc7wb]::placeholder {
+            color: #94a3b8;
+        }
+
+    /* Estado inactivo del icono */
+    .input-container i[b-3qhbubc7wb] {
+        color: #64748b;
+        font-size: 14px; /* Iconos más chicos a juego con los inputs */
+        transition: color 0.2s ease;
+    }
+
+    /* El icono "se enciende" al hacer clic */
+    .input-container:focus-within i[b-3qhbubc7wb] {
+        color: var(--color-primary);
+    }
+/* /Components/Features/Admin/ProductList.razor.rz.scp.css */
+/* --- COLORES Y TIPOGRAFÍA GENERAL --- */
+.text-navy[b-x7m49bk3up] {
+    color: var(--color-primary);
+}
+
+/* Título de la página más pequeño */
+.main-title[b-x7m49bk3up] {
+    font-size: 1.35rem !important;
+}
+
+/* --- BOTÓN SUPERIOR (Añadir Producto) --- */
 .navy-bg[b-x7m49bk3up] {
-    background-color: #021947;
+    background-color: var(--color-primary);
     color: white;
+    font-size: 0.82rem !important; /* Texto más pequeño */
+    padding: 6px 14px !important; /* Altura y ancho reducidos significativamente */
+    font-weight: 500;
+    border-radius: 6px;
     transition: background-color 0.2s;
 }
 
     .navy-bg:hover[b-x7m49bk3up] {
-        background-color: #010d26;
+        background-color: color-mix(in srgb, var(--color-primary), black 15%);
         color: white;
     }
 
+/* --- BOTÓN DE LA TABLA (Actualizar Stock) --- */
+.btn-outline-custom[b-x7m49bk3up] {
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 0.75rem !important; /* Botón de acción bien pequeño */
+    padding: 4px 10px !important; /* Reducción de tamaño total */
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+    .btn-outline-custom:hover[b-x7m49bk3up] {
+        background-color: color-mix(in srgb, var(--color-primary), white 95%);
+    }
+
+/* --- CONTENEDOR PRINCIPAL DE LA TABLA --- */
 .table-container[b-x7m49bk3up] {
     background: white;
     border-radius: 8px;
-    border: 1px solid #f1f5f9;
-    padding: 24px;
-}
-
-.search-input[b-x7m49bk3up] {
-    border-radius: 8px;
-    background-color: #ffffff;
     border: 1px solid #e2e8f0;
-    font-size: 0.95rem;
-    max-width: 450px;
+    padding: 14px; /* Relleno compacto */
 }
 
-    .search-input:focus[b-x7m49bk3up] {
-        box-shadow: none;
-        border-color: #021947;
+/* --- BARRA DE BÚSQUEDA --- */
+.input-container[b-x7m49bk3up] {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px; /* Buscador más delgado */
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+    .input-container:focus-within[b-x7m49bk3up] {
+        background-color: #ffffff;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary), white 85%);
     }
 
+    .input-container input[b-x7m49bk3up] {
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 13px; /* Tipografía de búsqueda reducida */
+        color: #1e293b;
+        width: 100%;
+    }
+
+        .input-container input[b-x7m49bk3up]::placeholder {
+            color: #94a3b8;
+        }
+
+    .input-container i[b-x7m49bk3up] {
+        color: #64748b;
+        font-size: 14px;
+        transition: color 0.2s ease;
+    }
+
+/* --- IMAGEN DEL PRODUCTO --- */
 .product-img-container[b-x7m49bk3up] {
-    width: 40px;
-    height: 60px;
+    width: 26px; /* Miniatura optimizada */
+    height: 38px; /* Miniatura optimizada */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 16px;
+    margin-right: 10px;
+    background-color: #f8fafc;
+    border-radius: 4px;
 }
 
 .product-img[b-x7m49bk3up] {
@@ -241,41 +426,67 @@
     object-fit: contain;
 }
 
+/* --- MEDIDAS TIPOGRÁFICAS INTERNAS DE LA TABLA --- */
+.custom-table th[b-x7m49bk3up] {
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.72rem; /* Cabeceras compactas */
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.custom-table td[b-x7m49bk3up] {
+    vertical-align: middle;
+    padding: 5px 6px; /* Filas muy juntas y limpias */
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.product-name[b-x7m49bk3up] {
+    font-size: 0.82rem; /* Nombre del producto pequeño y legible */
+    line-height: 1.2;
+}
+
+.product-sku[b-x7m49bk3up] {
+    font-size: 0.78rem; /* SKU discreto */
+}
+
+.stock-current[b-x7m49bk3up] {
+    font-size: 0.95rem; /* El número de stock destaca pero sin ser gigante */
+}
+
+.stock-min[b-x7m49bk3up] {
+    font-size: 0.85rem;
+}
+
+/* --- PAGINACIÓN --- */
 .custom-pagination .page-item.active .page-link[b-x7m49bk3up] {
-    background-color: #021947;
-    border-color: #021947;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
     color: white;
 }
 
 .custom-pagination .page-link[b-x7m49bk3up] {
     color: #475569;
     border: 1px solid #e2e8f0;
-    margin: 0 2px;
-    border-radius: 6px;
+    margin: 0 1px;
+    border-radius: 4px;
     background: white;
+    padding: 3px 8px; /* Botones de página muy pequeños */
+    font-size: 0.78rem;
+    transition: all 0.2s;
 }
 
-    .custom-pagination .page-link:disabled[b-x7m49bk3up] {
-        background-color: #f8f9fa;
-        color: #94a3b8;
+    .custom-pagination .page-link:hover:not(:disabled)[b-x7m49bk3up] {
+        background-color: #f1f5f9;
+        color: var(--color-primary);
     }
 
-.custom-table th[b-x7m49bk3up] {
-    color: #64748b;
-    font-weight: 600;
-    font-size: 0.85rem;
-    border-bottom: 2px solid #f1f5f9;
-    padding-bottom: 12px;
-    text-transform: uppercase;
-}
-
-.custom-table td[b-x7m49bk3up] {
-    vertical-align: middle;
-    padding: 16px 8px;
-    border-bottom: 1px solid #f8f9fa;
-    font-weight: 500;
-    color: #1e293b;
-}
+    .custom-pagination .page-link:disabled[b-x7m49bk3up] {
+        background-color: #f8fafc;
+        color: #cbd5e1;
+        border-color: #f1f5f9;
+    }
 /* /Components/Features/Admin/UpdateProduct.razor.rz.scp.css */
 .text-navy[b-kgcfu805vb] {
     color: #021947;
@@ -385,8 +596,9 @@
 }
 
 /* /Components/Features/Admin/UserList.razor.rz.scp.css */
+/* --- COLORES PRINCIPALES --- */
 .text-navy[b-jpb16fouw5] {
-    color: #021947;
+    color: #021947; /* O var(--color-primary) si ya lo usas así globalmente */
 }
 
 .navy-bg[b-jpb16fouw5] {
@@ -400,7 +612,7 @@
         color: white;
     }
 
-/* Botones de filtro inactivos */
+/* --- FILTROS --- */
 .btn-filter-inactive[b-jpb16fouw5] {
     background-color: #f1f5f9;
     color: #475569;
@@ -413,48 +625,97 @@
         color: #1e293b;
     }
 
+/* --- CONTENEDOR DE LA TABLA --- */
 .table-container[b-jpb16fouw5] {
     background: white;
     border-radius: 8px;
     border: 1px solid #f1f5f9;
-    padding: 24px;
+    padding: 14px; /* Relleno compacto, igual que en Productos */
 }
 
-.search-input[b-jpb16fouw5] {
-    border-radius: 8px;
-    background-color: #ffffff;
+/* --- BARRA DE BÚSQUEDA UNIFICADA --- */
+.input-container[b-jpb16fouw5] {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    background-color: #f8fafc;
     border: 1px solid #e2e8f0;
-    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
 }
 
-    .search-input:focus[b-jpb16fouw5] {
-        box-shadow: none;
+    .input-container:focus-within[b-jpb16fouw5] {
+        background-color: #ffffff;
         border-color: #021947;
+        box-shadow: 0 0 0 3px rgba(2, 25, 71, 0.15);
     }
 
+    .input-container input[b-jpb16fouw5] {
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 13px;
+        color: #1e293b;
+        width: 100%;
+    }
+
+        .input-container input[b-jpb16fouw5]::placeholder {
+            color: #94a3b8;
+        }
+
+    .input-container i[b-jpb16fouw5] {
+        color: #64748b;
+        font-size: 14px;
+        transition: color 0.2s ease;
+    }
+
+    .input-container:focus-within i[b-jpb16fouw5] {
+        color: #021947;
+    }
+
+/* --- AVATAR E IDS --- */
 .avatar-circle[b-jpb16fouw5] {
-    width: 42px;
-    height: 42px;
+    width: 32px; /* Avatar mucho más pequeño */
+    height: 32px;
     background-color: #021947;
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 14px;
 }
 
 .badge-id[b-jpb16fouw5] {
     background-color: #f8f9fa;
     color: #64748b;
-    padding: 2px 8px;
+    padding: 2px 6px;
     border-radius: 4px;
-    font-size: 0.75rem;
+    font-size: 0.68rem; /* ID más sutil */
     border: 1px solid #e2e8f0;
     margin-top: 4px;
     display: inline-block;
 }
 
-/* Paginación Dinámica */
+/* --- TABLA MODERNA Y COMPACTA --- */
+.custom-table th[b-jpb16fouw5] {
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.72rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.custom-table td[b-jpb16fouw5] {
+    vertical-align: middle;
+    padding: 6px 8px; /* Filas muy juntas y delgadas */
+    border-bottom: 1px solid #f8f9fa;
+}
+
+/* --- PAGINACIÓN MODERNA --- */
 .custom-pagination .page-item.active .page-link[b-jpb16fouw5] {
     background-color: #021947;
     border-color: #021947;
@@ -464,29 +725,24 @@
 .custom-pagination .page-link[b-jpb16fouw5] {
     color: #475569;
     border: 1px solid #e2e8f0;
-    margin: 0 2px;
-    border-radius: 6px;
+    margin: 0 1px;
+    border-radius: 4px;
     background: white;
+    padding: 3px 8px; /* Botones mini */
+    font-size: 0.78rem;
+    transition: all 0.2s;
 }
 
-    .custom-pagination .page-link:disabled[b-jpb16fouw5] {
-        background-color: #f8f9fa;
-        color: #94a3b8;
+    .custom-pagination .page-link:hover:not(:disabled)[b-jpb16fouw5] {
+        background-color: #f1f5f9;
+        color: #021947;
     }
 
-.custom-table th[b-jpb16fouw5] {
-    color: #64748b;
-    font-weight: 500;
-    font-size: 0.9rem;
-    border-bottom: 2px solid #f1f5f9;
-    padding-bottom: 12px;
-}
-
-.custom-table td[b-jpb16fouw5] {
-    vertical-align: middle;
-    padding: 16px 8px;
-    border-bottom: 1px solid #f8f9fa;
-}
+    .custom-pagination .page-link:disabled[b-jpb16fouw5] {
+        background-color: #f8fafc;
+        color: #cbd5e1;
+        border-color: #f1f5f9;
+    }
 /* /Components/Features/auth/ConfirmationEmail.razor.rz.scp.css */
 .container[b-90635xoz2l] {
     display: flex;
@@ -1243,6 +1499,330 @@ button[b-vt3trsx7fj] {
         font-size: 18px;
     }
 }
+/* /Components/Features/chart/Cart.razor.rz.scp.css */
+/* Contenedor Estructural Principal */
+.cart-page-container[b-zavu514wq6] {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 24px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #1e293b;
+}
+
+/* Cabecera de Página */
+.cart-header[b-zavu514wq6] {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+    .cart-header h1[b-zavu514wq6] {
+        font-size: 26px;
+        font-weight: 700;
+        color: #0f2147;
+        letter-spacing: 0.5px;
+        margin: 0 0 10px 0;
+    }
+
+/* Divisor con Icono Central */
+.cart-divider[b-zavu514wq6] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+    .cart-divider span[b-zavu514wq6] {
+        width: 40px;
+        height: 1px;
+        background-color: #0f2147;
+    }
+
+    .cart-divider i[b-zavu514wq6] {
+        color: #0f2147;
+        font-size: 16px;
+    }
+
+.cart-header .subtitle[b-zavu514wq6] {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Distribución del Carrito en Dos Columnas */
+.cart-content-layout[b-zavu514wq6] {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 60px;
+}
+
+/* Lista de Productos del Carrito (Izquierda) */
+.cart-items-section[b-zavu514wq6] {
+    background: #ffffff;
+}
+
+/* Encabezados de Tabla del Carrito */
+.cart-table-headers[b-zavu514wq6] {
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+}
+
+.hdr-receta[b-zavu514wq6] {
+    flex: 1;
+}
+
+.hdr-precio[b-zavu514wq6] {
+    width: 100px;
+    text-align: center;
+}
+
+.hdr-subtotal[b-zavu514wq6] {
+    width: 100px;
+    text-align: right;
+}
+
+/* Fila de Item Individual */
+.cart-item-row[b-zavu514wq6] {
+    display: flex;
+    align-items: center;
+    padding: 24px 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.item-media-info[b-zavu514wq6] {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.cart-item-img[b-zavu514wq6] {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    background-color: #f8fafc;
+    border-radius: 8px;
+}
+
+.item-text h3[b-zavu514wq6] {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f2147;
+    margin: 0 0 6px 0;
+}
+
+.item-text p[b-zavu514wq6] {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+    max-width: 420px;
+}
+
+/* Botón Eliminar con Icono de Papelera */
+.btn-delete-item[b-zavu514wq6] {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+    .btn-delete-item:hover[b-zavu514wq6] {
+        color: #ef4444;
+    }
+
+/* Columnas de Tarifas del Item */
+.item-price-col[b-zavu514wq6] {
+    width: 100px;
+    text-align: center;
+    font-weight: 600;
+    color: #0f2147;
+}
+
+.item-subtotal-col[b-zavu514wq6] {
+    width: 100px;
+    text-align: right;
+    font-weight: 700;
+    color: #0f2147;
+}
+
+/* Columna Derecha: Tarjeta de Resumen */
+.summary-card[b-zavu514wq6] {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+    .summary-card h2[b-zavu514wq6] {
+        font-size: 15px;
+        font-weight: 700;
+        color: #0f2147;
+        text-align: center;
+        margin: 0 0 24px 0;
+        letter-spacing: 0.5px;
+    }
+
+.summary-row[b-zavu514wq6] {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 14px;
+}
+
+/* Bloque del Monto Total */
+.summary-total-block[b-zavu514wq6] {
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 16px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.total-main[b-zavu514wq6] {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #0f2147;
+}
+
+    .total-main strong[b-zavu514wq6] {
+        font-weight: 700;
+    }
+
+.tax-notice[b-zavu514wq6] {
+    display: block;
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+/* Botón Finalizar Compra */
+.btn-checkout[b-zavu514wq6] {
+    width: 100%;
+    background-color: #0f2147;
+    color: #ffffff;
+    border: none;
+    padding: 13px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+}
+
+    .btn-checkout:hover[b-zavu514wq6] {
+        background-color: #162f65;
+    }
+
+/* Bloque Inferior de Pasarelas Aceptadas */
+.payment-methods-box[b-zavu514wq6] {
+    margin-top: 24px;
+    text-align: center;
+}
+
+    .payment-methods-box p[b-zavu514wq6] {
+        font-size: 12px;
+        color: #94a3b8;
+        margin: 0 0 10px 0;
+    }
+
+.payment-badges[b-zavu514wq6] {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.badge[b-zavu514wq6] {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+/* Sección de Recomendaciones Inferiores */
+.suggestions-section[b-zavu514wq6] {
+    margin-top: 40px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 30px;
+}
+
+.suggestions-header[b-zavu514wq6] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+    .suggestions-header span[b-zavu514wq6] {
+        flex: 1;
+        height: 1px;
+        background-color: #e2e8f0;
+        max-width: 350px;
+    }
+
+    .suggestions-header h2[b-zavu514wq6] {
+        font-size: 14px;
+        font-weight: 700;
+        color: #0f2147;
+        letter-spacing: 0.5px;
+        margin: 0;
+    }
+
+/* Carrusel/Grilla de Tarjetas Sugeridas */
+.suggestions-carousel[b-zavu514wq6] {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* Responsive para pantallas compactas o móviles */
+@media (max-width: 992px) {
+    .cart-content-layout[b-zavu514wq6] {
+        grid-template-columns: 1fr;
+    }
+
+    .suggestions-carousel[b-zavu514wq6] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .suggestions-carousel[b-zavu514wq6] {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-item-row[b-zavu514wq6] {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .item-price-col[b-zavu514wq6], .item-subtotal-col[b-zavu514wq6] {
+        width: auto;
+        text-align: left;
+    }
+}
 /* /Components/Features/Products/components/ProductCard.razor.rz.scp.css */
 .product-card[b-24gdafgvea] {
     position: relative;
@@ -1520,46 +2100,904 @@ input[b-ewupr7nfa0]{
         cursor: not-allowed;
         opacity: 0.5;
     }
+/* /Components/Features/recipes/AddRecipeProduct.razor.rz.scp.css */
+/* Contenedor Principal de la Vista */
+.add-recipe-container[b-vbv2pzjigi] {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a2a4a;
+}
+
+/* Cabecera de la Pantalla */
+.add-recipe-header[b-vbv2pzjigi] {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+    .add-recipe-header h1[b-vbv2pzjigi] {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: #0f2147;
+        text-transform: none;
+    }
+
+/* Línea decorativa debajo del título principal */
+.title-underline[b-vbv2pzjigi] {
+    width: 45px;
+    height: 3px;
+    background-color: #0f2147;
+    margin: 0 auto 20px;
+}
+
+.add-recipe-header .subtitle[b-vbv2pzjigi] {
+    font-size: 15px;
+    color: #5a6578;
+}
+
+/* Lista de Tarjetas de Productos */
+.products-selection-list[b-vbv2pzjigi] {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+/* Tarjeta Individual de Producto */
+.product-selection-card[b-vbv2pzjigi] {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .product-selection-card:hover[b-vbv2pzjigi] {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    }
+
+/* Bloque Izquierdo: Espacio de la Imagen */
+.card-left[b-vbv2pzjigi] {
+    width: 100px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 32px;
+}
+
+.product-thumb[b-vbv2pzjigi] {
+    max-height: 90px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Bloque Central: Ficha Técnica (Nombre, Marca, Cantidad) */
+.card-body[b-vbv2pzjigi] {
+    flex: 1;
+}
+
+    .card-body p[b-vbv2pzjigi] {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #334155;
+        letter-spacing: 0.3px;
+    }
+
+    .card-body strong[b-vbv2pzjigi] {
+        color: #0f2147;
+        display: inline-block;
+        width: 95px; /* Alineación perfecta de las etiquetas en bloque */
+        font-weight: 700;
+    }
+
+/* Bloque Derecho: Subtotal y Botón de Acción Alternativa */
+.card-right[b-vbv2pzjigi] {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.subtotal-box[b-vbv2pzjigi] {
+    font-size: 13px;
+    color: #64748b;
+    text-align: right;
+    white-space: nowrap;
+}
+
+    .subtotal-box strong[b-vbv2pzjigi] {
+        font-size: 18px;
+        color: #0f2147;
+        margin-left: 6px;
+        font-weight: 700;
+    }
+
+/* Botón Escoger Otra Marca */
+.btn-change-brand[b-vbv2pzjigi] {
+    background-color: #0f2147;
+    color: #ffffff;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+}
+
+    .btn-change-brand:hover[b-vbv2pzjigi] {
+        background-color: #1b3564;
+    }
+
+/* Pie de Página de la Vista */
+.add-recipe-footer[b-vbv2pzjigi] {
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+/* Botón Principal: Añadir al carrito */
+.btn-confirm-cart[b-vbv2pzjigi] {
+    background-color: #0f2147;
+    color: #ffffff;
+    border: none;
+    padding: 14px 45px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(15, 33, 71, 0.15);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+    .btn-confirm-cart:hover[b-vbv2pzjigi] {
+        background-color: #1b3564;
+    }
+
+    .btn-confirm-cart:active[b-vbv2pzjigi] {
+        transform: scale(0.98);
+    }
+
+/* Mensaje de Confirmación Final */
+.footer-notice[b-vbv2pzjigi] {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+    .footer-notice i[b-vbv2pzjigi] {
+        color: #10b981; /* Verde esmeralda para el check de confirmación */
+        font-size: 14px;
+    }
+/* /Components/Features/recipes/ChangeBrand.razor.rz.scp.css */
+/* Contenedor Principal de la Interfaz */
+.change-brand-container[b-70p4y48d1b] {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 24px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #1e293b;
+}
+
+/* Cabecera Principal */
+.change-brand-header[b-70p4y48d1b] {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+    .change-brand-header h1[b-70p4y48d1b] {
+        font-size: 34px;
+        font-weight: 700;
+        color: #0f2147;
+        margin: 0 0 6px 0;
+    }
+
+/* Subrayado Decorativo del Título */
+.title-underline[b-70p4y48d1b] {
+    width: 40px;
+    height: 3px;
+    background-color: #0f2147;
+    margin: 0 auto 25px;
+}
+
+.change-brand-header .subtitle[b-70p4y48d1b],
+.change-brand-header .product-type[b-70p4y48d1b] {
+    font-size: 16px;
+    color: #334155;
+    margin: 4px 0;
+}
+
+.change-brand-header strong[b-70p4y48d1b] {
+    color: #0f2147;
+    font-weight: 700;
+}
+
+.change-brand-header .instruction[b-70p4y48d1b] {
+    font-size: 14px;
+    color: #64748b;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* Distribución de la Grilla (2 Columnas perfectas) */
+.brands-grid[b-70p4y48d1b] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Tarjeta de Opción Individual */
+.brand-option-card[b-70p4y48d1b] {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+    .brand-option-card:hover[b-70p4y48d1b] {
+        border-color: #cbd5e1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    /* Estado de Tarjeta Seleccionada activamente */
+    .brand-option-card.active-card[b-70p4y48d1b] {
+        border-color: #0f2147;
+        background-color: #f8fafc;
+    }
+
+/* Contenedor de Imagen de Botella */
+.brand-img-box[b-70p4y48d1b] {
+    width: 60px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+}
+
+.brand-thumb[b-70p4y48d1b] {
+    max-height: 80px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Bloque Informativo de Texto de la Marca */
+.brand-info[b-70p4y48d1b] {
+    flex: 1;
+}
+
+    .brand-info h3[b-70p4y48d1b] {
+        font-size: 16px;
+        font-weight: 700;
+        color: #0f2147;
+        margin: 0 0 4px 0;
+    }
+
+.brand-category[b-70p4y48d1b] {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0 0 6px 0;
+}
+
+.brand-price[b-70p4y48d1b] {
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+    margin: 0;
+}
+
+/* Wrapper del Radio Button derecho */
+.brand-radio-wrapper[b-70p4y48d1b] {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+/* Radio Button Circular Nativo de la Interfaz */
+.custom-radio[b-70p4y48d1b] {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #cbd5e1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.brand-option-card:hover .custom-radio[b-70p4y48d1b] {
+    border-color: #94a3b8;
+}
+
+.custom-radio.checked[b-70p4y48d1b] {
+    border-color: #0f2147;
+}
+
+/* Punto Interno de Selección Activa */
+.radio-inner-dot[b-70p4y48d1b] {
+    width: 12px;
+    height: 12px;
+    background-color: #0f2147;
+    border-radius: 50%;
+    animation: scaleIn-b-70p4y48d1b 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Sección Inferior de Acciones */
+.change-brand-footer[b-70p4y48d1b] {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Botón "Confirmar Cambio" */
+.btn-confirm-change[b-70p4y48d1b] {
+    background-color: #0f2147;
+    color: #ffffff;
+    border: none;
+    padding: 13px 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(15, 33, 71, 0.15);
+    transition: background-color 0.2s ease, transform 0.1s ease, opacity 0.2s ease;
+}
+
+    .btn-confirm-change:hover[b-70p4y48d1b] {
+        background-color: #1b3564;
+    }
+
+    .btn-confirm-change:active[b-70p4y48d1b] {
+        transform: scale(0.98);
+    }
+
+    .btn-confirm-change:disabled[b-70p4y48d1b] {
+        background-color: #94a3b8;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+/* Animación de Entrada para la Burbuja del Radio */
+@keyframes scaleIn-b-70p4y48d1b {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Ajustes Adaptativos para Dispositivos Móviles */
+@media (max-width: 768px) {
+    .brands-grid[b-70p4y48d1b] {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+
+.no-options-alert[b-70p4y48d1b] {
+    grid-column: span 2;
+    text-align: center;
+    padding: 40px;
+    background-color: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.change-brand-footer[b-70p4y48d1b] {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-cancel-change[b-70p4y48d1b] {
+    background-color: transparent;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    padding: 13px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+    .btn-cancel-change:hover[b-70p4y48d1b] {
+        background-color: #f1f5f9;
+        color: #334155;
+    }
+
+/* Modificación de comportamiento móvil responsivo */
+@media (max-width: 768px) {
+    .brands-grid[b-70p4y48d1b] {
+        grid-template-columns: 1fr;
+    }
+
+    .change-brand-footer[b-70p4y48d1b] {
+        flex-direction: column-reverse;
+    }
+
+    .btn-cancel-change[b-70p4y48d1b], .btn-confirm-change[b-70p4y48d1b] {
+        width: 100%;
+    }
+}
+/* /Components/Features/recipes/Recipe.razor.rz.scp.css */
+.recipes-banner[b-ldc9o4vtim] {
+    position: relative;
+    width: 100vw;
+    height: 220px;
+    overflow: hidden;
+    margin-left: calc(50% - 50vw);
+}
+
+.recipes-banner-img[b-ldc9o4vtim] {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    object-position: 80% 38%;
+    display: block;
+}
+
+.recipes-banner-content[b-ldc9o4vtim] {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.recipes-title[b-ldc9o4vtim] {
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.recipes-divider[b-ldc9o4vtim] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+    .recipes-divider span[b-ldc9o4vtim] {
+        width: 30px;
+        height: 1px;
+        background: white;
+    }
+
+.recipes-description[b-ldc9o4vtim] {
+    font-size: 15px;
+    margin: 0;
+}
+
+.recipes-section[b-ldc9o4vtim] {
+    display: flex;
+    gap: 32px;
+    padding: 10px 40px 32px;
+    background: white;
+    box-sizing: border-box;
+    position: sticky;
+    top: 190px;
+    height: calc(100vh - 230px);
+    overflow: hidden;
+}
+
+.recipes-area[b-ldc9o4vtim] {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 12px;
+}
+
+    .recipes-area[b-ldc9o4vtim]::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .recipes-area[b-ldc9o4vtim]::-webkit-scrollbar-thumb {
+        background: var(--primary);
+        border-radius: 4px;
+    }
+
+.recipes-top[b-ldc9o4vtim] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.recipes-grid[b-ldc9o4vtim] {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 24px;
+}
+
+.filters-card[b-ldc9o4vtim] {
+    width: 260px;
+    min-width: 260px;
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    color: var(--primary);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+}
+
+    .filters-card[b-ldc9o4vtim]::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .filters-card[b-ldc9o4vtim]::-webkit-scrollbar-thumb {
+        background: #d8dbe8;
+        border-radius: 4px;
+    }
+
+.search-input-box[b-ldc9o4vtim] {
+    margin-top: 18px;
+}
+
+    .search-input-box input[b-ldc9o4vtim] {
+        width: 100%;
+        height: 38px;
+        border: 1px solid #d8dbe8;
+        border-radius: 8px;
+        padding: 0 10px;
+        color: var(--primary);
+        outline: none;
+        box-sizing: border-box;
+    }
+
+.clear-button[b-ldc9o4vtim] {
+    width: 100%;
+    height: 46px;
+    margin-top: 24px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+/* /Components/Features/recipes/RecipeCard.razor.rz.scp.css */
+.recipe-card[b-okfnm2lkz5] {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 315px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.08);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recipe-img-box[b-okfnm2lkz5] {
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-img[b-okfnm2lkz5] {
+    max-height: 150px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.recipe-card h3[b-okfnm2lkz5] {
+    margin: 12px 0 4px;
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.recipe-desc[b-okfnm2lkz5] {
+    margin: 0;
+    color: #4d5875;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.recipe-bottom[b-okfnm2lkz5] {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinea el botón a la derecha */
+    margin-top: 18px;
+}
+
+.view-recipe-button[b-okfnm2lkz5] {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+    .view-recipe-button:hover[b-okfnm2lkz5] {
+        opacity: 0.9;
+    }
+/* /Components/Features/recipes/RecipeDetails.razor.rz.scp.css */
+.recipe-detail-container[b-3lua00sur3] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background: white;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- COLUMNA DE MEDIOS (IZQUIERDA) --- */
+.recipe-media[b-3lua00sur3] {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-image-box[b-3lua00sur3] {
+    width: 100%;
+    height: 450px;
+    background: #f4f5f8;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-recipe-img[b-3lua00sur3] {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.thumbnails-carousel[b-3lua00sur3] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.carousel-arrow[b-3lua00sur3] {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--primary);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.thumb-box[b-3lua00sur3] {
+    width: 80px;
+    height: 80px;
+    background: #f4f5f8;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+    .thumb-box img[b-3lua00sur3] {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+    }
+
+    .thumb-box.active[b-3lua00sur3] {
+        border-color: var(--primary);
+    }
+
+
+/* --- COLUMNA DE INFORMACIÓN (DERECHA) --- */
+.recipe-info[b-3lua00sur3] {
+    display: flex;
+    flex-direction: column;
+    color: #0f2147; /* Color oscuro base de tu marca */
+}
+
+.recipe-title[b-3lua00sur3] {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    color: #0f2147;
+}
+
+.recipe-price[b-3lua00sur3] {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f2147;
+    margin-bottom: 12px;
+}
+
+.recipe-rating[b-3lua00sur3] {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 24px;
+}
+
+.stars[b-3lua00sur3] {
+    color: #0f2147; /* Estrellas del mismo color azul que tus botones */
+    font-size: 18px;
+    display: flex;
+    gap: 2px;
+}
+
+.rating-value[b-3lua00sur3] {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.rating-count[b-3lua00sur3] {
+    color: #8a94a6;
+    font-size: 15px;
+}
+
+.recipe-description[b-3lua00sur3] {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4d5875;
+    margin: 0 0 20px 0;
+}
+
+.recipe-divider[b-3lua00sur3] {
+    border: none;
+    border-top: 1px solid #e1e4ed;
+    margin-bottom: 20px;
+}
+
+.ingredients-section h3[b-3lua00sur3] {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.ingredients-section ul[b-3lua00sur3] {
+    padding-left: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ingredients-section li[b-3lua00sur3] {
+    font-size: 15px;
+    color: #333d54;
+    line-height: 1.4;
+}
+
+/* --- BOTONES DE ACCIÓN --- */
+.recipe-actions[b-3lua00sur3] {
+    display: flex;
+    gap: 16px;
+    margin-top: auto; /* Empuja los botones al final si hay espacio */
+    padding-top: 32px;
+}
+
+.btn-preparacion[b-3lua00sur3] {
+    flex: 1;
+    height: 52px;
+    background: #0f2147; /* var(--primary) */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: opacity 0.2s ease;
+}
+
+.btn-add-cart[b-3lua00sur3] {
+    flex: 1;
+    height: 52px;
+    background: white;
+    color: #0f2147;
+    border: 1.5px solid #0f2147;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-preparacion:hover[b-3lua00sur3] {
+    opacity: 0.9;
+}
+
+.btn-add-cart:hover[b-3lua00sur3] {
+    background-color: #f4f5f8;
+}
 /* /Components/Features/User/ChangePassword.razor.rz.scp.css */
+/* --- COLORES PRINCIPALES --- */
+.text-navy[b-6hxthm3v5c] {
+    color: var(--color-primary, #021947);
+}
+
+.navy-bg[b-6hxthm3v5c] {
+    background-color: var(--color-primary, #021947);
+    color: white;
+    transition: background-color 0.2s;
+}
+
+    .navy-bg:hover[b-6hxthm3v5c] {
+        background-color: color-mix(in srgb, var(--color-primary, #021947), black 15%);
+        color: white;
+    }
+
 /* --- Contenedor de la Página --- */
 .password-page-container[b-6hxthm3v5c] {
-    max-width: 900px;
+    max-width: 550px; /* Ancho reducido para un formulario más elegante */
     margin: 0 auto;
     padding-top: 0.5rem;
     padding-bottom: 1.5rem;
 }
 
-/* --- Encabezado --- */
-.password-header[b-6hxthm3v5c] {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.titulo[b-6hxthm3v5c] {
-    text-align: center;
-    color: #0b1f5c;
-    margin-bottom: 10px;
-    font-size: 36px;
-}
-
-.subtitulo[b-6hxthm3v5c] {
-    text-align: center;
-    color: gray;
-    margin-bottom: 40px;
-}
-
-/* --- Tarjetas (Cards) Generales --- */
+/* --- Tarjeta Principal --- */
 .password-form-card[b-6hxthm3v5c] {
     background-color: #ffffff;
-    border: none;
+    border: 1px solid #e2e8f0; /* Borde sutil en lugar de sin borde */
     border-radius: 8px;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    padding: 2rem;
+    padding: 1.25rem 1.5rem; /* Relleno compacto */
 }
 
-/* --- Grupos de Formulario e Inputs --- */
+/* --- Clases internas del componente personalizado <Input> --- */
 .form-group-container[b-6hxthm3v5c] {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .form-group-container-compact[b-6hxthm3v5c] {
@@ -1568,118 +3006,102 @@ input[b-ewupr7nfa0]{
 
 .form-input-label[b-6hxthm3v5c] {
     font-weight: 600;
-    color: #6c757d;
-    font-size: 0.85rem;
-    margin-bottom: 0.4rem;
+    color: var(--color-primary, #021947);
+    font-size: 0.75rem; /* Tamaño de etiqueta unificado (12px) */
+    margin-bottom: 3px;
     display: block;
 }
 
 .custom-input-group[b-6hxthm3v5c] {
     display: flex;
     align-items: center;
-    border: 1px solid #ced4da;
+    border: 1px solid #e2e8f0;
     border-radius: 6px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #f8fafc; /* Fondo gris claro */
+    transition: all 0.2s ease-in-out;
 }
 
     .custom-input-group:focus-within[b-6hxthm3v5c] {
-        border-color: #1a2b4c;
+        background-color: #ffffff;
+        border-color: var(--color-primary, #021947);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary, #021947), white 85%);
     }
 
 .custom-form-control[b-6hxthm3v5c] {
     flex: 1;
     border: none;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.95rem;
+    padding: 5px 10px; /* Padding de input reducido */
+    font-size: 13px; /* Tamaño de fuente unificado */
     outline: none;
-    color: #495057;
+    color: #1e293b;
+    background: transparent;
 }
 
 .input-icon-prefix[b-6hxthm3v5c] {
-    padding-left: 0.75rem;
+    padding-left: 10px;
     display: flex;
     align-items: center;
+    color: #64748b;
 }
 
 .input-icon-suffix[b-6hxthm3v5c] {
     background: none;
     border: none;
-    padding-right: 0.75rem;
+    padding-right: 10px;
     display: flex;
     align-items: center;
     cursor: pointer;
+    color: #64748b;
 }
 
 .field-icon-img[b-6hxthm3v5c] {
-    width: 16px;
-    height: 16px;
+    width: 14px; /* Iconos minimizados */
+    height: 14px;
     object-fit: contain;
 }
 
-
 /* --- Panel de Requisitos (Checklist) --- */
 .requirements-box[b-6hxthm3v5c] {
-    padding: 1rem;
-    background-color: #f8f9fa;
+    padding: 10px 12px;
+    background-color: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 6px;
-    margin-bottom: 1.5rem;
 }
 
 .requirements-title[b-6hxthm3v5c] {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 700;
-    color: #212529;
-    margin-bottom: 0.5rem;
+    color: #1e293b;
+    margin-bottom: 0.4rem;
     display: flex;
     align-items: center;
 }
 
 .info-icon-img[b-6hxthm3v5c] {
-    width: 16px;
-    height: 16px;
-    margin-right: 0.5rem;
-}
-
-.requirement-item[b-6hxthm3v5c] {
-    font-size: 0.8rem;
-    color: #6c757d;
-    display: flex;
-    align-items: center;
-}
-
-.check-icon-img[b-6hxthm3v5c] {
     width: 14px;
     height: 14px;
     margin-right: 0.4rem;
 }
 
-/* --- Botón de Acción Principal --- */
-.submit-container[b-6hxthm3v5c] {
-    text-align: center;
+.requirement-item[b-6hxthm3v5c] {
+    font-size: 0.72rem; /* Letra de requisitos muy pequeña */
+    color: #64748b;
+    display: flex;
+    align-items: center;
 }
 
-.btn-submit-password[b-6hxthm3v5c] {
-    width: 100%;
-    padding: 0.65rem;
-    background-color: #1a2b4c;
-    color: #ffffff;
-    font-weight: 700;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+.check-icon-img[b-6hxthm3v5c] {
+    width: 12px;
+    height: 12px;
+    margin-right: 0.4rem;
 }
-
-    .btn-submit-password:hover[b-6hxthm3v5c] {
-        background-color: #111c33;
-    }
 
 /* --- Footer Informativo Seguro --- */
 .security-footer-text[b-6hxthm3v5c] {
     text-align: center;
-    color: #6c757d;
-    font-size: 0.8rem;
+    color: #94a3b8;
+    font-size: 0.72rem;
     margin-top: 1rem;
     display: flex;
     justify-content: center;
@@ -1687,264 +3109,307 @@ input[b-ewupr7nfa0]{
 }
 
 .footer-shield-icon-img[b-6hxthm3v5c] {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     margin-right: 0.3rem;
 }
 /* /Components/Features/User/MyOrders.razor.rz.scp.css */
-/* --- Estilos del Encabezado Principal (Mantienen su tamaño original) --- */
-.titulo[b-zl7ppptjw8] {
-    text-align: center;
-    color: #0b1f5c;
-    margin-bottom: 10px;
-    font-size: 36px;
+/* --- COLORES PRINCIPALES --- */
+.text-navy[b-zl7ppptjw8] {
+    color: var(--color-primary, #021947);
 }
 
-.subtitulo[b-zl7ppptjw8] {
-    text-align: center;
-    color: gray;
-    margin-bottom: 40px;
-    font-size: 14px;
+/* --- Contenedor Principal --- */
+.orders-page-container[b-zl7ppptjw8] {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
 }
 
 /* --- Pestañas (Tabs) --- */
 .tabs[b-zl7ppptjw8] {
-    margin-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .tab-activo[b-zl7ppptjw8] {
-    color: #0b1f5c;
-    font-weight: bold;
-    border-bottom: 3px solid #0b1f5c;
-    padding-bottom: 10px;
-    font-size: 15px;
+    color: var(--color-primary, #021947);
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-primary, #021947);
+    font-size: 0.85rem;
+    margin-bottom: -1px; /* Solapa el borde inferior para un corte limpio */
 }
 
 /* --- Contenedor de Pedidos --- */
 .pedido-card[b-zl7ppptjw8] {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
+    background-color: transparent;
+    padding: 10px 0;
 }
 
 /* --- Tarjeta Individual del Pedido --- */
 .pedido-item[b-zl7ppptjw8] {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 18px 22px;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    margin-bottom: 18px;
+    gap: 15px;
+    padding: 14px 18px; /* Padding reducido para que sean más delgadas */
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px; /* Radio menos pronunciado */
+    margin-bottom: 12px; /* Margen inferior reducido */
     align-items: center;
+    transition: box-shadow 0.2s ease;
 }
 
-/* --- Fuentes dentro de las Columnas (Subidas ~10% en general) --- */
+    .pedido-item:hover[b-zl7ppptjw8] {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+/* --- Tipografía Compacta de las Columnas --- */
 .pedido-col label[b-zl7ppptjw8] {
     display: block;
-    color: gray;
-    margin-bottom: 6px;
-    font-size: 13px;
-    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 2px;
+    font-size: 0.72rem; /* Etiquetas muy sutiles */
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .pedido-col h3[b-zl7ppptjw8] {
-    color: #0b1f5c;
-    margin-bottom: 4px;
-    font-size: 16.5px;
-    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 0.90rem; /* Textos clave unificados */
 }
 
 .pedido-col p[b-zl7ppptjw8] {
-    color: gray;
-    margin-bottom: 0px;
-    font-size: 13px;
+    margin-bottom: 4px;
+    font-size: 0.75rem;
 }
 
-.pedido-col a[b-zl7ppptjw8] {
+.detalle-link[b-zl7ppptjw8] {
     color: #0b5ed7;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 0.78rem; /* Link de acción más pequeño */
 }
+
+    .detalle-link:hover[b-zl7ppptjw8] {
+        text-decoration: underline;
+    }
 
 /* --- Etiquetas de Estado --- */
 .estado[b-zl7ppptjw8] {
-    padding: 5px 11px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 6px; /* Formato píldora ligera */
+    font-size: 0.72rem;
+    font-weight: 600;
     display: inline-block;
 }
 
 .proceso[b-zl7ppptjw8] {
-    background-color: #dbeafe;
-    color: #1d4ed8;
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
 }
 
 .enviado[b-zl7ppptjw8] {
-    background-color: #fef3c7;
+    background-color: #fffbeb;
     color: #d97706;
+    border: 1px solid #fde68a;
 }
 
 .entregado[b-zl7ppptjw8] {
-    background-color: #dcfce7;
-    color: #15803d;
+    background-color: #f0fdf4;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
 }
 
 /* --- Footer Informativo Seguro --- */
 .security-footer-text[b-zl7ppptjw8] {
     text-align: center;
-    color: #6c757d;
-    font-size: 0.8rem;
-    margin-top: 1rem;
+    color: #94a3b8;
+    font-size: 0.72rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .footer-shield-icon-img[b-zl7ppptjw8] {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     margin-right: 0.3rem;
 }
 /* /Components/Features/User/OrderDetails.razor.rz.scp.css */
-.volver[b-81wvcmdvgm] {
-    margin-bottom: 20px;
+/* --- COLORES PRINCIPALES --- */
+.text-navy[b-81wvcmdvgm] {
+    color: var(--color-primary, #021947);
 }
 
-    .volver a[b-81wvcmdvgm] {
-        text-decoration: none;
-        color: #0b5ed7;
-        font-weight: 500;
+/* --- CONTENEDOR PRINCIPAL --- */
+.order-details-container[b-81wvcmdvgm] {
+    max-width: 850px; /* Límite para que la tarjeta no se estire demasiado */
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+/* --- ENLACE VOLVER --- */
+.volver-link[b-81wvcmdvgm] {
+    text-decoration: none;
+    color: #0b5ed7;
+    font-weight: 600;
+    font-size: 0.82rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+    .volver-link:hover[b-81wvcmdvgm] {
+        color: #0a4ebd;
+        text-decoration: underline;
     }
 
+/* --- TARJETA PRINCIPAL --- */
 .pedido-card[b-81wvcmdvgm] {
     background-color: white;
-    border-radius: 10px;
-    padding: 30px;
+    border-radius: 8px; /* Menos redondeado */
+    border: 1px solid #e2e8f0;
+    padding: 24px; /* Relleno compacto */
 }
 
-.pedido-header h2[b-81wvcmdvgm] {
-    margin-bottom: 5px;
-    color: #0b1f5c;
-}
-
-.fecha[b-81wvcmdvgm] {
-    color: gray;
-    margin-bottom: 15px;
-}
-
+/* --- ETIQUETAS DE ESTADO --- */
 .estado[b-81wvcmdvgm] {
-    background-color: #dbeafe;
-    color: #1d4ed8;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 6px; /* Forma de píldora ligera */
+    font-size: 0.72rem;
+    font-weight: 600;
+    display: inline-block;
+    letter-spacing: 0.3px;
 }
 
+/* Misma clase de estado que en MyOrders.css */
+.proceso[b-81wvcmdvgm] {
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+/* --- INFORMACIÓN DEL PEDIDO (MALLA) --- */
 .pedido-info[b-81wvcmdvgm] {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-    margin: 30px 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Reducido de 30px */
 }
 
     .pedido-info label[b-81wvcmdvgm] {
-        font-weight: bold;
+        font-weight: 600;
         display: block;
-        margin-bottom: 10px;
-        color: gray;
+        margin-bottom: 4px;
+        color: #64748b;
+        font-size: 0.72rem;
+        text-transform: uppercase;
     }
 
-.categoria[b-81wvcmdvgm] {
-    color: gray;
-    font-size: 14px;
-    margin-top: 5px;
+/* --- TABLA DE PRODUCTOS --- */
+.custom-table th[b-81wvcmdvgm] {
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.72rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
+    text-transform: uppercase;
 }
 
+.custom-table td[b-81wvcmdvgm] {
+    vertical-align: middle;
+    padding: 10px 8px; /* Filas juntas */
+    border-bottom: 1px solid #f8f9fa;
+}
+
+/* --- CAJA DE TOTALES --- */
 .total-box[b-81wvcmdvgm] {
-    width: 350px;
-    margin-left: auto;
-    margin-top: 30px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
+    width: 280px; /* Más angosto (antes 350px) */
+    background-color: #f8fafc; /* Fondo gris sutil */
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px 18px; /* Padding interior reducido */
 }
 
 .fila-total[b-81wvcmdvgm] {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+    font-size: 0.82rem;
 }
 
-.final[b-81wvcmdvgm] {
-    font-size: 24px;
-    font-weight: bold;
-    color: #0b1f5c;
-    margin-top: 20px;
+.final-price[b-81wvcmdvgm] {
+    font-size: 1.15rem; /* Destacado pero sin ser enorme (antes 24px) */
+    font-weight: 700;
 }
 /* /Components/Features/User/UserProfile.razor.rz.scp.css */
-.titulo[b-v60nhsg7nv] {
-    text-align: center;
-    color: #0b1f5c;
-    margin-bottom: 10px;
+/* --- COLORES PRINCIPALES --- */
+.text-navy[b-v60nhsg7nv] {
+    color: var(--color-primary, #021947);
 }
 
-.subtitulo[b-v60nhsg7nv] {
-    text-align: center;
-    margin-bottom: 40px;
-    color: gray;
+.navy-bg[b-v60nhsg7nv] {
+    background-color: var(--color-primary, #021947);
+    color: white;
+    transition: background-color 0.2s;
 }
 
+    .navy-bg:hover[b-v60nhsg7nv] {
+        background-color: color-mix(in srgb, var(--color-primary, #021947), black 15%);
+        color: white;
+    }
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.profile-page-container[b-v60nhsg7nv] {
+    max-width: 800px; /* Límite para mantener un diseño equilibrado */
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* --- TARJETA DEL PERFIL --- */
+.profile-form-card[b-v60nhsg7nv] {
+    background-color: white;
+    border-radius: 8px; /* Menos redondeado, más moderno */
+    border: 1px solid #e2e8f0;
+    padding: 24px; /* Relleno interior ajustado */
+}
+
+/* --- GRILLA DEL FORMULARIO --- */
 .grid[b-v60nhsg7nv] {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 30px;
+    gap: 16px; /* Espacio más ajustado entre campos (antes 20px) */
 }
 
-label[b-v60nhsg7nv] {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+/* Ajuste responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .grid[b-v60nhsg7nv] {
+        grid-template-columns: 1fr;
+    }
 }
 
+/* --- BOTONES --- */
 .boton-container[b-v60nhsg7nv] {
     display: flex;
     justify-content: flex-end;
 }
 
-.guardar-btn[b-v60nhsg7nv] {
-    background-color: #0b1f5c;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-    .guardar-btn:hover[b-v60nhsg7nv] {
-        opacity: 0.9;
-    }
-
-
-/* --- Footer Informativo Seguro --- */
+/* --- FOOTER INFORMATIVO SEGURO --- */
 .security-footer-text[b-v60nhsg7nv] {
     text-align: center;
-    color: #6c757d;
-    font-size: 0.8rem;
-    margin-top: 1rem;
+    color: #94a3b8;
+    font-size: 0.72rem; /* Tamaño minimizado (12px) */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .footer-shield-icon-img[b-v60nhsg7nv] {
-    width: 16px;
-    height: 16px;
+    width: 14px; /* Ícono reducido a escala */
+    height: 14px;
     margin-right: 0.3rem;
 }
 /* /Components/Layout/AdminLayout.razor.rz.scp.css */

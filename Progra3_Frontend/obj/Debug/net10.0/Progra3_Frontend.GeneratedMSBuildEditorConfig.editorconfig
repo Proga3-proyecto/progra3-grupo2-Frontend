@@ -83,6 +83,10 @@ build_metadata.AdditionalFiles.CssScope = b-4kld5hmy9d
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xhdXRoXFJlc2V0UGFzc3dvcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-vt3trsx7fj
 
+[C:/Users/Frank/Desktop/progra3-grupo2-Frontend/Progra3_Frontend/Components/Features/chart/Cart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xjaGFydFxDYXJ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-zavu514wq6
+
 [C:/Users/Frank/Desktop/progra3-grupo2-Frontend/Progra3_Frontend/Components/Features/Products/components/ProductCard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xQcm9kdWN0c1xjb21wb25lbnRzXFByb2R1Y3RDYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-24gdafgvea
@@ -94,6 +98,26 @@ build_metadata.AdditionalFiles.CssScope = b-ewupr7nfa0
 [C:/Users/Frank/Desktop/progra3-grupo2-Frontend/Progra3_Frontend/Components/Features/Products/Products.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xQcm9kdWN0c1xQcm9kdWN0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-92apxvfuow
+
+[C:/Users/Frank/Desktop/progra3-grupo2-Frontend/Progra3_Frontend/Components/Features/recipes/AddRecipeProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xyZWNpcGVzXEFkZFJlY2lwZVByb2R1Y3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-vbv2pzjigi
+
+[C:/Users/Frank/Desktop/progra3-grupo2-Frontend/Progra3_Frontend/Components/Features/recipes/ChangeBrand.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xyZWNpcGVzXENoYW5nZUJyYW5kLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-70p4y48d1b
+
+[C:/Users/Frank/Desktop/progra3-grupo2-Frontend/Progra3_Frontend/Components/Features/recipes/Recipe.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xyZWNpcGVzXFJlY2lwZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-ldc9o4vtim
+
+[C:/Users/Frank/Desktop/progra3-grupo2-Frontend/Progra3_Frontend/Components/Features/recipes/RecipeCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xyZWNpcGVzXFJlY2lwZUNhcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-okfnm2lkz5
+
+[C:/Users/Frank/Desktop/progra3-grupo2-Frontend/Progra3_Frontend/Components/Features/recipes/RecipeDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xyZWNpcGVzXFJlY2lwZURldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-3lua00sur3
 
 [C:/Users/Frank/Desktop/progra3-grupo2-Frontend/Progra3_Frontend/Components/Features/User/ChangePassword.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xVc2VyXENoYW5nZVBhc3N3b3JkLnJhem9y

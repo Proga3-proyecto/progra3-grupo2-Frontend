@@ -1,0 +1,145 @@
+﻿@page "/recetas/{IdReceta:int}/seleccion"
+@using Progra3_Frontend.Components.Pages.recipes
+@using Progra3_Frontend.Components.Features.Products;
+@inject NavigationManager Navigation
+
+<div class="add-recipe-container">
+    <header class="add-recipe-header">
+        <h1>Añadir Receta</h1>
+        <div class="title-underline"></div>
+        <p class="subtitle">Para la receta seleccionada se añadirán los siguientes Productos:</p>
+    </header>
+
+    @if (DetalleConfiguracion?.DetallesElementos != null)
+    {
+        <main class="products-selection-list">
+            @foreach (var item in DetalleConfiguracion.DetallesElementos)
+            {
+                <article class="product-selection-card">
+                    <div class="card-left">
+                        <img src="@item.ElementoBase.Producto.ImagenUrl"
+                             alt="@item.ElementoBase.Producto.Nombre"
+                             class="product-thumb" />
+                    </div>
+
+                    <div class="card-body">
+                        <p><strong>NOMBRE:</strong> @item.ElementoBase.Producto.Nombre</p>
+
+                        <p><strong>MARCA:</strong> @item.ElementoBase.Producto.Marca.Nombre</p>
+
+                        <p><strong>CANTIDAD:</strong> @((int)item.CantidadEspecifica)</p>
+                    </div>
+
+                    <div class="card-right">
+                        <div class="subtotal-box">
+                            SUBTOTAL: <strong>S/ @((item.ElementoBase.Producto.Precio * item.CantidadEspecifica).ToString("0.00"))</strong>
+                        </div>
+                        <!--<button class="btn-change-brand" @onclick="() => CambiarMarca(item)">
+                            ESCOGER OTRA MARCA
+                        </button>-->
+                    </div>
+                </article>
+            }
+        </main>
+
+        <footer class="add-recipe-footer">
+            <button class="btn-confirm-cart" @onclick="FinalizarAdicion">
+                <i class="bi bi-cart-fill"></i> Añadir al carrito
+            </button>
+            <p class="footer-notice">
+                <i class="bi bi-check-circle-fill"></i> Revisa tu carrito y confirma los productos antes de finalizar.
+            </p>
+        </footer>
+    }
+</div>
+
+@code {
+    [Parameter] public int IdReceta { get; set; }
+    private DetalleReceta DetalleConfiguracion { get; set; } = new();
+
+    protected override void OnParametersSet()
+    {
+        if (IdReceta == 2) // Hardcodeado únicamente para Pisco Sour
+        {
+            var recetaBase = new Receta { IdReceta = 2, Nombre = "Pisco Sour", ImageSrc = "receta-pisco-sour.png" };
+
+            // Instanciamos los productos asociándoles sus respectivas instancias de la clase Marca
+            var pisco = new ElementoReceta
+            {
+                IdElementoReceta = 10,
+                Producto = new Producto
+                {
+                    Nombre = "Pisco Quebranta",
+                    Categoria = "Pisco",
+                    Precio = 49.00m,
+                    Imagen = "pisco-quebranta.png",
+                    Marca = new Marca { IdMarca = 1, Nombre = "Cuatro Gallos" } // Relación de Objeto
+                }
+            };
+
+            var jarabe = new ElementoReceta
+            {
+                IdElementoReceta = 11,
+                Producto = new Producto
+                {
+                    Nombre = "Jarabe de Goma",
+                    Categoria = "Licor",
+                    Precio = 15.00m,
+                    Imagen = "licor-kahlua.png",
+                    Marca = new Marca { IdMarca = 2, Nombre = "Burgos" } // Relación de Objeto
+                }
+            };
+
+            var limon = new ElementoReceta
+            {
+                IdElementoReceta = 12,
+                Producto = new Producto
+                {
+                    Nombre = "Jugo de Limón Sutil",
+                    Categoria = "Complementos",
+                    Precio = 8.00m,
+                    Imagen = "limon.png",
+                    Marca = new Marca { IdMarca = 3, Nombre = "Del Huerto" } // Relación de Objeto
+                }
+            };
+
+            var huevo = new ElementoReceta
+            {
+                IdElementoReceta = 13,
+                Producto = new Producto
+                {
+                    Nombre = "Huevo fresco",
+                    Categoria = "Complementos",
+                    Precio = 2.00m,
+                    Imagen = "huevo.png",
+                    Marca = new Marca { IdMarca = 4, Nombre = "San Fernando" } // Relación de Objeto
+                }
+            };
+
+            // Consistencia matemática exacta: 49 + 15 + 8 + 2 = S/. 74.00
+            DetalleConfiguracion = new DetalleReceta
+            {
+                IdDetalleReceta = 902,
+                MontoTotal = 74.00m,
+                RecetaBase = recetaBase,
+                DetallesElementos = new List<DetalleElementoReceta>
+                {
+                    new() { IdDetalleElementoReceta = 1, CantidadEspecifica = 1, ElementoBase = pisco },
+                    new() { IdDetalleElementoReceta = 2, CantidadEspecifica = 1, ElementoBase = jarabe },
+                    new() { IdDetalleElementoReceta = 3, CantidadEspecifica = 1, ElementoBase = limon },
+                    new() { IdDetalleElementoReceta = 4, CantidadEspecifica = 1, ElementoBase = huevo }
+                }
+            };
+        }
+    }
+    private void CambiarMarca(DetalleElementoReceta item)
+    {
+        // Codificamos los textos para evitar problemas con espacios en la URL
+        var categoriaUrl = Uri.EscapeDataString(item.ElementoBase.Producto.Categoria);
+        var nombreUrl = Uri.EscapeDataString(item.ElementoBase.Producto.Nombre);
+
+        // Navegamos de forma dinámica pasando el ID por ruta y el resto por QueryString
+        Navigation.NavigateTo($"/escoger-marca/{item.IdDetalleElementoReceta}?categoria={categoriaUrl}&nombreActual={nombreUrl}");
+    }
+    private void FinalizarAdicion() => Navigation.NavigateTo("/carrito");
+}

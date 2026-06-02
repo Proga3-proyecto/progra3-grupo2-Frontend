@@ -1,0 +1,164 @@
+﻿@page "/carrito"
+@using Progra3_Frontend.Components.Pages.recipes
+@using Progra3_Frontend.Components.Features.Products
+@inject NavigationManager NavigationManager
+
+<div class="cart-page-container">
+    <header class="cart-header">
+        <h1>CARRITO DE COMPRAS</h1>
+        <div class="cart-divider">
+            <span></span>
+            <i class="bi bi-cart3"></i>
+            <span></span>
+        </div>
+        <p class="subtitle">¡Estás a un paso de disfrutar tus licores favoritos!</p>
+    </header>
+
+    @if (ItemsCarrito == null || !ItemsCarrito.Any())
+    {
+        <div class="empty-cart-alert">
+            <p>Tu carrito está vacío.</p>
+            <button class="btn-primary-action" @onclick='() => NavigationManager.NavigateTo("/")'>Ir a ver licores</button>
+        </div>
+    }
+    else
+    {
+        <div class="cart-content-layout">
+            <main class="cart-items-section">
+                <div class="cart-table-headers">
+                    <span class="hdr-receta">RECETA</span>
+                    <span class="hdr-precio">PRECIO</span>
+                    <span class="hdr-subtotal">SUBTOTAL</span>
+                </div>
+
+                <div class="cart-items-list">
+                    @foreach (var item in ItemsCarrito)
+                    {
+                        <article class="cart-item-row">
+                            <div class="item-media-info">
+                                <img src="@item.RecetaBase.ImageUrl" alt="@item.RecetaBase.Nombre" class="cart-item-img" />
+                                <div class="item-text">
+                                    <h3>@item.RecetaBase.Nombre</h3>
+                                    <p>@item.RecetaBase.Descripcion</p>
+                                    <button class="btn-delete-item" @onclick="() => EliminarItem(item.IdDetalleReceta)">
+                                        <i class="bi bi-trash"></i> Eliminar
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="item-price-col">
+                                S/ @item.MontoTotal.ToString("0.00")
+                            </div>
+
+                            <div class="item-subtotal-col">
+                                S/ @item.MontoTotal.ToString("0.00")
+                            </div>
+                        </article>
+                    }
+                </div>
+            </main>
+
+            <aside class="cart-summary-section">
+                <div class="summary-card">
+                    <h2>RESUMEN PEDIDO</h2>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>S/ @CalcularSubtotal().ToString("0.00")</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Envío</span>
+                        <span>S/ @CostoEnvio.ToString("0.00")</span>
+                    </div>
+
+                    <div class="summary-total-block">
+                        <div class="total-main">
+                            <strong>TOTAL</strong>
+                            <strong>S/ @((CalcularSubtotal() + CostoEnvio).ToString("0.00"))</strong>
+                        </div>
+                        <span class="tax-notice">Impuestos incluidos</span>
+                    </div>
+
+                    <button class="btn-checkout" @onclick="ProcesarCompra">
+                        FINALIZAR COMPRA
+                    </button>
+
+                    <div class="payment-methods-box">
+                        <p>Aceptamos:</p>
+                        <div class="payment-badges">
+                            <span class="badge visa">Visa</span>
+                            <span class="badge mastercard">Mastercard</span>
+                            <span class="badge amex">Amex</span>
+                            <span class="badge yape">Yape</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    }
+
+    <section class="suggestions-section">
+        <div class="suggestions-header">
+            <span></span>
+            <h2>TAMBIÉN TE PUEDE INTERESAR</h2>
+            <span></span>
+        </div>
+
+        <div class="suggestions-carousel">
+            @foreach (var producto in ProductosSugeridos)
+            {
+                <ProductCard producto="producto" />
+            }
+        </div>
+    </section>
+</div>
+
+@code {
+    private List<DetalleReceta> ItemsCarrito { get; set; } = new();
+    private List<Producto> ProductosSugeridos { get; set; } = new();
+    private const decimal CostoEnvio = 15.00m;
+
+    protected override void OnInitialized()
+    {
+        // 1. Carga del elemento visualizado en la captura de pantalla (image_b8fce3.png)
+        var recetaTrilogia = new Receta
+        {
+            IdReceta = 3,
+            Nombre = "Trilogía de Pisco Sour",
+            Descripcion = "Disfruta tres variaciones clásicas del pisco sour: Clásico, Maracuyá y Hierbabuena.",
+            ImageSrc = "trilogia-pisco.png" // Apunta a tus assets compartidos
+        };
+
+        ItemsCarrito.Add(new DetalleReceta
+        {
+            IdDetalleReceta = 771,
+            MontoTotal = 75.00m, // S/. 75.00 reflejado en la imagen
+            RecetaBase = recetaTrilogia
+        });
+
+        // 2. Poblado de sugerencias usando entidades de tu clase Producto original
+        ProductosSugeridos = new List<Producto>
+        {
+            new() { Nombre = "Pisco Portón", Categoria = "Pisco", Precio = 89.00m, Imagen = "pisco-porton.png" }, //
+            new() { Nombre = "Ron Zacapa 23", Categoria = "Ron", Precio = 149.00m, Imagen = "ron-zacapa.png" }, //
+            new() { Nombre = "Johnnie Walker Black Label", Categoria = "Whisky", Precio = 149.00m, Imagen = "whisky-black-label.png" }, //
+            new() { Nombre = "Johnnie Walker Green Label", Categoria = "Whisky", Precio = 119.00m, Imagen = "whisky-green.png" }
+        };
+    }
+
+    private decimal CalcularSubtotal()
+    {
+        return ItemsCarrito.Sum(item => item.MontoTotal);
+    }
+
+    private void EliminarItem(int idDetalleReceta)
+    {
+        ItemsCarrito.RemoveAll(x => x.IdDetalleReceta == idDetalleReceta);
+    }
+
+    private void ProcesarCompra()
+    {
+        Console.WriteLine("Redirigiendo a pasarela de pagos...");
+    }
+}
