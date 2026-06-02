@@ -14,8 +14,11 @@
         @if (isPriceExpanded)
         {
             <div class="price-range-inputs">
-                <input type="number" placeholder="s/ 0" />
-                <input type="number" placeholder="s/ 500+" />
+                <input type="number" min="0" step="1" placeholder="S/ 0"
+                       oninput="this.value = this.value < 0 ? 0 : this.value" />
+
+                <input type="number" min="0" step="1" placeholder="S/ 500+"
+                       oninput="this.value = this.value < 0 ? 0 : this.value" />
             </div>
         }
     </div>
