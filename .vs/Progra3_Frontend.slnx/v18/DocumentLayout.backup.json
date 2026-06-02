@@ -1,41 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\",
+  "WorkspaceRootPath": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\frank\\desktop\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\recipe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\home\\home.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\home\\home.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\home\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\home\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\products\\products.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\products\\products.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\recipe.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\recipes\\recipe.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\recipe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\recipes\\recipe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\frank\\desktop\\progra3-grupo2-frontend\\progra3_frontend\\components\\shared\\mainlayout\\usercontrols.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\shared\\mainlayout\\usercontrols.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\frank\\desktop\\progra3-grupo2-frontend\\progra3_frontend\\components\\shared\\mainlayout\\usercontrols.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\shared\\mainlayout\\usercontrols.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\frank\\desktop\\progra3-grupo2-frontend\\progra3_frontend\\components\\shared\\mainlayout\\nav.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\shared\\mainlayout\\nav.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\shared\\mainlayout\\nav.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\frank\\desktop\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\recipedetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\shared\\mainlayout\\usercontrols.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\shared\\mainlayout\\usercontrols.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\shared\\mainlayout\\usercontrols.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\shared\\mainlayout\\usercontrols.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\recipedetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\recipes\\recipedetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\frank\\desktop\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\recipemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\recipemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\recipes\\recipemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\frank\\desktop\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\changebrand.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\changebrand.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\recipes\\changebrand.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\frank\\desktop\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\addrecipeproduct.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\addrecipeproduct.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\recipes\\addrecipeproduct.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\frank\\desktop\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\recipecard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\recipes\\recipecard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\recipes\\recipecard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -46,124 +62,167 @@
       "DocumentGroups": [
         {
           "DockedWidth": 226,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserControls.razor",
-              "DocumentMoniker": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor",
-              "ToolTip": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-02T16:46:31.456Z",
+              "DocumentIndex": 0,
+              "Title": "Home.razor.css",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\Home\\Home.razor.css",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\Home\\Home.razor.css",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\Home\\Home.razor.css",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\Home\\Home.razor.css",
+              "ViewState": "AgIAACYBAAAAAAAAAAAAADkBAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-02T23:41:28.096Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserControls.razor.css",
-              "DocumentMoniker": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor.css",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor.css",
-              "ToolTip": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor.css",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-06-02T16:46:29.462Z",
+              "Title": "Products.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\Products\\Products.razor",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\Products\\Products.razor",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\Products\\Products.razor",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\Products\\Products.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T23:40:55.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\Home\\Home.razor",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\Home\\Home.razor",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\Home\\Home.razor",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\Home\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T23:40:51.642Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Nav.razor",
-              "DocumentMoniker": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Shared\\MainLayout\\Nav.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Shared\\MainLayout\\Nav.razor",
-              "ToolTip": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Shared\\MainLayout\\Nav.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Shared\\MainLayout\\Nav.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-02T16:40:57.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Recipe.razor",
-              "DocumentMoniker": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\Recipe.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\recipes\\Recipe.razor",
-              "ToolTip": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\Recipe.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\recipes\\Recipe.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-02T16:38:33.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AddRecipeProduct.razor",
-              "DocumentMoniker": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\AddRecipeProduct.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\recipes\\AddRecipeProduct.razor",
-              "ToolTip": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\AddRecipeProduct.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\recipes\\AddRecipeProduct.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-02T16:35:50.958Z",
+              "Title": "Recipe.razor.css",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\Recipe.razor.css",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\recipes\\Recipe.razor.css",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\Recipe.razor.css",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\recipes\\Recipe.razor.css",
+              "ViewState": "AgIAABkAAAAAAAAAAAAiwA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-02T16:50:17.897Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ChangeBrand.razor",
-              "DocumentMoniker": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\ChangeBrand.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\recipes\\ChangeBrand.razor",
-              "ToolTip": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\ChangeBrand.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\recipes\\ChangeBrand.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Title": "UserControls.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-02T16:37:41.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-02T16:46:31.456Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RecipeCard.razor",
-              "DocumentMoniker": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\RecipeCard.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\recipes\\RecipeCard.razor",
-              "ToolTip": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\RecipeCard.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\recipes\\RecipeCard.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-02T16:38:36.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RecipeDetails.razor",
-              "DocumentMoniker": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\RecipeDetails.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\recipes\\RecipeDetails.razor",
-              "ToolTip": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\RecipeDetails.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\recipes\\RecipeDetails.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-02T16:38:37.589Z",
-              "EditorCaption": ""
+              "DocumentIndex": 7,
+              "Title": "UserControls.razor.css",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor.css",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor.css",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor.css",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Shared\\MainLayout\\UserControls.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-02T16:46:29.462Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Nav.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Shared\\MainLayout\\Nav.razor",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Shared\\MainLayout\\Nav.razor",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Shared\\MainLayout\\Nav.razor",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Shared\\MainLayout\\Nav.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T16:40:57.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Recipe.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\Recipe.razor",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\recipes\\Recipe.razor",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\Recipe.razor",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\recipes\\Recipe.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T16:38:33.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddRecipeProduct.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\AddRecipeProduct.razor",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\recipes\\AddRecipeProduct.razor",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\AddRecipeProduct.razor",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\recipes\\AddRecipeProduct.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T16:35:50.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ChangeBrand.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\ChangeBrand.razor",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\recipes\\ChangeBrand.razor",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\ChangeBrand.razor",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\recipes\\ChangeBrand.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T16:37:41.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RecipeCard.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\RecipeCard.razor",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\recipes\\RecipeCard.razor",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\RecipeCard.razor",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\recipes\\RecipeCard.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T16:38:36.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RecipeDetails.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\RecipeDetails.razor",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\recipes\\RecipeDetails.razor",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\RecipeDetails.razor",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\recipes\\RecipeDetails.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T16:38:37.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "RecipeModel.cs",
-              "DocumentMoniker": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\RecipeModel.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\RecipeModel.cs",
               "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\recipes\\RecipeModel.cs",
-              "ToolTip": "C:\\Users\\Frank\\Desktop\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\RecipeModel.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\recipes\\RecipeModel.cs",
               "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\recipes\\RecipeModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T16:38:39.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-02T16:38:39.643Z"
             }
           ]
         }

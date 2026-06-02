@@ -1,0 +1,316 @@
+﻿.home-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background: white;
+    padding: 8px 58px 32px 58px;
+    box-sizing: border-box;
+}
+
+/* BANNER PRINCIPAL */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 330px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 1% 50%;
+    display: block;
+}
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    color: white;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 75px; /* MODIFICADO: antes estaba más a la derecha */
+    transform: translateY(-50%);
+}
+
+    .hero-text h1 {
+        margin: 0;
+        color: white;
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 1.25;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-text p {
+        margin: 22px 0 28px 0;
+        color: white;
+        font-size: 19px;
+        line-height: 1.55;
+    }
+
+.hero-button {
+    width: 170px;
+    height: 46px;
+    border: none;
+    border-radius: 7px;
+    background: white;
+    color: var(--color-primary);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* FLECHAS DEL BANNER */
+
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-arrow-left {
+    left: 24px;
+}
+
+.hero-arrow-right {
+    right: 24px;
+}
+
+/* LO MÁS VENDIDO */
+
+.best-sellers-section {
+    margin-top: 14px;
+}
+
+.best-sellers-section h2 {
+     margin: 0 0 18px 0;
+     text-align: center;
+     color: var(--color-primary);
+     font-size: 24px;
+     font-weight: 800;
+     letter-spacing: 3px;
+}
+
+.best-sellers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.best-card {
+    position: relative;
+    height: 255px; /* aumenta el cuadro blanco */
+    background: white;
+    border-radius: 10px;
+    padding: 16px 18px 60px 18px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.rank-badge {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--color-primary);
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.best-img-box {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.best-img {
+    max-height: 135px;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.best-info {
+    height: 58px; /* MODIFICADO: alinea nombres, categorías, precios y carrito */
+    margin-top: 6px;
+}
+
+    .best-info h3 {
+        margin: 0 0 2px 0;
+        color: var(--color-primary);
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 1.15;
+    }
+
+    .best-info p {
+        margin: 0;
+        color: #4d5875;
+        font-size: 13px;
+    }
+
+.best-bottom {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .best-bottom span {
+        color: var(--color-primary);
+        font-size: 17px;
+        font-weight: 800;
+    }
+
+.best-cart-button {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #7f8aa5;
+    border-radius: 7px;
+    background: white;
+    color: var(--color-primary);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+/* BENEFICIOS */
+
+.benefits-section {
+    margin-top: 18px;
+    width: 100%;
+    max-width: 100%;
+    background: white;
+    border-radius: 10px;
+    padding: 18px 28px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 24px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.benefit-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+.benefit-item h3 {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.benefit-item p {
+    margin: 2px 0 0 0;
+    color: #4d5875;
+    font-size: 13px;
+}
+
+.benefit-separator {
+    width: 1px;
+    height: 38px;
+    background: #d8dbe8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .home-page {
+        padding: 8px 30px 32px 30px;
+    }
+
+    .best-sellers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefit-separator {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .home-page {
+        padding: 8px 18px 32px 18px;
+    }
+
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-text {
+        left: 40px;
+    }
+
+        .hero-text h1 {
+            font-size: 26px;
+        }
+
+        .hero-text p {
+            font-size: 15px;
+        }
+
+    .best-sellers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-section {
+        grid-template-columns: 1fr;
+    }
+}
