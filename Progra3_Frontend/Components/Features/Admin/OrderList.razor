@@ -1,0 +1,270 @@
+﻿@page "/admin/order-list"
+@layout AdminLayout
+
+<div class="container-fluid mt-3" style="max-width: 1400px;">
+
+    <div class="mb-4">
+        <h2 class="fw-bold text-navy mb-0 main-title">Pedidos de la Tienda</h2>
+        <p class="text-muted mb-0" style="font-size: 0.95rem;">Panel de Administración</p>
+    </div>
+
+    <div class="table-container shadow-sm">
+        
+        <div class="row g-3 mb-4 align-items-end">
+            <div class="col-md-3">
+                <label class="form-label-custom text-muted mb-1" style="font-size: 0.85rem;">Estado</label>
+                <select class="form-select custom-input" @bind="InputEstado">
+                    <option value="Todos">Todos</option>
+                    <option value="Pagado">Pagado</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Enviado">Enviado</option>
+                    <option value="Cancelado">Cancelado</option>
+                </select>
+            </div>
+            
+            <div class="col-md-3">
+                <label class="form-label-custom text-muted mb-1" style="font-size: 0.85rem;">Cliente</label>
+                <div class="position-relative">
+                    <input type="text" class="form-control custom-input pe-5" placeholder="Buscar cliente..." @bind="InputCliente" />
+                    <i class="bi bi-search position-absolute" style="top: 50%; right: 12px; transform: translateY(-50%); color: #94a3b8;"></i>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <label class="form-label-custom text-muted mb-1" style="font-size: 0.85rem;">Fecha (Desde - Hasta)</label>
+                <div class="d-flex gap-2">
+                    <input type="date" class="form-control custom-input" @bind="InputFechaDesde" title="Fecha Desde" />
+                    <input type="date" class="form-control custom-input" @bind="InputFechaHasta" title="Fecha Hasta" />
+                </div>
+            </div>
+
+            <div class="col-md-2 d-flex gap-2">
+                <button class="btn navy-bg px-3 py-2 flex-grow-1 d-flex align-items-center justify-content-center gap-2" style="border-radius: 6px; font-weight: 500;" @onclick="AplicarFiltros">
+                    <i class="bi bi-funnel"></i> Filtrar
+                </button>
+                <button class="btn btn-outline-custom px-3 py-2 flex-grow-1 d-flex align-items-center justify-content-center gap-2" style="border-radius: 6px; font-weight: 500;" @onclick="LimpiarFiltros">
+                    <i class="bi bi-arrow-clockwise"></i> Limpiar
+                </button>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table custom-table table-borderless align-middle w-100">
+                <thead class="text-start">
+                    <tr>
+                        <th scope="col" class="px-2" style="width: 10%;">ID Pedido</th>
+                        <th scope="col" style="width: 20%;">Cliente</th>
+                        <th scope="col" style="width: 15%;">Fecha y Hora</th>
+                        <th scope="col" style="width: 12%;">Estado</th>
+                        <th scope="col" style="width: 15%;">Método de pago</th>
+                        <th scope="col" style="width: 13%;">Total (S/.)</th>
+                        <th scope="col" class="text-center" style="width: 15%;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="text-start">
+                    @if (!GetPagedOrders().Any())
+                    {
+                        <tr>
+                            <td colspan="7" class="text-center py-4 text-muted">No se encontraron pedidos con los filtros aplicados.</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @foreach (var order in GetPagedOrders())
+                        {
+                            <tr>
+                                <td class="px-2 text-dark fw-medium">@order.Id</td>
+                                <td class="text-dark font-medium">@order.Client</td>
+                                <td class="text-dark">@order.Date.ToString("dd/MM/yyyy h:mm tt")</td>
+                                <td class="text-dark">@order.Status</td>
+                                <td class="text-dark">@order.PaymentMethod</td>
+                                <td class="text-dark fw-medium">S/. @order.Total.ToString("F2")</td>
+                                <td class="text-center">
+                                    <a href="/admin/order-details" class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center gap-2 mx-auto" style="text-decoration: none;">
+                                        <i class="bi bi-eye"></i> Ver detalles
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            
+            <div class="text-muted fw-medium" style="font-size: 0.85rem;">
+                Mostrando @(FilteredOrders.Any() ? ((CurrentPage - 1) * PageSize + 1) : 0) a @Math.Min(CurrentPage * PageSize, FilteredOrders.Count()) de @FilteredOrders.Count() pedidos
+            </div>
+            
+            @if (TotalPages > 1)
+            {
+                <nav>
+                    <ul class="pagination custom-pagination pagination-sm mb-0">
+                        <li class="page-item @(CurrentPage == 1 ? "disabled" : "")">
+                            <button class="page-link px-3" style="font-weight: 500;" @onclick="GoToPreviousPage" disabled="@(CurrentPage == 1)">
+                                <i class="bi bi-chevron-left me-1"></i> Anterior
+                            </button>
+                        </li>
+
+                        @for (int i = 1; i <= TotalPages; i++)
+                        {
+                            var pageNumber = i;
+                            <li class="page-item @(CurrentPage == pageNumber ? "active" : "")">
+                                <button class="page-link" @onclick="() => ChangePage(pageNumber)">@pageNumber</button>
+                            </li>
+                        }
+
+                        <li class="page-item @(CurrentPage == TotalPages ? "disabled" : "")">
+                            <button class="page-link px-3" style="font-weight: 500;" @onclick="GoToNextPage" disabled="@(CurrentPage == TotalPages)">
+                                Siguiente <i class="bi bi-chevron-right ms-1"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            }
+
+            <div>
+                <select class="form-select form-select-sm custom-input text-muted" style="width: auto; font-size: 0.85rem;" @onchange="OnPageSizeChanged">
+                    <option value="5" selected="@(PageSize == 5)">5 por página</option>
+                    <option value="10" selected="@(PageSize == 10)">10 por página</option>
+                    <option value="20" selected="@(PageSize == 20)">20 por página</option>
+                    <option value="50" selected="@(PageSize == 50)">50 por página</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@code {
+    //Clase DTO temporal
+    public class OrderDto
+    {
+        public string Id { get; set; } = string.Empty;
+        public string Client { get; set; } = string.Empty;
+        public DateTime Date { get; set; }
+        public string Status { get; set; } = string.Empty;
+        public string PaymentMethod { get; set; } = string.Empty;
+        public decimal Total { get; set; }
+    }
+
+    private List<OrderDto> Orders { get; set; } = new();
+
+    // Logica de Filtros
+    // Variables temporales enlazadas a los inputs de la pantalla
+    private string InputEstado { get; set; } = "Todos";
+    private string InputCliente { get; set; } = string.Empty;
+    private DateTime? InputFechaDesde { get; set; }
+    private DateTime? InputFechaHasta { get; set; }
+
+    // Variables finales que se aplican a la lista al presionar "Filtrar"
+    private string AppliedEstado { get; set; } = "Todos";
+    private string AppliedCliente { get; set; } = string.Empty;
+    private DateTime? AppliedFechaDesde { get; set; }
+    private DateTime? AppliedFechaHasta { get; set; }
+
+    // Lista computada que pasa por los filtros activos
+    private IEnumerable<OrderDto> FilteredOrders => Orders.Where(o =>
+        (AppliedEstado == "Todos" || o.Status == AppliedEstado) &&
+        (string.IsNullOrWhiteSpace(AppliedCliente) || o.Client.Contains(AppliedCliente, StringComparison.OrdinalIgnoreCase)) &&
+        (!AppliedFechaDesde.HasValue || o.Date.Date >= AppliedFechaDesde.Value.Date) &&
+        (!AppliedFechaHasta.HasValue || o.Date.Date <= AppliedFechaHasta.Value.Date)
+    );
+
+    private void AplicarFiltros()
+    {
+        AppliedEstado = InputEstado;
+        AppliedCliente = InputCliente;
+        AppliedFechaDesde = InputFechaDesde;
+        AppliedFechaHasta = InputFechaHasta;
+        CurrentPage = 1;
+    }
+
+    private void LimpiarFiltros()
+    {
+        InputEstado = "Todos";
+        InputCliente = string.Empty;
+        InputFechaDesde = null;
+        InputFechaHasta = null;
+        AplicarFiltros();
+    }
+
+    // Logica de Paginacion
+    private int CurrentPage { get; set; } = 1;
+    private int PageSize { get; set; } = 5;
+    private int TotalPages => (int)Math.Ceiling((double)FilteredOrders.Count() / PageSize);
+
+    private IEnumerable<OrderDto> GetPagedOrders()
+    {
+        return FilteredOrders.Skip((CurrentPage - 1) * PageSize).Take(PageSize);
+    }
+
+    private void ChangePage(int page) => CurrentPage = page;
+    private void GoToPreviousPage() { if (CurrentPage > 1) CurrentPage--; }
+    private void GoToNextPage() { if (CurrentPage < TotalPages) CurrentPage++; }
+
+    private void OnPageSizeChanged(ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value?.ToString(), out int newSize))
+        {
+            PageSize = newSize;
+            CurrentPage = 1;
+        }
+    }
+
+    // Inicializcion de la pagina
+    protected override void OnInitialized()
+    {
+        // Data de prueba
+        Orders.Add(new OrderDto
+        {
+            Id = "1",
+            Client = "Argan Mentez",
+            Date = new DateTime(2024, 5, 3, 15, 18, 0), // 3:18 PM
+            Status = "Pagado",
+            PaymentMethod = "Tarjeta",
+            Total = 83.60m
+        });
+        
+        Orders.Add(new OrderDto
+        {
+            Id = "2",
+            Client = "Nareo Suimer",
+            Date = new DateTime(2024, 5, 5, 15, 17, 0),
+            Status = "Pendiente",
+            PaymentMethod = "Yape",
+            Total = 114.00m
+        });
+        
+        Orders.Add(new OrderDto
+        {
+            Id = "3",
+            Client = "David Menez",
+            Date = new DateTime(2024, 5, 25, 15, 13, 0),
+            Status = "Enviado",
+            PaymentMethod = "Plin",
+            Total = 57.00m
+        });
+        
+        Orders.Add(new OrderDto
+        {
+            Id = "4",
+            Client = "David Menez",
+            Date = new DateTime(2024, 5, 5, 13, 36, 0),
+            Status = "Cancelado",
+            PaymentMethod = "Transferencia",
+            Total = 57.00m
+        });
+        
+        Orders.Add(new OrderDto
+        {
+            Id = "5",
+            Client = "Braco Pioneer",
+            Date = new DateTime(2024, 5, 25, 13, 33, 0),
+            Status = "Cancelado",
+            PaymentMethod = "Efectivo",
+            Total = 34.20m
+        });
+    }
+}

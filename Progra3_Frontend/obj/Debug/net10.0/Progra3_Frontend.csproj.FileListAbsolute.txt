@@ -432,5 +432,7 @@ C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\Progra3_Frontend.genruntimeconfig.cache
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\ref\Progra3_Frontend.dll
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\Home\Home.razor.rz.scp.css
-C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\138ud5l1f6-{0}-mb7n08d3i8-mb7n08d3i8.gz
-C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\8c3gofyjw5-{0}-mb7n08d3i8-mb7n08d3i8.gz
+C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\Admin\OrderDetails.razor.rz.scp.css
+C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\scopedcss\Components\Features\Admin\OrderList.razor.rz.scp.css
+C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\138ud5l1f6-{0}-u4x0yh6m1n-u4x0yh6m1n.gz
+C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\obj\Debug\net10.0\compressed\8c3gofyjw5-{0}-u4x0yh6m1n-u4x0yh6m1n.gz

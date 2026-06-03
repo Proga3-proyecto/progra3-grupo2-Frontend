@@ -50,6 +50,14 @@ build_metadata.AdditionalFiles.CssScope = b-jyvd0mrujh
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xBZG1pblxBZGRVc2VyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-3qhbubc7wb
 
+[C:/Users/MSI/Desktop/progra3/progra3-grupo2-Frontend/Progra3_Frontend/Components/Features/Admin/OrderDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xBZG1pblxPcmRlckRldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-lntc5fkwxz
+
+[C:/Users/MSI/Desktop/progra3/progra3-grupo2-Frontend/Progra3_Frontend/Components/Features/Admin/OrderList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xBZG1pblxPcmRlckxpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-soa3yo1p8a
+
 [C:/Users/MSI/Desktop/progra3/progra3-grupo2-Frontend/Progra3_Frontend/Components/Features/Admin/ProductList.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWF0dXJlc1xBZG1pblxQcm9kdWN0TGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-x7m49bk3up

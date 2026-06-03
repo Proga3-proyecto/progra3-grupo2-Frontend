@@ -36,6 +36,9 @@ wwwroot\assets\products\whisky\whisky-black-label.png
 wwwroot\assets\products\whisky\whisky-chivas-regal.png
 wwwroot\assets\products\whisky\whisky-jack-daniels.png
 wwwroot\assets\products\whisky\whisky-johnnie-walker.png
+wwwroot\assets\recipes\cuba_libre.png
+wwwroot\assets\recipes\gin_tonic.png
+wwwroot\assets\recipes\margarita.png
 wwwroot\assets\recipes\receta-pisco-sour.png
 wwwroot\css\app.css
 wwwroot\css\fonts\css\all.css
