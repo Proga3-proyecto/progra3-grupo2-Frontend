@@ -3,24 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\user\\changepassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\user\\changepassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\layout\\adminlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\layout\\adminlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\admin\\orderdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\admin\\orderdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|c:\\users\\msi\\desktop\\progra3\\progra3-grupo2-frontend\\progra3_frontend\\components\\features\\admin\\orderlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8CE6CB3E-6B5E-1FBD-DD28-0990DBDB7DA0}|Progra3_Frontend\\Progra3_Frontend.csproj|solutionrelative:progra3_frontend\\components\\features\\admin\\orderlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI\\Downloads\\drive-download-20260603T034319Z-3-001\\ChangePassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,66 +22,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\App.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\App.razor",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\App.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\App.razor",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAowB4AAAAAAAAAAAAAAA==",
+              "Title": "ChangePassword.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\User\\ChangePassword.razor",
+              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\User\\ChangePassword.razor",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\User\\ChangePassword.razor",
+              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\User\\ChangePassword.razor",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAwIUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-03T02:03:28.473Z",
+              "WhenOpened": "2026-06-03T03:44:53.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\appsettings.json",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\appsettings.json",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\appsettings.json",
-              "RelativeToolTip": "Progra3_Frontend\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-03T02:03:25.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OrderList.razor",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\Admin\\OrderList.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\Admin\\OrderList.razor",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\Admin\\OrderList.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\Admin\\OrderList.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
+              "Title": "ChangePassword.razor",
+              "DocumentMoniker": "C:\\Users\\MSI\\Downloads\\drive-download-20260603T034319Z-3-001\\ChangePassword.razor",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\drive-download-20260603T034319Z-3-001\\ChangePassword.razor",
+              "ToolTip": "C:\\Users\\MSI\\Downloads\\drive-download-20260603T034319Z-3-001\\ChangePassword.razor",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\drive-download-20260603T034319Z-3-001\\ChangePassword.razor",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAwIUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-03T01:59:51.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderDetails.razor",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\Admin\\OrderDetails.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Features\\Admin\\OrderDetails.razor",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Features\\Admin\\OrderDetails.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Features\\Admin\\OrderDetails.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-03T01:59:48.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminLayout.razor",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Layout\\AdminLayout.razor",
-              "RelativeDocumentMoniker": "Progra3_Frontend\\Components\\Layout\\AdminLayout.razor",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\progra3\\progra3-grupo2-Frontend\\Progra3_Frontend\\Components\\Layout\\AdminLayout.razor",
-              "RelativeToolTip": "Progra3_Frontend\\Components\\Layout\\AdminLayout.razor",
-              "ViewState": "AgIAABEAAAAAAAAAAAAowB0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-03T01:59:37.912Z",
+              "WhenOpened": "2026-06-03T03:44:39.568Z",
               "EditorCaption": ""
             }
           ]

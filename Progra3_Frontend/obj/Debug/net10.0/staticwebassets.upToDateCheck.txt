@@ -136,8 +136,8 @@ wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 Components\Layout\ReconnectModal.razor.js
 C:\Users\MSI\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\build\..\_framework\blazor.web.js
 C:\Users\MSI\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\build\..\_framework\blazor.server.js
-C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\app.css
-C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\fonts\css\all.css
+C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\utilities.css
+C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\fonts\css\all.min.css
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\fonts\css\brands.css
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\fonts\css\brands.min.css
@@ -161,9 +161,7 @@ C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\cs
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\fonts\css\v4-shims.min.css
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\fonts\css\v5-font-face.css
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\fonts\css\v5-font-face.min.css
-C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\typography.css
-C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\utilities.css
-C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\variables.css
+C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\fonts\css\all.css
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -186,8 +184,8 @@ C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\li
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\app.css
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
-C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap.css
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
@@ -211,3 +209,5 @@ C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\li
 C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\Components\Layout\ReconnectModal.razor.js
 C:\Users\MSI\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\_framework\blazor.web.js
 C:\Users\MSI\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\_framework\blazor.server.js
+C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\variables.css
+C:\Users\MSI\Desktop\progra3\progra3-grupo2-Frontend\Progra3_Frontend\wwwroot\css\typography.css
