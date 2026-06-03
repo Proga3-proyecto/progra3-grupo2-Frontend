@@ -17,7 +17,7 @@
     right: 16px;
     border: none;
     background: transparent;
-    color: var(--primary);
+    color: var(--color-primary);
     font-size: 24px;
     cursor: pointer;
 }
@@ -37,7 +37,7 @@
 
 .product-card h3[b-24gdafgvea] {
     margin: 12px 0 4px;
-    color: var(--primary);
+    color: var(--color-primary);
     font-size: 16px;
 }
 
@@ -55,7 +55,7 @@
 }
 
     .product-bottom span[b-24gdafgvea] {
-        color: var(--primary);
+        color: var(--color-primary);
         font-size: 16px;
         font-weight: 700;
     }
@@ -65,7 +65,7 @@
     height: 38px;
     border: none;
     border-radius: 8px;
-    background: var(--primary);
+    background: var(--color-primary);
     color: white;
     font-size: 20px;
     cursor: pointer;

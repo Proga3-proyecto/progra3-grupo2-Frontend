@@ -1,11 +1,12 @@
-﻿<article class="product-card">
+﻿@inject NavigationManager Navigation
 
-    @* <button class="heart-button" @onclick="ToggleFavorito">
-        <i class="bi @(producto.Favorito ? "bi-heart-fill" : "bi-heart")"></i>
-    </button> *@
+<article class="product-card">
 
     <div class="product-img-box">
-        <img src="@producto.ImagenUrl" class="product-img" />
+        <img src="@producto.ImagenUrl"
+             class="product-img"
+             style="cursor:pointer;"
+             @onclick="IrADetalle" />
     </div>
 
     <h3>@producto.Nombre</h3>
@@ -26,6 +27,11 @@
     [Parameter]
     public Producto producto { get; set; } = default!;
 
+    private void IrADetalle()
+    {
+        Navigation.NavigateTo("/DescripcionProducto");
+    }
+
     private void ToggleFavorito()
     {
         producto.Favorito = !producto.Favorito;
@@ -35,5 +41,4 @@
     {
         Console.WriteLine($"Agregado: {producto.Nombre}");
     }
-
 }

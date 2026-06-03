@@ -1,0 +1,347 @@
+﻿@page "/DescripcionProducto"
+
+<div class="product-page-content">
+    <table class="product-container-table">
+        <tr>
+            <td class="product-main-cell gallery-column">
+                <div class="main-image-card">
+                    <div class="nav-arrow arrow-left">&lt;</div>
+                    <img src="/assets/products/ImagenBebidaDesc.jpeg" class="main-product-img" alt="Amaretto Disaronno Principal" />
+                    <div class="nav-arrow arrow-right">&gt;</div>
+                </div>
+
+                <table class="thumbnails-table">
+                    <tr>
+                        <td>
+                            <div class="thumb-box active">
+                                <img src="/assets/products/ImagenBebidaDesc1.jpeg" alt="Vista 1" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="thumb-box">
+                                <img src="/assets/products/ImagenBebidaDesc2.jpeg" alt="Vista 2" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="thumb-box">
+                                <img src="/assets/products/ImagenBebidaDesc3.jpeg" alt="Vista 3" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="thumb-box">
+                                <img src="/assets/products/ImagenBebidaDesc4.jpeg" alt="Vista 4" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td class="product-main-cell details-column">
+                <h1 class="product-title">Amaretto DISARONNO<br>X 700 ml</h1>
+
+                <div class="product-price">S/. 123.00</div>
+
+                <p class="product-description">
+                    Amaretto Di Saronno es un licor italiano en el que se combinan el dulzor del albaricoque con el amargor de las almendras los cuales están acompañados por alcohol puro, azúcar caramelizado y la esencia de diecisiete plantas y frutas aromáticas entre las que destaca de forma especial la vainilla.
+                </p>
+
+                <div class="meta-info-box">
+                    <table class="meta-info-table">
+                        <tr>
+                            <td class="meta-icon-cell">
+                                <div class="meta-icon-box">📦</div>
+                            </td>
+                            <td>
+                                <div class="meta-text-title">Disponibilidad</div>
+                                <div class="meta-text-sku"><strong>SKU:</strong> 001022001</div>
+                                <div class="stock-status"><span></span> En stock</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <table class="purchase-action-table">
+                    <tr>
+                        <td style="width: 110px;">
+                            <div class="quantity-selector">
+                                <table class="quantity-table">
+                                    <tr>
+                                        <td class="quantity-btn">−</td>
+                                        <td class="quantity-value">1</td>
+                                        <td class="quantity-btn">+</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="add-to-cart-cell">
+                            <button class="add-to-cart-btn">
+                                <span class="cart-icon">🛒</span> Añadir al carrito
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    /* Contenedor principal con limitación de ancho para evitar estiramiento en pantallas anchas */
+    .product-page-content {
+        width: 100%;
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 15px 0;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background-color: transparent;
+    }
+
+    .product-container-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .product-main-cell {
+        vertical-align: top;
+    }
+
+    /* --- ESTILOS: GALERÍA DE IMÁGENES COMPRIMIDA --- */
+    .gallery-column {
+        width: 42%; /* Reducido levemente para balancear pesos */
+        padding-right: 30px;
+    }
+
+    .main-image-card {
+        background-color: #ffffff;
+        border: 1px solid #eef1f5;
+        border-radius: 8px;
+        padding: 15px; /* Más compacto */
+        text-align: center;
+        position: relative;
+    }
+
+    .main-product-img {
+        max-height: 260px; /* Reducción drástica para empaquetar verticalmente */
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .nav-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background-color: #ffffff;
+        border: 1px solid #eef1f5;
+        border-radius: 50%;
+        line-height: 28px;
+        text-align: center;
+        color: #888888;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .arrow-left {
+        left: 10px;
+    }
+
+    .arrow-right {
+        right: 10px;
+    }
+
+    /* Miniaturas Redimensionadas */
+    .thumbnails-table {
+        width: 100%;
+        margin-top: 10px;
+        border-collapse: collapse;
+    }
+
+        .thumbnails-table td {
+            width: 25%;
+            padding: 0 4px;
+        }
+
+            .thumbnails-table td:first-child {
+                padding-left: 0;
+            }
+
+            .thumbnails-table td:last-child {
+                padding-right: 0;
+            }
+
+    .thumb-box {
+        background-color: #ffffff;
+        border: 1px solid #eef1f5;
+        border-radius: 6px;
+        padding: 4px;
+        text-align: center;
+        height: 55px; /* Reducido de 75px */
+        cursor: pointer;
+    }
+
+        .thumb-box.active {
+            border: 2px solid #001f4d;
+        }
+
+        .thumb-box img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+    /* --- ESTILOS: DETALLE DE PRODUCTO --- */
+    .details-column {
+        width: 58%;
+        padding-left: 5px;
+    }
+
+    .product-title {
+        font-size: 24px; /* Proporcionalmente más compacto */
+        font-weight: bold;
+        color: #001f4d;
+        margin: 0 0 8px 0;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+    }
+
+    .product-price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #001f4d;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #eef1f5;
+    }
+
+    .product-description {
+        font-size: 12.5px;
+        line-height: 1.5;
+        color: #555555;
+        margin-bottom: 18px;
+        text-align: justify;
+    }
+
+    /* Caja Disponibilidad Compacta */
+    .meta-info-box {
+        background-color: #ffffff;
+        border: 1px solid #eef1f5;
+        border-radius: 6px;
+        padding: 10px 12px;
+        margin-bottom: 20px;
+    }
+
+    .meta-info-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .meta-icon-cell {
+        width: 36px;
+        vertical-align: middle;
+    }
+
+    .meta-icon-box {
+        width: 26px;
+        height: 26px;
+        background-color: #f0f4f8;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 26px;
+        font-size: 13px;
+    }
+
+    .meta-text-title {
+        font-size: 10px;
+        font-weight: bold;
+        color: #001f4d;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 1px;
+    }
+
+    .meta-text-sku {
+        font-size: 12px;
+        color: #444444;
+    }
+
+    .stock-status {
+        font-size: 11px;
+        color: #28a745;
+        font-weight: bold;
+        margin-top: 1px;
+    }
+
+        .stock-status span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #28a745;
+            border-radius: 50%;
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+
+    /* --- SECCIÓN ACCIONES COMPRIMIDAS --- */
+    .purchase-action-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .quantity-selector {
+        width: 110px; /* Más angosto */
+        border: 1px solid #001f4d;
+        border-radius: 4px;
+        background-color: #ffffff;
+    }
+
+    .quantity-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .quantity-btn {
+        width: 32px;
+        text-align: center;
+        font-size: 14px;
+        color: #001f4d;
+        cursor: pointer;
+        padding: 6px 0; /* Menor altura de botones */
+        font-weight: bold;
+        user-select: none;
+    }
+
+    .quantity-value {
+        text-align: center;
+        font-size: 13px;
+        font-weight: bold;
+        color: #001f4d;
+    }
+
+    .add-to-cart-cell {
+        padding-left: 12px;
+    }
+
+    .add-to-cart-btn {
+        background-color: #001f4d;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        padding: 9px 0; /* Botón menos alto */
+        font-size: 13px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .cart-icon {
+        margin-right: 4px;
+        vertical-align: middle;
+    }
+</style>

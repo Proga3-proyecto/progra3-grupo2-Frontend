@@ -12,6 +12,11 @@ wwwroot\assets\products\gin\gin-beefeater.png
 wwwroot\assets\products\gin\gin-bombay.png
 wwwroot\assets\products\gin\gin-hendricks.png
 wwwroot\assets\products\gin\gin-tanqueray.png
+wwwroot\assets\products\ImagenBebidaDesc.jpeg
+wwwroot\assets\products\ImagenBebidaDesc1.jpeg
+wwwroot\assets\products\ImagenBebidaDesc2.jpeg
+wwwroot\assets\products\ImagenBebidaDesc3.jpeg
+wwwroot\assets\products\ImagenBebidaDesc4.jpeg
 wwwroot\assets\products\licor\licor-amaretto.png
 wwwroot\assets\products\licor\licor-baileys.png
 wwwroot\assets\products\licor\licor-jagermeister.png

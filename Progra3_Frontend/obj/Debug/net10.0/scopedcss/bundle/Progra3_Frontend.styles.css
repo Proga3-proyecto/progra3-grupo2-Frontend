@@ -2359,7 +2359,7 @@ button[b-vt3trsx7fj] {
     right: 16px;
     border: none;
     background: transparent;
-    color: var(--primary);
+    color: var(--color-primary);
     font-size: 24px;
     cursor: pointer;
 }
@@ -2379,7 +2379,7 @@ button[b-vt3trsx7fj] {
 
 .product-card h3[b-24gdafgvea] {
     margin: 12px 0 4px;
-    color: var(--primary);
+    color: var(--color-primary);
     font-size: 16px;
 }
 
@@ -2397,7 +2397,7 @@ button[b-vt3trsx7fj] {
 }
 
     .product-bottom span[b-24gdafgvea] {
-        color: var(--primary);
+        color: var(--color-primary);
         font-size: 16px;
         font-weight: 700;
     }
@@ -2407,7 +2407,7 @@ button[b-vt3trsx7fj] {
     height: 38px;
     border: none;
     border-radius: 8px;
-    background: var(--primary);
+    background: var(--color-primary);
     color: white;
     font-size: 20px;
     cursor: pointer;
@@ -3142,7 +3142,7 @@ input[b-ewupr7nfa0]{
     }
 
     .recipes-area[b-ldc9o4vtim]::-webkit-scrollbar-thumb {
-        background: var(--primary);
+        background: var(--color-primary);
         border-radius: 4px;
     }
 
@@ -3165,7 +3165,7 @@ input[b-ewupr7nfa0]{
     background: white;
     border-radius: 12px;
     padding: 24px;
-    color: var(--primary);
+    color: var(--color-primary);
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
     height: 100%;
@@ -3191,7 +3191,7 @@ input[b-ewupr7nfa0]{
         border: 1px solid #d8dbe8;
         border-radius: 8px;
         padding: 0 10px;
-        color: var(--primary);
+        color: var(--color-primary);
         outline: none;
         box-sizing: border-box;
     }
@@ -3202,7 +3202,7 @@ input[b-ewupr7nfa0]{
     margin-top: 24px;
     border: none;
     border-radius: 8px;
-    background: var(--primary);
+    background: var(--color-primary);
     color: white;
     font-weight: 600;
     cursor: pointer;
@@ -3240,7 +3240,7 @@ input[b-ewupr7nfa0]{
 
 .recipe-card h3[b-okfnm2lkz5] {
     margin: 12px 0 4px;
-    color: var(--primary);
+    color:var(--color-primary);
     font-size: 16px;
 }
 
@@ -3265,7 +3265,7 @@ input[b-ewupr7nfa0]{
     padding: 8px 16px;
     border: none;
     border-radius: 8px;
-    background: var(--primary);
+    background: var(--color-primary);
     color: white;
     font-size: 14px;
     font-weight: 600;
@@ -3326,7 +3326,7 @@ input[b-ewupr7nfa0]{
     background: transparent;
     border: none;
     font-size: 20px;
-    color: var(--primary);
+    color: var(--color-primary);
     cursor: pointer;
     padding: 5px;
 }
@@ -3352,7 +3352,7 @@ input[b-ewupr7nfa0]{
     }
 
     .thumb-box.active[b-3lua00sur3] {
-        border-color: var(--primary);
+        border-color: var(--color-primary);
     }
 
 
@@ -3445,7 +3445,7 @@ input[b-ewupr7nfa0]{
 .btn-preparacion[b-3lua00sur3] {
     flex: 1;
     height: 52px;
-    background: #0f2147; /* var(--primary) */
+    background: #0f2147; /* var(--color-primary) */
     color: white;
     border: none;
     border-radius: 8px;

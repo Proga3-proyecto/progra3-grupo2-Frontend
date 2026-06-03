@@ -47,7 +47,7 @@
     background: transparent;
     border: none;
     font-size: 20px;
-    color: var(--primary);
+    color: var(--color-primary);
     cursor: pointer;
     padding: 5px;
 }
@@ -73,7 +73,7 @@
     }
 
     .thumb-box.active {
-        border-color: var(--primary);
+        border-color: var(--color-primary);
     }
 
 
@@ -166,7 +166,7 @@
 .btn-preparacion {
     flex: 1;
     height: 52px;
-    background: #0f2147; /* var(--primary) */
+    background: #0f2147; /* var(--color-primary) */
     color: white;
     border: none;
     border-radius: 8px;
